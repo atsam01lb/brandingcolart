@@ -51,7 +51,11 @@
   /* Brand portfolio — namespaced "branding-*" so it never collides
      with this stylesheet's existing .brand-card / .brand-grid / .logo-preview-*
      components used elsewhere on the site (those drive modal case studies). */
-  .branding-spotlight { max-width: 360px; margin: 0 auto; }
+  .branding-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+  }
 
   .branding-card {
     display: flex;
@@ -62,6 +66,7 @@
     box-shadow: 0 4px 30px rgba(26, 20, 36, .04);
     overflow: hidden;
     cursor: pointer;
+    position: relative;
     transition: transform .5s cubic-bezier(.7, 0, .2, 1), box-shadow .5s, border-color .5s;
   }
   .branding-card:hover,
@@ -87,6 +92,34 @@
     transition: transform .6s cubic-bezier(.2, .7, .2, 1);
   }
   .branding-card:hover .branding-card-logo img { transform: scale(1.06); }
+
+  /* Coming-soon variant: badge shown smaller/circular on the brand gradient */
+  .branding-card-logo.is-soon {
+    background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
+    padding: 30px;
+  }
+  .branding-card-logo.is-soon img {
+    max-width: 76px;
+    max-height: 76px;
+    border-radius: 50%;
+    box-shadow: 0 8px 22px rgba(26,20,36,.22), 0 0 0 4px rgba(255,255,255,.16);
+  }
+  .branding-card:hover .branding-card-logo.is-soon img { transform: scale(1.08); }
+
+  .branding-card-soon-pill {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: rgba(26, 20, 36, .55);
+    backdrop-filter: blur(3px);
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    border-radius: 999px;
+  }
 
   .branding-card-body {
     padding: 20px 20px 22px;
@@ -116,6 +149,8 @@
   .branding-card-cta i { font-size: 10px; transition: transform .3s; }
   .branding-card:hover .branding-card-cta { color: var(--magenta); gap: 10px; }
   .branding-card:hover .branding-card-cta i { transform: translate(2px, -2px); }
+  .branding-card-cta.is-soon { color: var(--stone, #726c63); }
+  .branding-card:hover .branding-card-cta.is-soon { color: var(--purple); }
 
   /* Minimal footer for this hub page */
   .branding-footer { text-align: center; }
@@ -184,12 +219,12 @@
       <div class="section-head">
         <span class="section-eyebrow-pill">OUR PORTFOLIO</span>
         <h2>Brands We've <span class="magenta">Branded</span></h2>
-        <p>The first identity system in our branding showcase — more brand stories are on the way.</p>
+        <p>One full identity system live now — with more brand stories in progress and on the way.</p>
       </div>
 
-      <div class="branding-spotlight">
+      <div class="branding-grid">
 
-        <!-- Joseph Farah -->
+        <!-- Joseph Farah — live -->
         <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/josephfarah" target="_blank" rel="noopener">
           <div class="branding-card-logo">
             <img src="assets/images/joseph-farah-logo.png" alt="Joseph Farah logo" loading="lazy">
@@ -197,6 +232,90 @@
           <div class="branding-card-body">
             <h3>Joseph Farah</h3>
             <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Healthy Little Me — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/healthylittleme" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/healthylittleme-badge.png" alt="Healthy Little Me" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Healthy Little Me</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
+          </div>
+        </a>
+
+        <!-- Glow Bites — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/glowbites" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/glowbites-badge.png" alt="Glow Bites" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Glow Bites</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
+          </div>
+        </a>
+
+        <!-- Hand in Hand — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/handinhand" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/handinhand-badge.png" alt="Hand in Hand" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Hand in Hand</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
+          </div>
+        </a>
+
+        <!-- Noon Coffee — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/nooncoffee" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/nooncoffee-badge.png" alt="Noon Coffee" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Noon Coffee</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
+          </div>
+        </a>
+
+        <!-- Atlas Cultural Initiative — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/atlasculturalinitiative" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/atlasculturalinitiative-badge.png" alt="Atlas Cultural Initiative" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Atlas Cultural Initiative</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
+          </div>
+        </a>
+
+        <!-- Hikaya Coffee Shop — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/hikayacoffeeshop" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/hikayacoffeeshop-badge.png" alt="Hikaya Coffee Shop" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Hikaya Coffee Shop</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
+          </div>
+        </a>
+
+        <!-- Chef Ahmad Restaurant — coming soon -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/chefahmadrestaurant" target="_blank" rel="noopener">
+          <div class="branding-card-logo is-soon">
+            <span class="branding-card-soon-pill">Coming Soon</span>
+            <img src="assets/images/chefahmadrestaurant-badge.png" alt="Chef Ahmad Restaurant" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Chef Ahmad Restaurant</h3>
+            <span class="branding-card-cta is-soon">Coming Soon <i class="fa-solid fa-clock"></i></span>
           </div>
         </a>
 
