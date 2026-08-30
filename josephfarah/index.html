@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joseph Farah | Brand Guidelines</title>
+<meta name="description" content="The personal brand identity Colart designed for Joseph Farah — logo system, color palette, typography and applications.">
+<link rel="canonical" href="https://branding.colartdigitalmarketingagency.com/josephfarah">
+
+<link rel="icon" type="image/png" href="../assets/images/joseph-farah-logo.png">
+<meta property="og:title" content="Joseph Farah — Brand Guidelines">
+<meta property="og:description" content="A personal brand identity by Colart: quiet confidence, a hand-drawn monogram, and a disciplined black &amp; alabaster palette.">
+<meta property="og:image" content="../assets/images/joseph-farah-lockup-black.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&amp;family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Shared Colart reset / base -->
+<link rel="stylesheet" href="../style.css">
+
+<style>
+  /* ===========================================
+     JOSEPH FARAH — PERSONAL BRAND SHOWCASE
+     Namespaced "jf-*" tokens & classes so nothing
+     here collides with the shared Colart stylesheet.
+     Guidelines source: Joseph Farah Brand Guidelines,
+     Vol. I — prepared by Colart Digital Marketing Agency.
+  =========================================== */
+  :root {
+    --jf-ink:      #0b0b0b;
+    --jf-stone:    #726c63;
+    --jf-pale:     #b9b3a8;
+    --jf-alabaster:#f7f6f4;
+    --jf-line:     rgba(11,11,11,.12);
+    --jf-muted:    rgba(11,11,11,.58);
+    --jf-serif:    'GFS Didot', 'Times New Roman', serif;
+    --jf-sans:     'Poppins', system-ui, sans-serif;
+  }
+  html, body { background: var(--jf-alabaster); color: var(--jf-ink); }
+  body { font-family: var(--jf-sans); font-weight: 300; }
+  .jf-page { overflow-x: hidden; }
+  h1, h2, h3 { font-family: var(--jf-serif); font-weight: 400; letter-spacing: -.01em; }
+
+  /* ---------- utility bar ---------- */
+  .jf-utility {
+    position: sticky; top: 0; z-index: 60;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 36px;
+    background: rgba(247,246,244,.92);
+    backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--jf-line);
+  }
+  .jf-utility a {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-family: var(--jf-sans); font-size: 12.5px; font-weight: 600;
+    letter-spacing: .06em; text-transform: uppercase; color: var(--jf-ink);
+    transition: opacity .3s;
+  }
+  .jf-utility a:hover { opacity: .55; }
+  .jf-utility .jf-colart-credit { font-weight: 400; color: var(--jf-muted); text-transform: none; letter-spacing: 0; }
+  .jf-utility .jf-colart-credit strong { color: var(--purple, #642878); font-weight: 700; }
+  @media (max-width: 700px) { .jf-utility { padding: 14px 20px; } .jf-utility span.jf-hide-sm { display:none; } }
+
+  /* ---------- hero ---------- */
+  .jf-hero {
+    background: var(--jf-ink);
+    padding: 110px 36px 100px;
+    text-align: center;
+    position: relative;
+  }
+  .jf-hero-eyebrow {
+    font-family: var(--jf-sans); font-size: 11px; font-weight: 600;
+    letter-spacing: .32em; text-transform: uppercase; color: rgba(255,255,255,.55);
+    margin-bottom: 40px;
+  }
+  .jf-hero img.jf-hero-mark { width: 100%; max-width: 360px; margin: 0 auto 30px; }
+  .jf-hero-tagline {
+    font-family: var(--jf-sans); font-weight: 300; font-size: clamp(15px, 1.6vw, 18px);
+    color: rgba(255,255,255,.75); max-width: 520px; margin: 0 auto 34px; line-height: 1.7;
+  }
+  .jf-attrs { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .jf-attr-pill {
+    border: 1px solid rgba(255,255,255,.25); color: rgba(255,255,255,.85);
+    font-size: 11.5px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase;
+    padding: 8px 18px; border-radius: 999px;
+  }
+
+  /* ---------- shared section chrome ---------- */
+  .jf-section { padding: 100px 36px; }
+  .jf-section .jf-container { max-width: 1180px; margin: 0 auto; }
+  .jf-section-alt { background: #fff; }
+  @media (max-width: 768px) { .jf-section { padding: 70px 22px; } }
+
+  .jf-kicker { font-size: 11.5px; font-weight: 600; letter-spacing: .28em; text-transform: uppercase; color: var(--jf-stone); margin-bottom: 14px; display: block; }
+  .jf-h2 { font-size: clamp(30px, 4vw, 46px); margin-bottom: 20px; }
+  .jf-lede { font-size: 15.5px; line-height: 1.75; color: var(--jf-muted); max-width: 640px; font-family: var(--jf-sans); font-weight: 300; }
+  .jf-section-head { margin-bottom: 54px; }
+  .jf-rule { width: 46px; height: 1px; background: var(--jf-ink); opacity: .25; margin: 22px 0; }
+
+  /* ---------- the brand (intro) ---------- */
+  .jf-brand-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 70px; align-items: center; }
+  @media (max-width: 900px) { .jf-brand-grid { grid-template-columns: 1fr; gap: 40px; } }
+  .jf-brand-grid p { font-size: 15.5px; line-height: 1.8; color: var(--jf-muted); margin-bottom: 18px; font-weight: 300; }
+  .jf-attr-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+  .jf-attr-chip { border: 1px solid var(--jf-line); border-radius: 999px; padding: 8px 16px; font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--jf-ink); }
+  .jf-marble-card {
+    aspect-ratio: 4/5; border-radius: 4px; overflow: hidden; position: relative;
+    background: url('../assets/images/joseph-farah-marble-texture.jpg') center/cover, var(--jf-pale);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 30px 70px rgba(11,11,11,.18);
+  }
+  .jf-marble-card img { width: 62%; }
+
+  /* ---------- logo system ---------- */
+  .jf-lockup-showcase {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 46px;
+  }
+  @media (max-width: 760px) { .jf-lockup-showcase { grid-template-columns: 1fr; } }
+  .jf-tile {
+    border-radius: 4px; display: flex; align-items: center; justify-content: center;
+    padding: 60px 40px; position: relative; aspect-ratio: 4/3.1;
+  }
+  .jf-tile-caption {
+    position: absolute; bottom: 20px; left: 0; right: 0; text-align: center;
+    font-size: 10.5px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase;
+  }
+  .jf-tile--alabaster { background: var(--jf-alabaster); border: 1px solid var(--jf-line); }
+  .jf-tile--alabaster .jf-tile-caption { color: var(--jf-muted); }
+  .jf-tile--ink { background: var(--jf-ink); }
+  .jf-tile--ink .jf-tile-caption { color: rgba(255,255,255,.55); }
+  .jf-tile img { max-width: 78%; max-height: 100%; }
+
+  .jf-monogram-block { text-align: center; margin: 56px 0 46px; }
+  .jf-monogram-block img { width: 100%; max-width: 220px; margin: 0 auto; }
+
+  .jf-mono-usage { display: flex; justify-content: center; gap: 46px; flex-wrap: wrap; }
+  .jf-mono-usage-item { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+  .jf-mono-circle { border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+  .jf-mono-circle img { width: 38%; }
+  .jf-mono-circle--lg { width: 130px; height: 130px; background: var(--jf-ink); }
+  .jf-mono-circle--md { width: 110px; height: 110px; background: var(--jf-stone); }
+  .jf-mono-circle--sm { width: 90px; height: 90px; background: transparent; border: 1.5px solid var(--jf-ink); }
+  .jf-mono-usage-label { font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--jf-muted); text-align: center; }
+
+  .jf-var-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 40px; }
+  @media (max-width: 860px) { .jf-var-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 560px) { .jf-var-grid { grid-template-columns: 1fr; } }
+  .jf-var-tile {
+    aspect-ratio: 4/3.4; border-radius: 4px; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 24px; position: relative;
+    border: 1px solid var(--jf-line);
+  }
+  .jf-var-tile img { max-width: 60%; max-height: 55%; }
+  .jf-var-tile span {
+    position: absolute; bottom: 16px; font-size: 10px; font-weight: 700;
+    letter-spacing: .1em; text-transform: uppercase;
+  }
+  .jf-var-1 { background: var(--jf-alabaster); }
+  .jf-var-2 { background: #fff; }
+  .jf-var-3 { background: var(--jf-ink); border-color: transparent; }
+  .jf-var-3 span { color: rgba(255,255,255,.6); }
+  .jf-var-4 { background: url('../assets/images/joseph-farah-marble-texture.jpg') center/cover; }
+  .jf-var-5 { background: var(--jf-stone); border-color: transparent; }
+  .jf-var-5 span { color: rgba(255,255,255,.6); }
+  .jf-var-6 { background: #fff; }
+  .jf-var-tile:not(.jf-var-3):not(.jf-var-5) span { color: var(--jf-muted); }
+
+  .jf-clear-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-top: 46px; }
+  @media (max-width: 860px) { .jf-clear-grid { grid-template-columns: 1fr; gap: 30px; } }
+  .jf-clear-box {
+    border: 1.5px dashed rgba(11,11,11,.3); border-radius: 4px; padding: 56px;
+    display: flex; align-items: center; justify-content: center; aspect-ratio: 4/3.4;
+  }
+  .jf-clear-box img { width: 68%; }
+  .jf-clear-notes p { font-size: 14.5px; line-height: 1.75; color: var(--jf-muted); margin-bottom: 16px; font-weight: 300; }
+  .jf-clear-notes strong { color: var(--jf-ink); font-weight: 600; }
+
+  .jf-misuse-title { font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: var(--jf-stone); margin: 60px 0 24px; }
+  .jf-misuse-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  @media (max-width: 760px) { .jf-misuse-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .jf-misuse-grid { grid-template-columns: 1fr; } }
+  .jf-misuse-tile {
+    background: var(--jf-alabaster); border: 1px solid var(--jf-line); border-radius: 4px;
+    aspect-ratio: 4/3.2; position: relative; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; padding: 20px 16px 34px; overflow: hidden;
+  }
+  .jf-misuse-tile img { width: 46%; opacity: .92; }
+  .jf-misuse-x {
+    position: absolute; top: 12px; right: 12px; width: 24px; height: 24px; border-radius: 50%;
+    background: var(--jf-ink); color: #fff; display: grid; place-items: center; font-size: 11px;
+  }
+  .jf-misuse-label {
+    position: absolute; bottom: 14px; font-size: 10px; font-weight: 700; letter-spacing: .05em;
+    text-transform: uppercase; color: var(--jf-muted); text-align: center; padding: 0 10px;
+  }
+  .jf-mis-stretch img { transform: scaleX(1.7) scaleY(.72); }
+  .jf-mis-recolor img { filter: invert(24%) sepia(90%) saturate(2000%) hue-rotate(200deg); }
+  .jf-mis-rotate img { transform: rotate(-22deg) scale(1.05); }
+  .jf-mis-effects img { filter: drop-shadow(3px 0 0 rgba(184,150,60,.75)) drop-shadow(-3px 0 0 rgba(60,90,184,.6)); }
+  .jf-mis-contrast { background: var(--jf-pale); }
+  .jf-mis-contrast img { opacity: .35; }
+  .jf-mis-crowd img { width: 72%; }
+  .jf-mis-crowd { padding: 4px; }
+
+  /* ---------- color palette ---------- */
+  .jf-swatch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px 30px; margin-top: 46px; }
+  @media (max-width: 760px) { .jf-swatch-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .jf-swatch-grid { grid-template-columns: 1fr; } }
+  .jf-swatch-block { aspect-ratio: 16/10; border-radius: 4px; margin-bottom: 16px; border: 1px solid var(--jf-line); }
+  .jf-swatch-block.jf-texture { background: url('../assets/images/joseph-farah-marble-texture.jpg') center/cover; }
+  .jf-swatch-name { font-family: var(--jf-serif); font-size: 19px; margin-bottom: 4px; }
+  .jf-swatch-name em { font-family: var(--jf-sans); font-style: normal; font-size: 10px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--jf-stone); margin-left: 8px; }
+  .jf-swatch-meta { font-size: 11.5px; color: var(--jf-muted); line-height: 1.8; font-family: var(--jf-sans); letter-spacing: .01em; }
+
+  .jf-usage-bar-wrap { margin-top: 20px; }
+  .jf-usage-label { font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--jf-stone); margin-bottom: 14px; display: block; }
+  .jf-usage-bar { display: flex; height: 14px; border-radius: 999px; overflow: hidden; max-width: 420px; }
+  .jf-usage-meta { font-size: 12px; color: var(--jf-muted); margin-top: 10px; }
+
+  /* ---------- typography ---------- */
+  .jf-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 70px; margin-top: 46px; }
+  @media (max-width: 860px) { .jf-type-grid { grid-template-columns: 1fr; gap: 50px; } }
+  .jf-type-label { font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--jf-stone); margin-bottom: 22px; display: block; }
+  .jf-type-Aa { font-family: var(--jf-serif); font-size: 96px; line-height: 1; margin-bottom: 18px; }
+  .jf-type-alpha { font-family: var(--jf-serif); font-size: 17px; letter-spacing: .06em; color: var(--jf-muted); line-height: 1.7; margin-bottom: 28px; }
+  .jf-type-samples p { font-family: var(--jf-serif); font-size: 20px; margin-bottom: 6px; }
+  .jf-type-samples .jf-note, .jf-poppins-note { font-family: var(--jf-sans); font-size: 13px; color: var(--jf-muted); margin-top: 18px; line-height: 1.7; font-weight: 300; }
+  .jf-poppins-row { font-family: var(--jf-sans); font-size: 17px; margin-bottom: 14px; color: var(--jf-ink); }
+  .jf-hierarchy { margin-top: 34px; padding-top: 28px; border-top: 1px solid var(--jf-line); }
+  .jf-hierarchy .jf-section-title { font-family: var(--jf-serif); font-size: 26px; margin-bottom: 10px; }
+  .jf-hierarchy .jf-eyebrow-label { font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--jf-stone); margin-bottom: 10px; display: block; }
+
+  /* ---------- patterns ---------- */
+  .jf-pattern-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 46px; }
+  @media (max-width: 760px) { .jf-pattern-grid { grid-template-columns: 1fr; } }
+  .jf-pattern-tile { aspect-ratio: 4/3.3; border-radius: 4px; position: relative; overflow: hidden; }
+  .jf-pattern-tile span {
+    position: absolute; bottom: 16px; left: 0; right: 0; text-align: center;
+    font-size: 10.5px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.75);
+  }
+  .jf-pattern-marble { background: url('../assets/images/joseph-farah-marble-texture.jpg') center/cover; }
+  .jf-pattern-marble span { color: var(--jf-ink); text-shadow: 0 1px 8px rgba(247,246,244,.8); }
+  .jf-pattern-mono {
+    background: var(--jf-ink);
+    background-image: url('../assets/images/joseph-farah-monogram-white.png');
+    background-repeat: repeat; background-size: 90px auto; background-position: center;
+    opacity: 1;
+  }
+  .jf-pattern-mono-overlay { position: absolute; inset: 0; background: rgba(11,11,11,.35); }
+
+  .jf-motif-row { margin-top: 40px; display: flex; flex-direction: column; gap: 22px; }
+  .jf-motif-label { font-size: 10.5px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--jf-muted); margin-left: 18px; }
+  .jf-divider-motif { display: flex; align-items: center; gap: 18px; }
+  .jf-divider-line { width: 60px; height: 1px; background: var(--jf-ink); }
+  .jf-divider-line--long { width: 140px; }
+  .jf-divider-dot { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--jf-ink); flex-shrink: 0; }
+
+  /* ---------- applications ---------- */
+  .jf-social-mock { max-width: 480px; margin: 46px auto 0; border: 1px solid var(--jf-line); border-radius: 8px; overflow: hidden; background: #fff; }
+  .jf-social-banner {
+    height: 130px; background: var(--jf-ink);
+    background-image: url('../assets/images/joseph-farah-monogram-white.png');
+    background-repeat: repeat; background-size: 60px auto; background-position: center;
+    position: relative;
+  }
+  .jf-social-avatar {
+    width: 84px; height: 84px; border-radius: 50%; background: var(--jf-ink);
+    border: 4px solid #fff; display: flex; align-items: center; justify-content: center;
+    position: absolute; left: 26px; bottom: -42px; box-shadow: 0 6px 18px rgba(11,11,11,.2);
+  }
+  .jf-social-avatar img { width: 42%; }
+  .jf-social-info { padding: 54px 26px 20px; }
+  .jf-social-info h3 { font-family: var(--jf-serif); font-size: 21px; margin-bottom: 2px; }
+  .jf-social-handle { font-size: 12.5px; color: var(--jf-muted); margin-bottom: 14px; }
+  .jf-social-bio { font-size: 12.5px; color: var(--jf-muted); line-height: 1.6; font-weight: 300; }
+  .jf-social-feed { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .jf-feed-tile { aspect-ratio: 1/1; display: flex; align-items: center; justify-content: center; }
+  .jf-feed-tile img { width: 34%; }
+  .jf-feed-1 { background: var(--jf-ink); }
+  .jf-feed-2 { background: var(--jf-alabaster); display: flex; align-items: center; justify-content: center; }
+  .jf-feed-2 span { font-family: var(--jf-serif); font-size: 11.5px; letter-spacing: .1em; color: var(--jf-ink); }
+  .jf-feed-3 { background: var(--jf-stone); }
+  .jf-feed-4 { background: var(--jf-alabaster); }
+  .jf-feed-5 { background: var(--jf-ink); }
+  .jf-feed-6 { background: var(--jf-pale); }
+  .jf-social-caption { text-align: center; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--jf-muted); margin-top: 18px; }
+
+  .jf-cards-mock { display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; margin-top: 50px; }
+  .jf-biz-card {
+    width: 300px; aspect-ratio: 85/55; border-radius: 8px; padding: 26px;
+    display: flex; flex-direction: column; box-shadow: 0 20px 45px rgba(11,11,11,.16);
+  }
+  .jf-biz-card--front { background: var(--jf-ink); align-items: center; justify-content: center; text-align: center; }
+  .jf-biz-card--front img { width: 46%; margin-bottom: 10px; }
+  .jf-biz-card--front .jf-card-word { width: 58%; }
+  .jf-biz-card--back { background: #fff; border: 1px solid var(--jf-line); justify-content: space-between; }
+  .jf-biz-card--back .jf-card-name { font-family: var(--jf-serif); font-size: 19px; }
+  .jf-biz-card--back .jf-card-title { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--jf-muted); margin-top: 2px; }
+  .jf-biz-card--back .jf-card-rule { width: 100%; height: 1px; background: var(--jf-line); margin: 12px 0; }
+  .jf-biz-card--back .jf-card-contact { font-size: 10.5px; color: var(--jf-muted); line-height: 1.9; }
+  .jf-biz-card-label { text-align: center; font-size: 11px; color: var(--jf-muted); margin-top: 14px; }
+
+  .jf-app-grid2 { display: grid; grid-template-columns: 1.35fr 1fr; gap: 20px; margin-top: 50px; align-items: start; }
+  @media (max-width: 860px) { .jf-app-grid2 { grid-template-columns: 1fr; } }
+  .jf-letterhead {
+    background: #fff; border: 1px solid var(--jf-line); border-radius: 4px; padding: 46px 40px;
+    display: flex; flex-direction: column; align-items: center; aspect-ratio: 210/297; max-height: 560px;
+  }
+  .jf-letterhead img { width: 84px; margin-bottom: 10px; }
+  .jf-letterhead .jf-lh-word { width: 130px; margin-bottom: 20px; }
+  .jf-lh-rule { width: 50px; height: 1px; background: var(--jf-ink); opacity: .3; margin-bottom: 30px; }
+  .jf-lh-bar { height: 7px; background: var(--jf-line); border-radius: 2px; width: 100%; margin-bottom: 10px; }
+  .jf-lh-bar.w80 { width: 80%; } .jf-lh-bar.w60 { width: 60%; } .jf-lh-bar.w40 { width: 40%; }
+  .jf-lh-spacer { flex: 1; }
+  .jf-lh-footer { font-size: 9px; letter-spacing: .08em; color: var(--jf-muted); border-top: 1px solid var(--jf-line); padding-top: 14px; width: 100%; text-align: center; }
+  .jf-side-stack { display: flex; flex-direction: column; gap: 20px; }
+  .jf-envelope-seal { background: var(--jf-alabaster); border: 1px solid var(--jf-line); border-radius: 4px; padding: 30px; display: flex; flex-direction: column; align-items: flex-end; justify-content: flex-end; aspect-ratio: 4/2.6; }
+  .jf-seal-circle { width: 52px; height: 52px; border-radius: 50%; background: var(--jf-ink); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; }
+  .jf-seal-circle img { width: 40%; }
+  .jf-folder-cover { background: var(--jf-ink); border-radius: 4px; padding: 30px; display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 4/2.6; }
+  .jf-folder-cover img { width: 30%; margin-bottom: 8px; }
+  .jf-folder-cover .jf-fc-word { width: 40%; }
+  .jf-app-caption { font-size: 10.5px; color: var(--jf-muted); text-align: center; margin-top: 10px; letter-spacing: .04em; }
+
+  .jf-email-sig {
+    max-width: 480px; margin: 46px auto 0; background: #fff; border: 1px solid var(--jf-line);
+    border-radius: 6px; padding: 26px 28px; display: flex; align-items: center; gap: 20px;
+  }
+  .jf-email-avatar { width: 62px; height: 62px; border-radius: 50%; background: var(--jf-ink); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .jf-email-avatar img { width: 40%; }
+  .jf-email-divider { width: 1px; align-self: stretch; background: var(--jf-line); }
+  .jf-email-body .jf-card-name { font-family: var(--jf-serif); font-size: 17px; }
+  .jf-email-body .jf-card-title { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--jf-muted); margin: 2px 0 8px; }
+  .jf-email-body .jf-card-contact { font-size: 11px; color: var(--jf-muted); line-height: 1.7; }
+
+  /* ---------- closing ---------- */
+  .jf-closing { background: var(--jf-ink); padding: 90px 36px 50px; text-align: center; }
+  .jf-closing img { width: 62px; margin: 0 auto 22px; opacity: .9; }
+  .jf-closing h2 { font-size: 26px; color: #fff; margin-bottom: 6px; }
+  .jf-closing .jf-rule { margin: 20px auto; background: rgba(255,255,255,.3); }
+  .jf-closing-meta { font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 46px; }
+  .jf-closing-credit { border-top: 1px solid rgba(255,255,255,.12); padding-top: 30px; max-width: 480px; margin: 0 auto; }
+  .jf-closing-credit p { font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 10px; }
+  .jf-closing-credit a { color: rgba(255,255,255,.85); font-weight: 600; font-size: 14px; font-family: var(--jf-sans); }
+  .jf-closing-credit .jf-links { margin-top: 12px; font-size: 11.5px; color: rgba(255,255,255,.45); }
+  .jf-closing-credit .jf-links a { color: rgba(255,255,255,.65); font-weight: 400; font-size: 11.5px; }
+  .jf-closing-credit .jf-links a:hover { color: #fff; }
+
+  /* This is a long reference page people will jump/scroll through quickly —
+     don't gate content on a scroll-triggered reveal that can be raced past
+     and left permanently invisible. Show everything immediately. */
+  .fade-in, .fade-in-stagger, .fade-in-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+</style>
+</head>
+<body class="jf-page">
+
+<div class="jf-utility">
+  <a href="https://branding.colartdigitalmarketingagency.com/"><i class="fa-solid fa-arrow-left"></i> Branding Portfolio</a>
+  <span class="jf-colart-credit jf-hide-sm">Identity by <strong>Colart</strong> Digital Marketing Agency</span>
+</div>
+
+<!-- ===========================================
+     HERO
+=========================================== -->
+<section class="jf-hero reveal">
+  <div class="jf-hero-eyebrow">Personal Brand Identity</div>
+  <img class="jf-hero-mark" src="../assets/images/joseph-farah-lockup-white.png" alt="Joseph Farah">
+  <p class="jf-hero-tagline">A personal mark built on quiet confidence rather than noise — a hand-drawn monogram paired
+    with a classical serif wordmark, rendered in ink black against a signature marble ground.</p>
+  <div class="jf-attrs">
+    <span class="jf-attr-pill">Refined</span>
+    <span class="jf-attr-pill">Confident</span>
+    <span class="jf-attr-pill">Timeless</span>
+    <span class="jf-attr-pill">Personal</span>
+    <span class="jf-attr-pill">Understated</span>
+  </div>
+</section>
+
+<!-- ===========================================
+     THE BRAND
+=========================================== -->
+<section class="jf-section jf-section-alt" id="brand">
+  <div class="jf-container">
+    <div class="jf-brand-grid">
+      <div class="fade-in">
+        <span class="jf-kicker">01 · Foundations</span>
+        <h2 class="jf-h2">The Brand</h2>
+        <p>Joseph Farah is a personal mark built on quiet confidence rather than noise. The identity pairs a
+          hand-drawn monogram with a classical serif wordmark, rendered in ink black against a signature marble
+          ground — a mark that reads as considered, not decorated.</p>
+        <p>Every application in this guide is built to protect that first impression: restraint in color, precision
+          in spacing, and a typographic voice that never has to raise itself to be noticed.</p>
+        <div class="jf-attr-list">
+          <span class="jf-attr-chip">Refined</span>
+          <span class="jf-attr-chip">Confident</span>
+          <span class="jf-attr-chip">Timeless</span>
+          <span class="jf-attr-chip">Personal</span>
+          <span class="jf-attr-chip">Understated</span>
+        </div>
+      </div>
+      <div class="jf-marble-card fade-in">
+        <img src="../assets/images/joseph-farah-lockup-black.png" alt="Joseph Farah monogram on signature marble">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     LOGO SYSTEM
+=========================================== -->
+<section class="jf-section" id="logo-system">
+  <div class="jf-container">
+
+    <div class="jf-section-head fade-in">
+      <span class="jf-kicker">02 · Logo System</span>
+      <h2 class="jf-h2">Primary Lockup</h2>
+      <p class="jf-lede">The full lockup, monogram and wordmark together, is the primary signature of the brand. Use
+        it whenever space allows; it should always appear exactly as constructed, at consistent proportions.</p>
+    </div>
+
+    <div class="jf-lockup-showcase fade-in">
+      <div class="jf-tile jf-tile--alabaster">
+        <img src="../assets/images/joseph-farah-lockup-black.png" alt="Joseph Farah primary lockup, ink black">
+        <span class="jf-tile-caption">Primary Lockup · Ink Black</span>
+      </div>
+      <div class="jf-tile jf-tile--ink">
+        <img src="../assets/images/joseph-farah-lockup-white.png" alt="Joseph Farah primary lockup, reversed white">
+        <span class="jf-tile-caption">Reversed · On Ink</span>
+      </div>
+    </div>
+
+    <div class="jf-monogram-block fade-in">
+      <span class="jf-kicker" style="text-align:center;">The Monogram</span>
+      <img src="../assets/images/joseph-farah-logo.png" alt="Joseph Farah monogram">
+      <p class="jf-lede" style="margin: 18px auto 0; text-align:center;">A secondary mark for moments where the full
+        lockup can't work: profile icons, favicons, seals, and stamped or embossed finishes.</p>
+    </div>
+
+    <div class="jf-mono-usage fade-in-stagger">
+      <div class="jf-mono-usage-item">
+        <div class="jf-mono-circle jf-mono-circle--lg"><img src="../assets/images/joseph-farah-monogram-white.png" alt="Monogram app icon"></div>
+        <span class="jf-mono-usage-label">App / Avatar Icon</span>
+      </div>
+      <div class="jf-mono-usage-item">
+        <div class="jf-mono-circle jf-mono-circle--md"><img src="../assets/images/joseph-farah-monogram-white.png" alt="Monogram seal"></div>
+        <span class="jf-mono-usage-label">Seal / Badge</span>
+      </div>
+      <div class="jf-mono-usage-item">
+        <div class="jf-mono-circle jf-mono-circle--sm"><img src="../assets/images/joseph-farah-logo.png" alt="Monogram favicon"></div>
+        <span class="jf-mono-usage-label">Favicon, 16px</span>
+      </div>
+    </div>
+
+    <div class="jf-section-head fade-in" style="margin-top:80px;">
+      <h2 class="jf-h2">Logo Variations</h2>
+      <p class="jf-lede">A limited, deliberate set of approved variations. Always choose the version with the
+        strongest contrast against its background.</p>
+    </div>
+    <div class="jf-var-grid fade-in-stagger">
+      <div class="jf-var-tile jf-var-1"><img src="../assets/images/joseph-farah-lockup-black.png" alt="Ink black on alabaster"><span>Ink Black · On Alabaster</span></div>
+      <div class="jf-var-tile jf-var-2"><img src="../assets/images/joseph-farah-lockup-black.png" alt="Ink black on white"><span>Ink Black · On White</span></div>
+      <div class="jf-var-tile jf-var-3"><img src="../assets/images/joseph-farah-lockup-white.png" alt="Reversed white on ink"><span>Reversed White · On Ink</span></div>
+      <div class="jf-var-tile jf-var-4"><img src="../assets/images/joseph-farah-lockup-black.png" alt="Signature on marble"><span>Signature · On Marble</span></div>
+      <div class="jf-var-tile jf-var-5"><img src="../assets/images/joseph-farah-lockup-white.png" alt="Alabaster on stone"><span>Alabaster · On Stone</span></div>
+      <div class="jf-var-tile jf-var-6"><img src="../assets/images/joseph-farah-logo.png" alt="Compact monogram only"><span>Compact · Monogram Only</span></div>
+    </div>
+
+    <div class="jf-clear-grid">
+      <div class="jf-clear-box fade-in">
+        <img src="../assets/images/joseph-farah-lockup-black.png" alt="Clear space diagram">
+      </div>
+      <div class="jf-clear-notes fade-in">
+        <span class="jf-kicker">Clear Space &amp; Minimum Size</span>
+        <p><strong>Clear space</strong> equal to the cap-height of the monogram (X) must surround the logo on all
+          sides, free of text, imagery, or edges.</p>
+        <p><strong>Minimum size:</strong> 24mm wide in print, 120px wide on screen. Below this, use the monogram
+          alone.</p>
+      </div>
+    </div>
+
+    <div class="jf-misuse-title fade-in">Common Misuse</div>
+    <div class="jf-misuse-grid fade-in-stagger">
+      <div class="jf-misuse-tile jf-mis-stretch"><div class="jf-misuse-x">×</div><img src="../assets/images/joseph-farah-logo.png" alt=""><span class="jf-misuse-label">Don't Stretch or Distort</span></div>
+      <div class="jf-misuse-tile jf-mis-recolor"><div class="jf-misuse-x">×</div><img src="../assets/images/joseph-farah-logo.png" alt=""><span class="jf-misuse-label">Don't Recolor</span></div>
+      <div class="jf-misuse-tile jf-mis-rotate"><div class="jf-misuse-x">×</div><img src="../assets/images/joseph-farah-logo.png" alt=""><span class="jf-misuse-label">Don't Rotate</span></div>
+      <div class="jf-misuse-tile jf-mis-effects"><div class="jf-misuse-x">×</div><img src="../assets/images/joseph-farah-logo.png" alt=""><span class="jf-misuse-label">Don't Add Effects</span></div>
+      <div class="jf-misuse-tile jf-mis-contrast"><div class="jf-misuse-x">×</div><img src="../assets/images/joseph-farah-logo.png" alt=""><span class="jf-misuse-label">Don't Use Low-Contrast Backgrounds</span></div>
+      <div class="jf-misuse-tile jf-mis-crowd"><div class="jf-misuse-x">×</div><img src="../assets/images/joseph-farah-logo.png" alt=""><span class="jf-misuse-label">Don't Crowd the Clear Space</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================================
+     COLOR PALETTE
+=========================================== -->
+<section class="jf-section jf-section-alt" id="color">
+  <div class="jf-container">
+    <div class="jf-section-head fade-in">
+      <span class="jf-kicker">03 · Visual Language</span>
+      <h2 class="jf-h2">Color Palette</h2>
+      <p class="jf-lede">A disciplined black and white palette, warmed by stone and finished with a signature marble
+        ground.</p>
+    </div>
+
+    <div class="jf-swatch-grid fade-in-stagger">
+      <div>
+        <div class="jf-swatch-block" style="background:#0b0b0b;"></div>
+        <div class="jf-swatch-name">Ink Black <em>Primary</em></div>
+        <div class="jf-swatch-meta">HEX 0B0B0B<br>RGB 11 · 11 · 11<br>CMYK 0 · 0 · 0 · 96</div>
+      </div>
+      <div>
+        <div class="jf-swatch-block" style="background:#726c63;"></div>
+        <div class="jf-swatch-name">Stone</div>
+        <div class="jf-swatch-meta">HEX 726C63<br>RGB 114 · 108 · 99<br>CMYK 0 · 5 · 13 · 55</div>
+      </div>
+      <div>
+        <div class="jf-swatch-block" style="background:#b9b3a8;"></div>
+        <div class="jf-swatch-name">Pale Stone</div>
+        <div class="jf-swatch-meta">HEX B9B3A8<br>RGB 185 · 179 · 168<br>CMYK 0 · 3 · 9 · 27</div>
+      </div>
+      <div>
+        <div class="jf-swatch-block" style="background:#f7f6f4; border:1px solid var(--jf-line);"></div>
+        <div class="jf-swatch-name">Alabaster</div>
+        <div class="jf-swatch-meta">HEX F7F6F4<br>RGB 247 · 246 · 244<br>CMYK 0 · 0 · 1 · 3</div>
+      </div>
+      <div>
+        <div class="jf-swatch-block jf-texture"></div>
+        <div class="jf-swatch-name">Signature Marble</div>
+        <div class="jf-swatch-meta">Texture, not a flat color.<br>Used as a ground for hero moments.</div>
+      </div>
+      <div>
+        <div class="jf-usage-bar-wrap">
+          <span class="jf-usage-label">Usage Ratio</span>
+          <div class="jf-usage-bar">
+            <div style="width:55%; background:#f7f6f4; border-right:1px solid var(--jf-line);"></div>
+            <div style="width:35%; background:#0b0b0b;"></div>
+            <div style="width:10%; background:#726c63;"></div>
+          </div>
+          <div class="jf-usage-meta">55% Alabaster · 35% Ink · 10% Stone accent</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     TYPOGRAPHY
+=========================================== -->
+<section class="jf-section" id="typography">
+  <div class="jf-container">
+    <div class="jf-section-head fade-in">
+      <span class="jf-kicker">03 · Visual Language</span>
+      <h2 class="jf-h2">Typography</h2>
+    </div>
+    <div class="jf-type-grid fade-in-stagger">
+      <div>
+        <span class="jf-type-label">Display · GFS Didot</span>
+        <div class="jf-type-Aa">Aa</div>
+        <div class="jf-type-alpha">ABCDEFGHIJKLM<br>NOPQRSTUVWXYZ</div>
+        <div class="jf-rule"></div>
+        <div class="jf-type-samples">
+          <p style="font-weight:400;">Joseph Farah, Regular</p>
+          <p style="font-style:italic;">Joseph Farah, Italic</p>
+          <p style="font-weight:700;">Joseph Farah, Bold</p>
+        </div>
+        <p class="jf-note">Used for the wordmark, page titles, and pull statements. Set with generous spacing; never
+          condensed.</p>
+      </div>
+      <div>
+        <span class="jf-type-label">Supporting · Poppins</span>
+        <p class="jf-poppins-row" style="font-weight:300;">Light, Aa Bb Cc</p>
+        <p class="jf-poppins-row" style="font-weight:400;">Regular, Aa Bb Cc</p>
+        <p class="jf-poppins-row" style="font-weight:500;">Medium, Aa Bb Cc</p>
+        <p class="jf-poppins-row" style="font-weight:600;">SemiBold, Aa Bb Cc</p>
+        <p class="jf-poppins-row" style="font-weight:700;">Bold, Aa Bb Cc</p>
+
+        <div class="jf-hierarchy">
+          <span class="jf-kicker" style="margin-bottom:6px;">Hierarchy</span>
+          <div class="jf-section-title">Section Title</div>
+          <span class="jf-eyebrow-label">Eyebrow Label</span>
+          <p class="jf-poppins-note">Body copy sits in Poppins Regular at comfortable line height for long-form
+            reading.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     PATTERNS & MARKS
+=========================================== -->
+<section class="jf-section jf-section-alt" style="background:#0d0d0d;" id="patterns">
+  <div class="jf-container">
+    <div class="jf-section-head fade-in">
+      <span class="jf-kicker" style="color:var(--jf-pale);">03 · Visual Language</span>
+      <h2 class="jf-h2" style="color:#fff;">Patterns &amp; Marks</h2>
+    </div>
+    <div class="jf-pattern-grid fade-in-stagger">
+      <div class="jf-pattern-tile jf-pattern-marble"><span>Signature Marble Texture</span></div>
+      <div class="jf-pattern-tile jf-pattern-mono">
+        <div class="jf-pattern-mono-overlay"></div>
+        <span>Monogram Pattern, Backgrounds &amp; Packaging</span>
+      </div>
+    </div>
+    <div class="jf-motif-row fade-in">
+      <div>
+        <span class="jf-motif-label">Section Divider</span>
+        <div class="jf-divider-motif" style="margin-top:10px;">
+          <div class="jf-divider-line jf-divider-line--long" style="background:rgba(255,255,255,.5);"></div>
+        </div>
+      </div>
+      <div>
+        <span class="jf-motif-label">Ornamental Rule</span>
+        <div class="jf-divider-motif" style="margin-top:10px;">
+          <div class="jf-divider-dot" style="border-color:rgba(255,255,255,.5);"></div>
+          <div class="jf-divider-line" style="background:rgba(255,255,255,.5);"></div>
+          <div class="jf-divider-dot" style="border-color:rgba(255,255,255,.5);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     APPLICATIONS
+=========================================== -->
+<section class="jf-section" id="applications">
+  <div class="jf-container">
+    <div class="jf-section-head fade-in">
+      <span class="jf-kicker">04 · Applications</span>
+      <h2 class="jf-h2">Social Media</h2>
+    </div>
+    <div class="jf-social-mock fade-in">
+      <div class="jf-social-banner"><div class="jf-social-avatar"><img src="../assets/images/joseph-farah-monogram-white.png" alt="Avatar"></div></div>
+      <div class="jf-social-info">
+        <h3>Joseph Farah</h3>
+        <div class="jf-social-handle">@josephfarah</div>
+        <div class="jf-social-bio">Refined, deliberate, personal: bio line placeholder for profile description.</div>
+      </div>
+      <div class="jf-social-feed">
+        <div class="jf-feed-tile jf-feed-1"><img src="../assets/images/joseph-farah-monogram-white.png" alt=""></div>
+        <div class="jf-feed-tile jf-feed-2"><span>JOSEPH FARAH</span></div>
+        <div class="jf-feed-tile jf-feed-3"><img src="../assets/images/joseph-farah-monogram-white.png" alt=""></div>
+        <div class="jf-feed-tile jf-feed-4"></div>
+        <div class="jf-feed-tile jf-feed-5"><img src="../assets/images/joseph-farah-monogram-white.png" alt=""></div>
+        <div class="jf-feed-tile jf-feed-6"></div>
+      </div>
+    </div>
+    <div class="jf-social-caption">Feed aesthetic direction, alternating ink, alabaster &amp; stone tiles</div>
+
+    <div class="jf-section-head fade-in" style="margin-top:90px;">
+      <h2 class="jf-h2">Business Card</h2>
+      <p class="jf-lede">85 × 55mm, sample contact details shown; replace with final information.</p>
+    </div>
+    <div class="jf-cards-mock fade-in-stagger">
+      <div>
+        <div class="jf-biz-card jf-biz-card--front">
+          <img src="../assets/images/joseph-farah-monogram-white.png" alt="JF monogram">
+          <div style="font-family: var(--jf-serif); font-size:13px; letter-spacing:.3em; color:#fff; margin-top:8px;">JOSEPH FARAH</div>
+        </div>
+        <div class="jf-biz-card-label">Front — Ink, Reversed Monogram</div>
+      </div>
+      <div>
+        <div class="jf-biz-card jf-biz-card--back">
+          <div>
+            <div class="jf-card-name">Joseph Farah</div>
+            <div class="jf-card-title">Founder</div>
+          </div>
+          <div>
+            <div class="jf-card-rule"></div>
+            <div class="jf-card-contact">hello@josephfarah.com<br>+961 71 000 000<br>josephfarah.com</div>
+          </div>
+        </div>
+        <div class="jf-biz-card-label">Back — Alabaster, Contact Details</div>
+      </div>
+    </div>
+
+    <div class="jf-section-head fade-in" style="margin-top:90px;">
+      <h2 class="jf-h2">Letterhead &amp; Stationery</h2>
+    </div>
+    <div class="jf-app-grid2 fade-in-stagger">
+      <div>
+        <div class="jf-letterhead">
+          <img src="../assets/images/joseph-farah-logo.png" alt="" style="width:56px; margin-bottom:6px;">
+          <div style="font-family: var(--jf-serif); font-size:13px; letter-spacing:.28em; color: var(--jf-ink); margin-bottom:20px;">JOSEPH FARAH</div>
+          <div class="jf-lh-rule"></div>
+          <div class="jf-lh-bar w80"></div>
+          <div class="jf-lh-bar w60"></div>
+          <div class="jf-lh-bar w40" style="margin-bottom:26px;"></div>
+          <div class="jf-lh-bar w80"></div>
+          <div class="jf-lh-bar w60"></div>
+          <div class="jf-lh-spacer"></div>
+          <div class="jf-lh-footer">JOSEPHFARAH.COM &nbsp;·&nbsp; HELLO@JOSEPHFARAH.COM &nbsp;·&nbsp; +961 71 000 000</div>
+        </div>
+      </div>
+      <div class="jf-side-stack">
+        <div>
+          <div class="jf-envelope-seal">
+            <div class="jf-seal-circle"><img src="../assets/images/joseph-farah-monogram-white.png" alt=""></div>
+          </div>
+          <div class="jf-app-caption">Envelope, Flap Seal Detail</div>
+        </div>
+        <div>
+          <div class="jf-folder-cover">
+            <img src="../assets/images/joseph-farah-monogram-white.png" alt="">
+            <div style="font-family: var(--jf-serif); font-size:11px; letter-spacing:.28em; color:#fff; margin-top:8px;">JOSEPH FARAH</div>
+          </div>
+          <div class="jf-app-caption">Presentation Folder, Cover Detail</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jf-section-head fade-in" style="margin-top:90px;">
+      <h2 class="jf-h2">Email Signature</h2>
+      <p class="jf-lede">Sample contact details shown; replace with final information.</p>
+    </div>
+    <div class="jf-email-sig fade-in">
+      <div class="jf-email-avatar"><img src="../assets/images/joseph-farah-monogram-white.png" alt="Avatar"></div>
+      <div class="jf-email-divider"></div>
+      <div class="jf-email-body">
+        <div class="jf-card-name">Joseph Farah</div>
+        <div class="jf-card-title">Founder</div>
+        <div class="jf-card-contact">hello@josephfarah.com &nbsp;|&nbsp; +961 71 000 000<br>josephfarah.com &nbsp;|&nbsp; @josephfarah</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================================
+     CLOSING
+=========================================== -->
+<section class="jf-closing">
+  <img src="../assets/images/joseph-farah-monogram-white.png" alt="Joseph Farah monogram">
+  <h2>Thank You</h2>
+  <div class="jf-rule"></div>
+  <div class="jf-closing-meta">Brand Guidelines · Version 1.0 · 2026</div>
+  <div class="jf-closing-credit">
+    <p>Identity Design &amp; Guidelines By</p>
+    <a href="https://www.colartdigitalmarketingagency.com/">Colart Digital Marketing Agency</a>
+    <div class="jf-links">
+      <a href="https://branding.colartdigitalmarketingagency.com/">More Branding Work</a> ·
+      <a href="https://www.colartdigitalmarketingagency.com/services/">Our Services</a> ·
+      <a href="https://www.colartdigitalmarketingagency.com/contact/">Start a Project</a>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
