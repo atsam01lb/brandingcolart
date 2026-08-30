@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Branding by Colart | Brand Identities We've Created</title>
+<meta name="description" content="Explore the logos and brand identities Colart Digital Marketing Agency has created for clients across Lebanon and the GCC.">
+<link rel="canonical" href="https://branding.colartdigitalmarketingagency.com/">
+
+<!-- Favicon (Colart mark) -->
+<link rel="icon" type="image/png" href="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
+<link rel="apple-touch-icon" href="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Branding by Colart">
+<meta property="og:description" content="The logos and brand identities Colart has created for clients across Lebanon and the GCC.">
+<meta property="og:image" content="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
+<meta property="og:type" content="website">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Colart brand stylesheet (shared across colartdigitalmarketingagency.com) -->
+<link rel="stylesheet" href="style.css">
+
+<style>
+  /* ===========================================
+     PAGE-SPECIFIC ADDITIONS — Branding hub
+     Extends style.css tokens; no rules here override
+     the shared stylesheet's existing selectors.
+  =========================================== */
+
+  /* Simple header CTA for this page (no multi-page nav needed) */
+  .branding-header-actions { display: flex; align-items: center; gap: 12px; }
+  @media (max-width: 640px) { .branding-header-actions .nav-cta span { display: none; } }
+
+  /* Secondary "outline" button — for use on light/white backgrounds
+     (style.css's .btn-ghost is designed for dark hero backgrounds only) */
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #fff;
+    border: 1.5px solid rgba(100, 40, 120, .28);
+    color: var(--purple);
+    padding: 15.5px 28px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .01em;
+    transition: background .3s, border-color .3s, color .3s, transform .3s;
+  }
+  .btn-outline:hover {
+    background: var(--purple);
+    border-color: var(--purple);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .btn-outline i { font-size: 13px; }
+
+  /* Intro section buttons row */
+  .intro-buttons {
+    margin-top: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  /* Brand portfolio grid — namespaced "branding-*" so it never collides
+     with this stylesheet's existing .brand-card / .brand-grid / .logo-preview-*
+     components used elsewhere on the site (those drive modal case studies). */
+  .branding-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+  }
+  @media (max-width: 620px) {
+    .branding-grid { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; }
+  }
+
+  .branding-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    box-shadow: 0 4px 30px rgba(26, 20, 36, .04);
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform .5s cubic-bezier(.7, 0, .2, 1), box-shadow .5s, border-color .5s;
+  }
+  .branding-card:hover,
+  .branding-card:focus-visible {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(100, 40, 120, .14);
+    border-color: rgba(100, 40, 120, .22);
+  }
+  .branding-card:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+
+  .branding-card-logo {
+    aspect-ratio: 4 / 3;
+    background: var(--bg-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 26px;
+  }
+  .branding-card-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    transition: transform .6s cubic-bezier(.2, .7, .2, 1);
+  }
+  .branding-card:hover .branding-card-logo img { transform: scale(1.06); }
+
+  /* "Coming soon" tile — for cards whose logo isn't published yet */
+  .branding-card-logo--placeholder {
+    position: relative;
+    background: #fff;
+    border: 2px dashed rgba(100, 40, 120, .22);
+    margin: 10px;
+    border-radius: 14px;
+    flex-direction: column;
+    gap: 10px;
+    color: rgba(100, 40, 120, .55);
+  }
+  .branding-card-logo--placeholder i { font-size: 26px; color: rgba(100, 40, 120, .38); }
+  .branding-card-badge {
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+  }
+
+  .branding-card-body {
+    padding: 20px 20px 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 4px;
+  }
+  .branding-card-body h3 {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+  }
+  .branding-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--purple);
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+    transition: gap .25s, color .25s;
+  }
+  .branding-card-cta i { font-size: 10px; transition: transform .3s; }
+  .branding-card:hover .branding-card-cta { color: var(--magenta); gap: 10px; }
+  .branding-card:hover .branding-card-cta i { transform: translate(2px, -2px); }
+
+  /* Minimal footer for this hub page */
+  .branding-footer { text-align: center; }
+  .branding-footer img { height: 42px; margin: 0 auto 14px; }
+  .branding-footer .foot-tagline { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="https://www.colartdigitalmarketingagency.com/" class="logo" aria-label="Colart Digital Marketing Agency — home">
+    <img src="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png" alt="Colart Digital Marketing Agency">
+  </a>
+  <div class="branding-header-actions">
+    <a href="https://www.colartdigitalmarketingagency.com/" class="nav-cta">
+      <i class="fa-solid fa-arrow-left"></i><span>Back to Colart</span>
+    </a>
+  </div>
+</header>
+
+<main style="padding-top: 76px;">
+
+  <!-- ===========================================
+       INTRO — Branding by Colart
+  =========================================== -->
+  <section class="welcome-section reveal">
+    <div class="welcome-content">
+      <div class="welcome-badge">
+        <i class="fa-solid fa-palette"></i>
+        BY COLART <strong>BRANDING</strong>
+      </div>
+      <h1 class="welcome-title">
+        Every Brand Has a Story.<br>
+        We Give It a <span class="magenta">Face.</span>
+      </h1>
+      <p class="welcome-text">
+        Colart designs the logos, colors and visual identity systems behind the brands we work with —
+        from neighborhood coffee shops to cultural initiatives. This is a look at the branding we've
+        created, straight from the source.
+      </p>
+      <p class="welcome-text">
+        Want the full picture of what we do? Explore our services, check out a live client menu, or
+        see how our WhatsApp request tool works for venues.
+      </p>
+      <div class="intro-buttons">
+        <a href="https://www.colartdigitalmarketingagency.com/services/" class="btn-pill-gradient">
+          Discover Colart's Services <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="https://menus.colartdigitalmarketingagency.com/" class="btn-outline">
+          <i class="fa-solid fa-utensils"></i> Menus.Colart
+        </a>
+        <a href="https://requests.colartdigitalmarketingagency.com/" class="btn-outline">
+          <i class="fa-solid fa-music"></i> Requests.Colart
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       BRANDING PORTFOLIO GRID
+  =========================================== -->
+  <section class="work-section work-section-alt" id="brands">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-eyebrow-pill">OUR PORTFOLIO</span>
+        <h2>Brands We've <span class="magenta">Branded</span></h2>
+        <p>A curated look at the visual identities Colart has designed. Click any logo to view that
+          brand's full branding showcase.</p>
+      </div>
+
+      <div class="branding-grid fade-in-stagger">
+
+        <!-- Joseph Farah — logo not yet published -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/josephfarah" target="_blank" rel="noopener">
+          <div class="branding-card-logo branding-card-logo--placeholder">
+            <i class="fa-solid fa-image"></i>
+            <span class="branding-card-badge">Coming Soon</span>
+          </div>
+          <div class="branding-card-body">
+            <h3>Joseph Farah</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Healthy Little Me -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/healthylittleme" target="_blank" rel="noopener">
+          <div class="branding-card-logo">
+            <img src="https://www.colartdigitalmarketingagency.com/assets/images/work/logos/035.png" alt="Healthy Little Me logo" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Healthy Little Me</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Glow Bites -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/glowbites" target="_blank" rel="noopener">
+          <div class="branding-card-logo">
+            <img src="https://menus.colartdigitalmarketingagency.com/assets/img/glowbites-logo.svg" alt="Glow Bites logo" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Glow Bites</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Hand in Hand — logo not yet published -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/handinhand" target="_blank" rel="noopener">
+          <div class="branding-card-logo branding-card-logo--placeholder">
+            <i class="fa-solid fa-image"></i>
+            <span class="branding-card-badge">Coming Soon</span>
+          </div>
+          <div class="branding-card-body">
+            <h3>Hand in Hand</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Noon Coffee -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/nooncoffee" target="_blank" rel="noopener">
+          <div class="branding-card-logo">
+            <img src="https://www.colartdigitalmarketingagency.com/assets/images/work/branding/noon/noon-01.jpg" alt="Noon Coffee logo" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Noon Coffee</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Atlas Cultural Initiative -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/atlasculturalinitiative" target="_blank" rel="noopener">
+          <div class="branding-card-logo">
+            <img src="https://www.colartdigitalmarketingagency.com/assets/images/work/branding/atlas/atlas-01.jpg" alt="Atlas Cultural Initiative logo" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Atlas Cultural Initiative</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+        <!-- Hikaya Coffee Shop -->
+        <a class="branding-card" href="https://branding.colartdigitalmarketingagency.com/hikayacoffeeshop" target="_blank" rel="noopener">
+          <div class="branding-card-logo">
+            <img src="https://www.colartdigitalmarketingagency.com/assets/images/work/branding/hikaya/hikaya-01.jpg" alt="Hikaya Coffee Shop logo" loading="lazy">
+          </div>
+          <div class="branding-card-body">
+            <h3>Hikaya Coffee Shop</h3>
+            <span class="branding-card-cta">View Branding <i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===========================================
+       FINAL CTA
+  =========================================== -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-card-bg"></div>
+        <div class="cta-card-content">
+          <span class="section-eyebrow-pill light">LET'S BUILD YOURS NEXT</span>
+          <h2>Ready for a Brand <span class="magenta-light">People Remember?</span></h2>
+          <p>From logo to launch, Colart designs identities that grow with your business.</p>
+          <div class="cta-buttons-row">
+            <a href="https://www.colartdigitalmarketingagency.com/contact/" class="cta-btn-primary">
+              <i class="fa-solid fa-paper-plane"></i> Start a Project
+            </a>
+            <a href="https://www.colartdigitalmarketingagency.com/services/" class="cta-btn-secondary">
+              <i class="fa-solid fa-list-check"></i> See All Services
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-top branding-footer" style="grid-template-columns: 1fr; padding-bottom: 26px;">
+    <div class="foot-brand" style="margin: 0 auto;">
+      <img src="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png" alt="Colart Digital Marketing Agency">
+      <p class="foot-tagline">We Create. You Grow.</p>
+      <p class="foot-desc" style="margin: 0 auto;">Branding, web and digital marketing for growing brands across Lebanon, the GCC and beyond.</p>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    &copy; <span id="year"></span> Colart Digital Marketing Agency. All rights reserved. ·
+    <a href="https://www.colartdigitalmarketingagency.com/">colartdigitalmarketingagency.com</a>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Scroll-triggered reveal for .fade-in / .fade-in-stagger elements
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade-in, .fade-in-stagger').forEach((el) => observer.observe(el));
+</script>
+
+</body>
+</html>
