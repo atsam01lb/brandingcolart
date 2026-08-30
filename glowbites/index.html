@@ -1,184 +1,702 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glow Bites — Branding by Colart | Coming Soon</title>
-<meta name="description" content="The full brand identity Colart is creating for Glow Bites is coming soon. Explore Colart's branding portfolio.">
-<link rel="canonical" href="https://branding.colartdigitalmarketingagency.com/glowbites">
-
-<!-- Favicon (Colart mark) -->
-<link rel="icon" type="image/png" href="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
-<link rel="apple-touch-icon" href="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
-
-<!-- Open Graph -->
-<meta property="og:title" content="Glow Bites — Branding by Colart">
-<meta property="og:description" content="The full brand identity Colart is creating for Glow Bites is coming soon.">
-<meta property="og:image" content="assets/images/glowbites-badge.png">
-<meta property="og:type" content="website">
-
-<!-- Fonts -->
+<title>Glow Bites Brand Book</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,500;1,700&display=swap" rel="stylesheet">
-
-<!-- Icons -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Cairo:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<!-- Colart brand stylesheet -->
 <link rel="stylesheet" href="style.css">
-
-<style>
-  /* ===========================================
-     PAGE-SPECIFIC ADDITIONS — "Coming Soon" template
-     Namespaced "soon-*"; extends style.css tokens only.
-  =========================================== */
-
-  .branding-header-actions { display: flex; align-items: center; gap: 12px; }
-  @media (max-width: 640px) { .branding-header-actions .nav-cta span { display: none; } }
-
-  .soon-hero {
-    position: relative;
-    min-height: 88vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 150px 24px 90px;
-    background: linear-gradient(135deg, var(--purple) 0%, var(--magenta) 100%);
-    overflow: hidden;
-    text-align: center;
-  }
-  .soon-hero::before {
-    content: "";
-    position: absolute; inset: 0;
-    background:
-      radial-gradient(circle at 12% 18%, rgba(255,255,255,.14), transparent 42%),
-      radial-gradient(circle at 88% 82%, rgba(255,255,255,.10), transparent 46%);
-    pointer-events: none;
-  }
-  .soon-hero-inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
-
-  .soon-badge {
-    width: 132px;
-    height: 132px;
-    margin: 0 auto 30px;
-    border-radius: 50%;
-    box-shadow: 0 18px 46px rgba(26,20,36,.28), 0 0 0 6px rgba(255,255,255,.14);
-  }
-  .soon-badge img { width: 100%; height: 100%; display: block; border-radius: 50%; }
-
-  .soon-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,.16);
-    border: 1px solid rgba(255,255,255,.32);
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: .09em;
-    text-transform: uppercase;
-    padding: 8px 16px;
-    border-radius: 999px;
-    margin-bottom: 22px;
-  }
-  .soon-eyebrow i { font-size: 10px; }
-
-  .soon-hero h1 {
-    font-family: var(--font-display, inherit);
-    font-size: clamp(32px, 5vw, 48px);
-    font-weight: 800;
-    color: #fff;
-    line-height: 1.15;
-    margin-bottom: 18px;
-  }
-  .soon-hero p {
-    font-size: 17px;
-    line-height: 1.7;
-    color: rgba(255,255,255,.86);
-    max-width: 520px;
-    margin: 0 auto 34px;
-  }
-
-  .soon-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; }
-  .soon-buttons .btn-primary { background: #fff; color: var(--purple); }
-  .soon-buttons .btn-primary:hover { background: rgba(255,255,255,.9); }
-  .soon-buttons .btn-ghost { border-color: rgba(255,255,255,.5); color: #fff; }
-  .soon-buttons .btn-ghost:hover { background: rgba(255,255,255,.12); border-color: #fff; }
-
-  .soon-notify {
-    margin-top: 44px;
-    padding-top: 30px;
-    border-top: 1px solid rgba(255,255,255,.24);
-    font-size: 13.5px;
-    color: rgba(255,255,255,.78);
-  }
-  .soon-notify a { color: #fff; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
-
-  .branding-footer { text-align: center; }
-  .branding-footer img { height: 42px; margin: 0 auto 14px; }
-  .branding-footer .foot-tagline { margin-bottom: 6px; }
-</style>
 </head>
 <body>
 
-<header>
-  <a href="https://www.colartdigitalmarketingagency.com/" class="logo" aria-label="Colart Digital Marketing Agency — home">
-    <img src="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png" alt="Colart Digital Marketing Agency">
-  </a>
-  <div class="branding-header-actions">
-    <a href="https://branding.colartdigitalmarketingagency.com/" class="nav-cta">
-      <i class="fa-solid fa-arrow-left"></i><span>Back to Branding Hub</span>
-    </a>
-  </div>
-</header>
 
-<main>
+<div class="shell">
+  <nav class="toc" aria-label="Table of contents">
+    <a class="toc-hub-link" href="https://branding.colartdigitalmarketingagency.com/"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Branding Portfolio</a>
+    <a class="toc-brand" href="#cover"><img src="assets/icon_leaf_only.webp" alt=""><span>Glow Bites</span></a>
+    <ul class="toc-list" id="tocList">
+      <li><a class="toc-link" href="#s1"><span class="n">01</span><span>Brand Strategy</span></a></li>
+      <li><a class="toc-link" href="#s2"><span class="n">02</span><span>Logo Identity</span></a></li>
+      <li><a class="toc-link" href="#s3"><span class="n">03</span><span>Color System</span></a></li>
+      <li><a class="toc-link" href="#s4"><span class="n">04</span><span>Typography</span></a></li>
+      <li><a class="toc-link" href="#s5"><span class="n">05</span><span>Graphic Language</span></a></li>
+      <li><a class="toc-link" href="#s6"><span class="n">06</span><span>Photography</span></a></li>
+      <li><a class="toc-link" href="#s7"><span class="n">07</span><span>Packaging</span></a></li>
+      <li><a class="toc-link" href="#s8"><span class="n">08</span><span>Digital Identity</span></a></li>
+      <li><a class="toc-link" href="#s9"><span class="n">09</span><span>Applications</span></a></li>
+      <li><a class="toc-link" href="#s10"><span class="n">10</span><span>Guidelines Summary</span></a></li>
+    </ul>
+  </nav>
 
-  <!-- ===========================================
-       COMING SOON — Glow Bites
-  =========================================== -->
-  <section class="soon-hero">
-    <div class="soon-hero-inner">
-      <div class="soon-badge">
-        <img src="assets/images/glowbites-badge.png" alt="Glow Bites monogram">
+  <main>
+    <section class="cover" id="cover">
+      <div class="kicker">Brand Identity Guidelines &middot; Version 1.0</div>
+      <img class="cover-logo" src="assets/primary_full.webp" alt="Glow Bites logo">
+      <p class="cover-sub">A complete guide to how Glow Bites looks, sounds and feels - across packaging, the menu, social media and every day it reaches someone's hands.</p>
+      <div class="cover-meta">PREPARED FOR GLOW BITES &nbsp;&middot;&nbsp; AUGUST 2026</div>
+    </section>
+
+    <section class="chapter" id="s1">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">01</span><h2>Brand Strategy</h2></div>
+        <p class="chapter-lede">Before Glow Bites is a color palette or a logo, it's a point of view: that eating well and eating well <em>should never be two different sentences.</em> Everything in this book exists to protect that idea.</p>
+
+        <h3 class="sub">Brand Positioning</h3>
+        <p>Glow Bites occupies the space between the bakery counter and the health-food aisle - a space most brands treat as a compromise and Glow Bites treats as the whole point. For the health-conscious home in Lebanon and the region, Glow Bites is the everyday source of treats - from healthy balls and granola to Maamoul and cake - made with real, balanced ingredients, so choosing to feel good never means giving up the ritual of something sweet.</p>
+        <p>Where diet brands lead with restriction and traditional bakeries lead with indulgence, Glow Bites leads with <strong>balance</strong>: recipes considered enough to support gluten-free, sugar-free and high-protein needs, and crafted enough to still taste completely homemade.</p>
+
+        <h3 class="sub">Brand Personality</h3>
+        <p>If Glow Bites walked into a room, it would be the friend who bakes for the whole group without anyone having to ask what they can and can't eat - warm, capable, a little playful, and never precious about health.</p>
+        <div class="trait-grid">
+          <div class="trait"><span class="yes">Warm</span><br><span class="no">not clinical</span></div>
+          <div class="trait"><span class="yes">Encouraging</span><br><span class="no">not preachy</span></div>
+          <div class="trait"><span class="yes">Homemade</span><br><span class="no">not industrial</span></div>
+          <div class="trait"><span class="yes">Playful</span><br><span class="no">not childish</span></div>
+          <div class="trait"><span class="yes">Confident</span><br><span class="no">not boastful</span></div>
+          <div class="trait"><span class="yes">Grounded</span><br><span class="no">not trendy</span></div>
+        </div>
+
+        <h3 class="sub">Brand Values</h3>
+        <ul class="value-list">
+          <li><span class="vnum">01</span><div><strong>Balance over restriction</strong>Glow Bites is built for people managing a goal, not punishing themselves for one.</div></li>
+          <li><span class="vnum">02</span><div><strong>Real, honest ingredients</strong>Every recipe should be easy to say out loud and easy to explain to a five-year-old.</div></li>
+          <li><span class="vnum">03</span><div><strong>Joy stays on the menu</strong>Health-conscious is not the same as joyless. Treats are still treats.</div></li>
+          <li><span class="vnum">04</span><div><strong>Craft, not shortcuts</strong>Small-batch, homemade methods over mass production, even as the brand grows.</div></li>
+          <li><span class="vnum">05</span><div><strong>Made for real life</strong>Accessible every day, not reserved for a cheat day or a special occasion.</div></li>
+          <li><span class="vnum">06</span><div><strong>Warmth of shared tradition</strong>Maamoul and gifting sit at the heart of the range on purpose - treats are for sharing.</div></li>
+        </ul>
+
+        <h3 class="sub">Target Audience</h3>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="type-meta" style="margin-top:0;margin-bottom:.5rem;">PRIMARY</div>
+            <p>Health-conscious individuals and parents, largely 25&ndash;45, actively managing wellness, fitness or dietary goals (weight, gut health, gluten-free or sugar-free needs) who are not willing to give up dessert to do it. They snack with intention, read labels, and share what they find.</p>
+          </div>
+          <div class="card">
+            <div class="type-meta" style="margin-top:0;margin-bottom:.5rem;">SECONDARY</div>
+            <p>Gift-givers and hosts - especially around Eid and Maamoul season - along with offices ordering healthier snack boxes, and the wider wellness and fitness community looking for treats that fit the way they already eat.</p>
+          </div>
+        </div>
+
+        <h3 class="sub">Brand Messaging &amp; USP</h3>
+        <p><strong>Core message:</strong> You shouldn't have to choose between healthy and delicious. <strong>Unique selling proposition:</strong> Glow Bites is the brand that brings traditional, beloved treats - Maamoul chief among them - together with modern healthy-snacking formats like energy balls and granola, handcrafted from balanced recipes rather than swapped for imitation "diet" versions.</p>
+        <ul class="pill-list">
+          <li class="pill">Real ingredients</li>
+          <li class="pill">Balanced, not restrictive</li>
+          <li class="pill">Handmade in small batches</li>
+          <li class="pill">Gluten-free &amp; sugar-free options</li>
+          <li class="pill">Tradition, reimagined</li>
+          <li class="pill">Made to share</li>
+        </ul>
+
+        <h3 class="sub">Brand Voice &amp; Tone</h3>
+        <p>Glow Bites speaks like an enthusiastic friend who happens to know a lot about food - never like a nutrition label reading itself aloud. The voice stays constant; the tone flexes by context.</p>
+        <div class="table-scroll">
+        <table class="spec">
+          <thead><tr><th>Channel</th><th>Tone leans toward</th><th>Example</th></tr></thead>
+          <tbody>
+            <tr><td>Packaging &amp; labels</td><td class="mono">Clear, warm, simple</td><td>"Oats, dates, a little love. That's it."</td></tr>
+            <tr><td>Social media</td><td class="mono">Playful, inviting</td><td>"Monday just got a glow-up. 🌿"</td></tr>
+            <tr><td>Gifting &amp; occasions</td><td class="mono">Personal, generous</td><td>"Maamoul made the way it should be - shared."</td></tr>
+            <tr><td>Nutrition &amp; education</td><td class="mono">Honest, unfussy</td><td>"No refined sugar. No shortcuts either."</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h3 class="sub">Tagline &amp; Brand Statement</h3>
+        <blockquote class="statement">"Healthy Energy, Sweetly Made."<cite>Primary tagline - used with the logo</cite></blockquote>
+        <blockquote class="statement">"Eat well. Feel good. Glow from within."<cite>Brand statement - used in longer-form messaging</cite></blockquote>
       </div>
-      <span class="soon-eyebrow"><i class="fa-solid fa-pen-nib"></i> By Colart · Branding · Coming Soon</span>
-      <h1>The Glow Bites Identity Is Being Crafted.</h1>
-      <p>A vibrant, appetite-driven identity for a modern snacks &amp; treats brand. The full brand guidelines — logo system, color palette, typography and applications — will be showcased here soon.</p>
-      <div class="soon-buttons">
-        <a href="https://branding.colartdigitalmarketingagency.com/" class="btn-primary">
-          <i class="fa-solid fa-arrow-left arrow"></i> Back to Branding Hub
-        </a>
-        <a href="https://www.colartdigitalmarketingagency.com/services/" class="btn-ghost">
-          <i class="fa-solid fa-list-check"></i> Discover Colart's Services
-        </a>
+    </section>
+
+    <section class="chapter" id="s2">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">02</span><h2>Logo Identity</h2></div>
+        <p class="chapter-lede">One wordmark, drawn once, and used consistently. The "o" in Glow carries a small two-leaf mark - the one piece of the identity that can step out on its own as an icon.</p>
+
+        <h3 class="sub">Primary Logo</h3>
+        <p>The full lockup - wordmark and tagline together - is the default, preferred version of the logo. Use it whenever there's room.</p>
+        <div class="logo-tile on-cream"><img src="assets/primary_full.webp" alt="Glow Bites primary logo, full color"></div>
+
+        <h3 class="sub">Secondary &amp; Icon Lockups</h3>
+        <p>For wide, short spaces - headers, email signatures, banners - use the horizontal lockup. For square spaces - packaging fronts, social avatars, stamps - use the stacked icon-led version. The leaf mark alone stands in for app icons, favicons and social profile photos.</p>
+        <div class="grid grid-2">
+          <div class="tile-wrap"><div class="logo-tile on-cream"><img src="assets/lockup_horizontal.webp" alt="Glow Bites horizontal lockup"></div><div class="tile-label">HORIZONTAL - wide formats</div></div>
+          <div class="tile-wrap"><div class="logo-tile on-cream"><img src="assets/lockup_stacked_icon_top.webp" alt="Glow Bites stacked icon-led lockup" style="max-height:150px;"></div><div class="tile-label">STACKED - square formats</div></div>
+        </div>
+        <div class="grid grid-3" style="margin-top:1.1rem;">
+          <div class="tile-wrap"><div class="logo-tile on-cream"><img src="assets/icon_leaf_only.webp" alt="Glow Bites leaf mark" style="max-height:80px;"></div><div class="tile-label">MARK ONLY - icon / favicon</div></div>
+          <div class="tile-wrap"><div class="logo-tile on-orange" style="background:var(--orange);"><img src="assets/avatar_icon_circle_orange.webp" alt="Glow Bites social avatar on orange" style="max-height:130px;"></div><div class="tile-label">SOCIAL AVATAR - orange</div></div>
+          <div class="tile-wrap"><div class="logo-tile on-cream"><img src="assets/avatar_icon_circle_cream.webp" alt="Glow Bites social avatar on cream" style="max-height:130px;"></div><div class="tile-label">SOCIAL AVATAR - cream</div></div>
+        </div>
+
+        <h3 class="sub">Black, White &amp; Monochrome</h3>
+        <p>For one-color printing, engraving, embossing or any background the full palette can't sit on cleanly.</p>
+        <div class="grid grid-3">
+          <div class="tile-wrap"><div class="logo-tile on-cream"><img src="assets/primary_full_BLACK.webp" alt="Glow Bites logo in solid black"></div><div class="tile-label">BLACK - on light backgrounds</div></div>
+          <div class="tile-wrap"><div class="logo-tile on-espresso"><img src="assets/primary_full_WHITE.webp" alt="Glow Bites logo in solid white"></div><div class="tile-label">WHITE - on dark backgrounds</div></div>
+          <div class="tile-wrap"><div class="logo-tile on-brown"><img src="assets/lockup_horizontal_WHITE.webp" alt="Glow Bites horizontal logo in white on brown"></div><div class="tile-label">REVERSED - on brand brown</div></div>
+        </div>
+
+        <h3 class="sub">Clear Space &amp; Minimum Size</h3>
+        <p>Let the logo breathe. Keep a minimum clear space equal to the height of the leaf mark (defined here as <strong>X</strong>) free of text, edges and other graphics on every side.</p>
+        <div class="table-scroll">
+        <table class="spec">
+          <thead><tr><th>Version</th><th>Digital minimum</th><th>Print minimum</th></tr></thead>
+          <tbody>
+            <tr><td>Primary / horizontal lockup</td><td class="mono">140px wide</td><td class="mono">3.2 cm / 1.25 in wide</td></tr>
+            <tr><td>Stacked lockup</td><td class="mono">110px wide</td><td class="mono">2.6 cm / 1 in wide</td></tr>
+            <tr><td>Leaf mark only</td><td class="mono">24px wide</td><td class="mono">0.8 cm / 0.3 in wide</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h3 class="sub">Usage Rules</h3>
+        <div class="dd-grid">
+          <div class="dd do">
+            <h4>Do</h4>
+            <ul>
+              <li>Use the supplied files at their original proportions</li>
+              <li>Place the full-color logo on cream, white, or brand brown</li>
+              <li>Use the white or black version on photography, with enough contrast</li>
+              <li>Keep the minimum clear space around every version</li>
+            </ul>
+          </div>
+          <div class="dd dont">
+            <h4>Don't</h4>
+            <ul>
+              <li>Stretch, skew, rotate or add drop shadows to the logo</li>
+              <li>Recolor the wordmark outside the approved palette</li>
+              <li>Place the full-color logo over a busy photo without a scrim</li>
+              <li>Rebuild, re-letter or approximate the wordmark in another font</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <p class="soon-notify">
-        Want to see more brand work in the meantime? <a href="https://branding.colartdigitalmarketingagency.com/josephfarah">View the Joseph Farah brand guidelines &rarr;</a>
-      </p>
-    </div>
-  </section>
+    </section>
 
-</main>
+    <section class="chapter" id="s3">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">03</span><h2>Brand Color System</h2></div>
+        <p class="chapter-lede">Every color in the system is pulled directly from the logo artwork - nothing here was invented separately from it, so brand and product always feel like one family.</p>
 
-<footer>
-  <div class="foot-top branding-footer" style="grid-template-columns: 1fr; padding-bottom: 26px;">
-    <div class="foot-brand" style="margin: 0 auto;">
-      <img src="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png" alt="Colart Digital Marketing Agency">
-      <p class="foot-tagline">We Create. You Grow.</p>
-      <p class="foot-desc" style="margin: 0 auto;">Branding, web and digital marketing for growing brands across Lebanon, the GCC and beyond.</p>
-    </div>
-  </div>
-  <div class="foot-bottom">
-    &copy; <span id="year"></span> Colart Digital Marketing Agency. All rights reserved. ·
-    <a href="https://www.colartdigitalmarketingagency.com/">colartdigitalmarketingagency.com</a>
+        <h3 class="sub">Primary Colors</h3>
+        <div class="grid grid-2">
+          <div class="swatch">
+            <div class="chip" style="background:#C97629;"></div>
+            <div class="info"><div class="cname">Glow Orange</div><div class="code"><b>HEX</b> #C97629<br><b>RGB</b> 201, 118, 41<br><b>CMYK</b> 0, 41, 80, 21</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#733919;"></div>
+            <div class="info"><div class="cname">Bites Brown</div><div class="code"><b>HEX</b> #733919<br><b>RGB</b> 115, 57, 25<br><b>CMYK</b> 0, 50, 78, 55</div></div>
+          </div>
+        </div>
+
+        <h3 class="sub">Secondary / Accent Colors</h3>
+        <div class="grid grid-2">
+          <div class="swatch">
+            <div class="chip" style="background:#818735;"></div>
+            <div class="info"><div class="cname">Olive Leaf Dark</div><div class="code"><b>HEX</b> #818735<br><b>RGB</b> 129, 135, 53<br><b>CMYK</b> 4, 0, 61, 47</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#C1C04E;"></div>
+            <div class="info"><div class="cname">Olive Leaf Light</div><div class="code"><b>HEX</b> #C1C04E<br><b>RGB</b> 193, 192, 78<br><b>CMYK</b> 0, 1, 60, 24</div></div>
+          </div>
+        </div>
+
+        <h3 class="sub">Neutrals</h3>
+        <div class="grid grid-2">
+          <div class="swatch">
+            <div class="chip" style="background:#FFFAF0;"></div>
+            <div class="info"><div class="cname">Cream</div><div class="code"><b>HEX</b> #FFFAF0<br><b>RGB</b> 255, 250, 240<br><b>CMYK</b> 0, 2, 6, 0</div></div>
+          </div>
+          <div class="swatch">
+            <div class="chip" style="background:#2B1B10;"></div>
+            <div class="info"><div class="cname">Espresso Ink</div><div class="code"><b>HEX</b> #2B1B10<br><b>RGB</b> 43, 27, 16<br><b>CMYK</b> 0, 37, 63, 83</div></div>
+          </div>
+        </div>
+        <p style="margin-top:.9rem;font-size:.88rem;color:var(--taupe);">Espresso Ink is a near-black drawn from Bites Brown, used for long-form body text where pure brown loses legibility at small sizes.</p>
+
+        <h3 class="sub">Color Usage Ratios</h3>
+        <p>Cream should always feel like the room the brand lives in - not just another color in the mix.</p>
+        <div style="display:flex;height:3rem;border-radius:.6rem;overflow:hidden;border:1px solid var(--hairline);">
+          <div style="flex:60;background:#FFFAF0;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.72rem;color:var(--taupe);">60% Cream</div>
+          <div style="flex:25;background:#C97629;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.72rem;color:#FFF3E4;">25% Orange + Brown</div>
+          <div style="flex:10;background:#818735;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.68rem;color:#F3F3DE;">10% Olive</div>
+          <div style="flex:5;background:#2B1B10;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:.6rem;color:#EADFD4;">5%</div>
+        </div>
+
+        <h3 class="sub">Background Combinations</h3>
+        <div class="grid grid-3">
+          <div class="tile-wrap"><div class="logo-tile on-cream"><img src="assets/lockup_horizontal.webp" alt="Full color logo on cream"></div><div class="tile-label">PREFERRED - full color on cream</div></div>
+          <div class="tile-wrap"><div class="logo-tile on-brown"><img src="assets/lockup_horizontal_WHITE.webp" alt="White logo on brown"></div><div class="tile-label">APPROVED - white on brown</div></div>
+          <div class="tile-wrap"><div class="logo-tile" style="background:#C1C04E;"><img src="assets/lockup_horizontal.webp" alt="Full color logo on olive light, low contrast example"></div><div class="tile-label">AVOID - low contrast on olive light</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="s4">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">04</span><h2>Typography</h2></div>
+        <p class="chapter-lede">Three typefaces, three jobs: one to greet, one to explain, one to measure - plus an Arabic companion so the brand reads just as naturally right-to-left.</p>
+
+        <h3 class="sub">Primary Typeface - Fredoka</h3>
+        <div class="type-sample">
+          <div class="role">Display &amp; Headlines</div>
+          <div class="big" style="font-family:'Fredoka';font-weight:600;font-size:clamp(1.8rem,1.4rem+2vw,3rem);color:var(--brown-deep);">Healthy Energy, Sweetly Made</div>
+          <div class="type-meta">Weights used: 500 (Medium), 600 (SemiBold) &middot; Headlines, section titles, product names, packaging hero type</div>
+        </div>
+
+        <h3 class="sub">Secondary Typeface - Karla</h3>
+        <div class="type-sample">
+          <div class="role">Body &amp; UI Text</div>
+          <div class="big" style="font-family:'Karla';font-weight:400;font-size:1.15rem;color:var(--espresso);max-width:56ch;">Oats, dates and a little love - that's the whole ingredient list. Glow Bites keeps recipes short, honest and easy to say out loud.</div>
+          <div class="type-meta">Weights used: 400 (Regular), 600 (SemiBold) &middot; Body copy, ingredient lists, captions, buttons, nutrition tables</div>
+        </div>
+
+        <h3 class="sub">Arabic Typeface - Cairo</h3>
+        <div class="type-sample">
+          <div class="role">Bilingual &amp; Arabic-first Content</div>
+          <div class="big" style="font-family:'Cairo';font-weight:600;font-size:1.6rem;color:var(--brown-deep);" dir="rtl">طاقة صحية، بحلاوة</div>
+          <div class="type-meta">Weights used: 400, 600, 700 &middot; Use for Arabic packaging copy, bilingual labels and Arabic-first social captions. Pairs at matching weights with Fredoka for headlines and Karla for body.</div>
+        </div>
+
+        <h3 class="sub">Utility Typeface - IBM Plex Mono</h3>
+        <div class="type-sample">
+          <div class="role">Specs, Codes &amp; Data</div>
+          <div class="big" style="font-family:'IBM Plex Mono';font-weight:400;font-size:1.05rem;color:var(--brown);">NET WT 150g &nbsp;/&nbsp; #C97629 &nbsp;/&nbsp; LOT-0826</div>
+          <div class="type-meta">Used sparingly &middot; nutrition tables, hex/spec references, prices, batch codes - never for headlines or long body copy</div>
+        </div>
+
+        <h3 class="sub">Type Hierarchy</h3>
+        <div class="card">
+          <div class="scale-row"><span class="tag">H1 / 40&ndash;56px</span><span class="sample" style="font-size:2.2rem;">Glow Bites</span></div>
+          <div class="scale-row"><span class="tag">H2 / 28&ndash;36px</span><span class="sample" style="font-size:1.6rem;">Healthy Balls</span></div>
+          <div class="scale-row"><span class="tag">H3 / 20&ndash;24px</span><span class="sample" style="font-size:1.2rem;">Date &amp; Oat Bites</span></div>
+          <div class="scale-row"><span class="tag">Body / 15&ndash;16px</span><span class="sample" style="font-family:'Karla';font-weight:400;font-size:1rem;">Made fresh in small batches, weekly.</span></div>
+          <div class="scale-row"><span class="tag">Caption / 12&ndash;13px</span><span class="sample" style="font-family:'IBM Plex Mono';font-weight:400;font-size:.8rem;">GLUTEN-FREE &middot; NO REFINED SUGAR</span></div>
+        </div>
+
+        <h3 class="sub">Digital &amp; Print Usage</h3>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="type-meta" style="margin-top:0;margin-bottom:.5rem;">DIGITAL</div>
+            <p>Load all four families from Google Fonts. Body text never drops below 14px; line length stays near 60&ndash;70 characters for readability on the website and menu.</p>
+          </div>
+          <div class="card">
+            <div class="type-meta" style="margin-top:0;margin-bottom:.5rem;">PRINT</div>
+            <p>Embed licensed font files in packaging and print artwork. Body copy on labels never drops below 7pt; nutrition tables may use 6pt Plex Mono at minimum for legal/regulatory text only.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="s5">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">05</span><h2>Graphic Language</h2></div>
+        <p class="chapter-lede">The visual world around the logo - a tone-on-tone pattern of the treats themselves, a two-leaf motif, and a small set of honest, single-weight icons.</p>
+
+        <h3 class="sub">Signature Pattern</h3>
+        <p>Drawn straight from the logo artwork: outlines of stars, hearts, gingerbread figures and cookies, tone-on-tone so it never competes with photography or type sitting on top of it.</p>
+        <div class="pattern-strip"></div>
+        <p style="margin-top:.8rem;font-size:.88rem;color:var(--taupe);">Use at low contrast on cream for packaging interiors, gift wrap, and website section backgrounds. Never place body text directly over the bold version without a solid panel behind it.</p>
+
+        <h3 class="sub">Shapes &amp; Graphic Elements</h3>
+        <p>The leaf mark is the brand's recurring punctuation - used as a bullet, a divider between two words in a headline, or a stamp on a sticker. Soft, organic "leaf-blob" shapes (drawn from the same silhouette) frame photography in place of hard rectangles.</p>
+        <div class="icon-row">
+          <div class="icon-chip"><div class="shape"><img src="assets/icon_leaf_only.webp" alt="" style="width:26px;"></div><div class="lbl">DIVIDER</div></div>
+          <div class="icon-chip"><div class="shape" style="border-radius:70% 30% 65% 35% / 55% 45% 55% 45%; background:var(--olive-light);"></div><div class="lbl">PHOTO FRAME</div></div>
+          <div class="icon-chip"><div class="shape" style="border-radius:30% 70% 35% 65% / 45% 55% 45% 55%; background:var(--orange);"></div><div class="lbl">COLOR BLOCK</div></div>
+        </div>
+
+        <h3 class="sub">Dietary &amp; Category Icons</h3>
+        <p>A single-weight, rounded-stroke icon set marks dietary attributes at a glance across packaging and the menu.</p>
+        <div class="icon-row" style="margin-top:.8rem;">
+          <div class="icon-chip">
+            <div class="shape"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M15 6c3 3 3 8 0 13-3-5-3-10 0-13z" stroke="#733919" stroke-width="1.6" stroke-linejoin="round"/><path d="M6 15h18" stroke="#C97629" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div class="lbl">GLUTEN-FREE</div>
+          </div>
+          <div class="icon-chip">
+            <div class="shape"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><rect x="9" y="9" width="12" height="12" rx="2" stroke="#733919" stroke-width="1.6"/><path d="M7 7l16 16" stroke="#C97629" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div class="lbl">SUGAR-FREE</div>
+          </div>
+          <div class="icon-chip">
+            <div class="shape"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="9" cy="15" r="3" stroke="#733919" stroke-width="1.6"/><circle cx="21" cy="15" r="3" stroke="#733919" stroke-width="1.6"/><path d="M12 15h6" stroke="#C97629" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+            <div class="lbl">HIGH-PROTEIN</div>
+          </div>
+          <div class="icon-chip">
+            <div class="shape"><svg width="30" height="30" viewBox="0 0 30 30" fill="none"><path d="M9 20C7 13 12 8 19 8c1 6-3 11-10 12z" fill="#818735"/></svg></div>
+            <div class="lbl">VEGAN</div>
+          </div>
+        </div>
+
+        <h3 class="sub">Image Treatment &amp; Illustration Style</h3>
+        <p>Photography is warmed slightly toward the brand palette and never desaturated cold or blue. Where illustration is needed - icons, diagrams, packaging flourishes - it stays flat, single or dual-tone, built from the same rounded, no-sharp-corner shape language as the leaf mark.</p>
+
+        <h3 class="sub">Product &amp; Category Visual System</h3>
+        <p>Each menu category carries one consistent accent color, used on tags, dividers and packaging bands so the range stays easy to sort at a glance.</p>
+        <div class="table-scroll">
+        <table class="spec">
+          <thead><tr><th>Category</th><th>Accent</th><th>Swatch</th></tr></thead>
+          <tbody>
+            <tr><td>Healthy Balls &amp; Choconuts</td><td class="mono">Olive Dark</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#818735;"></span></td></tr>
+            <tr><td>Granola</td><td class="mono">Olive Light</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#C1C04E;"></span></td></tr>
+            <tr><td>Regular Maamoul</td><td class="mono">Bites Brown</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#733919;"></span></td></tr>
+            <tr><td>Regular Desserts &amp; Molds</td><td class="mono">Glow Orange</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#C97629;"></span></td></tr>
+            <tr><td>Gluten-Free / Sugar-Free / Extra Healthy</td><td class="mono">Espresso Ink label, Olive tag</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#2B1B10;"></span></td></tr>
+            <tr><td>Gifts &amp; Boxes</td><td class="mono">Full palette</td><td><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:linear-gradient(135deg,#C97629,#818735);"></span></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="s6">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">06</span><h2>Photography Direction</h2></div>
+        <p class="chapter-lede">No stock photography, no cold studio light. Every shot should look like it was taken in someone's kitchen on a sunny morning - because that's close to the truth.</p>
+
+        <h3 class="sub">Shot Types</h3>
+        <div class="grid grid-2">
+          <div class="photo-mock" style="background-image:url('assets/shot_flatlay.webp');"><span class="cap"><b>OVERHEAD FLAT-LAY</b><br>product arranged on marble or wood, generous negative space for text</span></div>
+          <div class="photo-mock" style="background-image:url('assets/shot_hero.webp');"><span class="cap"><b>45&deg; HERO SHOT</b><br>single product, shallow depth of field, warm key light</span></div>
+          <div class="photo-mock" style="background-image:url('assets/shot_macro.webp');"><span class="cap"><b>TEXTURE MACRO</b><br>close crop on crumb, oats, nuts - sells the handmade quality</span></div>
+          <div class="photo-mock" style="background-image:url('assets/shot_lifestyle.webp');"><span class="cap"><b>LIFESTYLE / IN-HAND</b><br>a real moment: reaching for a bite, sharing a box, gifting Maamoul</span></div>
+        </div>
+        <p style="margin-top:.8rem;font-size:.83rem;color:var(--taupe);">Reference images above are open-license mood photography (Unsplash), standing in for the direction until Glow Bites commissions its own shoot of these exact treats.</p>
+
+        <h3 class="sub">Lighting &amp; Backgrounds</h3>
+        <p>Soft, diffused natural daylight, ideally window light rather than direct sun or flash - gentle shadows, no harsh studio contrast. Backdrops stay in the warm-neutral family: raw linen, light oak or walnut wood, unbleached kraft, and cream paper. The signature pattern can appear faintly as a prop or backdrop texture, never competing with the food.</p>
+
+        <h3 class="sub">Composition &amp; Props</h3>
+        <p>Leave room. Compositions should hold enough negative space on cream or wood for a headline or price tag to sit comfortably without a text box. Favor odd numbers of items, slight asymmetry, and a rule-of-thirds product placement over perfectly centered, symmetrical grids. Props stay natural and food-adjacent - linen napkins, raw oats, dates, pistachios, a wooden board, kraft twine - and skip anything plastic, glossy or overtly "studio."</p>
+
+        <h3 class="sub">Lifestyle Photography</h3>
+        <p>Real settings over staged ones: a gym bag with a bite tucked in a side pocket, a family gathering with a Maamoul tray making the rounds, a desk snack break. Hands and partial faces are welcome; the product should always stay the clear subject.</p>
+
+        <h3 class="sub">Social Media Photography Guidelines</h3>
+        <ul class="pill-list">
+          <li class="pill">1:1 or 4:5 crop for feed</li>
+          <li class="pill">9:16 for Stories &amp; Reels</li>
+          <li class="pill">Consistent warm grade, no cold filters</li>
+          <li class="pill">Bright natural light only</li>
+          <li class="pill">One clear subject per frame</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chapter" id="s7">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">07</span><h2>Packaging Identity</h2></div>
+        <p class="chapter-lede">Packaging is where most people meet Glow Bites first. It carries the heaviest brand weight in this book, on purpose: kraft and cream over plastic and gloss, the product visible wherever possible, and just enough color to sort the range at a glance.</p>
+
+        <h3 class="sub">Overall Direction</h3>
+        <p>Matte kraft or cream stock as the default substrate, printed in one or two brand colors rather than full-bleed photography. The logo sits small and consistent - usually the stacked icon-led lockup - while the product name is set large in Fredoka. The signature pattern appears as a light interior lining or tissue print, never on the outward-facing panel competing with the product name.</p>
+
+        <h3 class="sub">By Product Category</h3>
+        <div class="grid grid-2">
+          <div class="card">
+            <div class="mockup-box" style="background:#FFFDF8;border:1px solid var(--hairline-strong);border-radius:.6rem;padding:1.1rem;position:relative;height:150px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;"><img src="assets/icon_leaf_only.webp" style="width:22px;"><span style="width:26px;height:26px;border-radius:50%;background:#733919;display:flex;align-items:center;justify-content:center;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:13px;"></span></div>
+              <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1.05rem;">Pistachio Maamoul</div>
+            </div>
+            <p style="margin-top:.9rem;"><strong>Cookie &amp; Maamoul</strong> - cream box, brown wax-style seal sticker bearing the leaf mark, product name set large on the lid, mould pattern motif on the base.</p>
+          </div>
+          <div class="card">
+            <div class="mockup-box" style="background:#FFFDF8;border:1px solid var(--hairline-strong);border-radius:.6rem;padding:1.1rem;position:relative;height:150px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;"><img src="assets/icon_leaf_only.webp" style="width:22px;"><span style="font-family:'IBM Plex Mono';font-size:.65rem;background:#818735;color:#F3F3DE;padding:.15rem .4rem;border-radius:1rem;">VEGAN</span></div>
+              <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1.05rem;">Date &amp; Oat Bites</div>
+            </div>
+            <p style="margin-top:.9rem;"><strong>Healthy Balls</strong> - clear window pouch or jar so the product sells itself, a colored label band per flavor pulled from the category accent.</p>
+          </div>
+          <div class="card">
+            <div class="mockup-box" style="background:#FFFDF8;border:1px solid var(--hairline-strong);border-radius:.6rem;padding:1.1rem;position:relative;height:150px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;"><img src="assets/icon_leaf_only.webp" style="width:22px;"><span style="font-family:'IBM Plex Mono';font-size:.65rem;color:#818735;">RESEALABLE</span></div>
+              <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1.05rem;">Honey Almond Granola</div>
+            </div>
+            <p style="margin-top:.9rem;"><strong>Granola</strong> - stand-up kraft pouch, olive-green label band, resealable strip called out clearly for repeat use.</p>
+          </div>
+          <div class="card">
+            <div class="mockup-box" style="background:#FFFDF8;border:1px solid var(--hairline-strong);border-radius:.6rem;padding:1.1rem;position:relative;height:150px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start;"><img src="assets/icon_leaf_only.webp" style="width:22px;"><span style="width:26px;height:26px;border-radius:50%;background:#C97629;display:flex;align-items:center;justify-content:center;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:13px;"></span></div>
+              <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1.05rem;">Carrot Cake Slice</div>
+            </div>
+            <p style="margin-top:.9rem;"><strong>Cakes &amp; Desserts</strong> - cream window box with an orange accent band, so the slice or mould is visible through the front.</p>
+          </div>
+        </div>
+
+        <h3 class="sub">Stickers &amp; Labels</h3>
+        <p>A circular sticker - icon plus product name - is the default seal across boxes, pouches and jars, in one of the category accent colors on cream stock. Rectangular labels carry the fuller ingredient and nutrition panel where a sticker alone isn't enough room.</p>
+
+        <h3 class="sub">Packaging Hierarchy</h3>
+        <div class="table-scroll">
+        <table class="spec">
+          <thead><tr><th>Order</th><th>Element</th><th>Weight on pack</th></tr></thead>
+          <tbody>
+            <tr><td class="mono">1</td><td>Logo (icon-led lockup)</td><td>Small, consistent placement - top-left or top-center</td></tr>
+            <tr><td class="mono">2</td><td>Product name</td><td>Largest text element, Fredoka SemiBold</td></tr>
+            <tr><td class="mono">3</td><td>Key claim</td><td>e.g. "Gluten-Free" - one badge, not a wall of claims</td></tr>
+            <tr><td class="mono">4</td><td>Net weight / count</td><td>Small, IBM Plex Mono, consistent corner</td></tr>
+            <tr><td class="mono">5</td><td>Ingredients &amp; nutrition</td><td>Smallest, on the back or base panel</td></tr>
+          </tbody>
+        </table>
+        </div>
+
+        <h3 class="sub">Product Naming System</h3>
+        <p>Names follow a simple <strong>[Hero Ingredient] + [Second Ingredient] + [Format]</strong> pattern, in Title Case, two to four words: <em>Date &amp; Oat Bites</em>, <em>Pistachio Maamoul</em>, <em>Honey Almond Granola</em>, <em>Carrot Cake Slice</em>. The category itself (Healthy Balls, Maamoul, Granola&hellip;) lives as a small badge or section header, never bolted onto the product name.</p>
+
+        <h3 class="sub">Nutritional &amp; Informational Layout</h3>
+        <div class="table-scroll">
+        <table class="spec">
+          <thead style="background:#733919;"><tr><th style="color:#F6EEDF;">Nutrition Facts</th><th style="color:#F6EEDF;">Per 30g serving</th></tr></thead>
+          <tbody>
+            <tr><td>Energy</td><td class="mono">128 kcal</td></tr>
+            <tr><td>Sugars</td><td class="mono">3.1 g</td></tr>
+            <tr><td>Protein</td><td class="mono">4.6 g</td></tr>
+            <tr><td><strong>Allergens</strong></td><td class="mono"><strong>Contains nuts</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p style="margin-top:.7rem;font-size:.88rem;color:var(--taupe);">Header row in Bites Brown, allergen row bolded, a small QR code (bottom corner) may link out to the full nutrition panel for smaller packs where space is tight.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="s8">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">08</span><h2>Digital Brand Identity</h2></div>
+        <p class="chapter-lede">Online, Glow Bites keeps the same warmth as the packaging - cream backgrounds, rounded cards, and category color-coding carried straight through from the shelf to the screen.</p>
+
+        <h3 class="sub">Website &amp; Online Menu</h3>
+        <p>Cream page background, white or off-white product cards with soft rounded corners and a light border rather than a heavy shadow. Category sections follow the color-coding set out in Graphic Language, and calls to action - "Order," "Add to Cart" - use Glow Orange, reserving brand brown for headings and navigation.</p>
+
+        <h3 class="sub">Social Media Visual System</h3>
+        <p>A repeating three-post rhythm keeps the grid varied but recognizable: one product shot, one lifestyle moment, one educational or ingredient-led tip - each carrying a small corner logo mark and consistent warm color grade.</p>
+
+        <div class="grid grid-3">
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1/1;border-radius:.8rem;border:1px solid var(--hairline);background:linear-gradient(165deg,#F6EEDF,#E9DCC0);display:flex;flex-direction:column;justify-content:space-between;padding:1rem;">
+              <img src="assets/icon_leaf_only.webp" style="width:20px;">
+              <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1rem;">New: Pistachio Maamoul 🌿</div>
+            </div>
+            <div class="tile-label">FEED POST</div>
+          </div>
+          <div class="tile-wrap">
+            <div style="aspect-ratio:9/16;border-radius:.8rem;border:1px solid var(--hairline);background:linear-gradient(180deg,#733919,#4A2410);display:flex;flex-direction:column;justify-content:space-between;padding:1rem;color:#F6EEDF;">
+              <div style="font-family:'Fredoka';font-weight:600;font-size:1.05rem;">Back in stock</div>
+              <div style="align-self:center;background:#C97629;color:#FFF3E4;font-family:'IBM Plex Mono';font-size:.7rem;padding:.5rem 1rem;border-radius:2rem;text-align:center;">SWIPE UP TO ORDER</div>
+            </div>
+            <div class="tile-label">STORY TEMPLATE</div>
+          </div>
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1/1;border-radius:.8rem;border:1px solid var(--hairline);background:#F6EEDF;display:flex;flex-direction:column;justify-content:space-between;padding:1rem;">
+              <span style="align-self:flex-start;background:#818735;color:#F3F3DE;font-family:'IBM Plex Mono';font-size:.65rem;padding:.2rem .55rem;border-radius:1rem;">NEW</span>
+              <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1rem;">Honey Almond Granola</div>
+            </div>
+            <div class="tile-label">PRODUCT ANNOUNCEMENT</div>
+          </div>
+        </div>
+
+        <h3 class="sub">Highlight Covers</h3>
+        <div class="icon-row">
+          <div class="icon-chip"><div class="shape" style="background:#733919;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:22px;"></div><div class="lbl">MENU</div></div>
+          <div class="icon-chip"><div class="shape" style="background:#C97629;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:22px;"></div><div class="lbl">NEW</div></div>
+          <div class="icon-chip"><div class="shape" style="background:#818735;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:22px;"></div><div class="lbl">REVIEWS</div></div>
+          <div class="icon-chip"><div class="shape" style="background:#C1C04E;"><img src="assets/icon_leaf_only.webp" style="width:22px;"></div><div class="lbl">GIFTING</div></div>
+        </div>
+
+        <h3 class="sub">WhatsApp Ordering Visuals</h3>
+        <p>The catalog cover image uses the horizontal lockup on cream; quick-reply and order-confirmation cards keep the same rounded-card, warm-neutral treatment as the website so the hand-off from Instagram to WhatsApp to checkout never feels like three different brands.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="s9">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">09</span><h2>Brand Applications</h2></div>
+        <p class="chapter-lede">The identity at work, across the physical and digital touchpoints a customer actually runs into - illustrative mockups built from the real logo, palette and pattern.</p>
+
+        <div class="grid grid-2">
+          <div class="tile-wrap">
+            <div style="display:flex;gap:.7rem;">
+              <div style="flex:1;aspect-ratio:1.6/1;background:#FFFDF8;border:1px solid var(--hairline-strong);border-radius:.5rem;display:flex;align-items:center;justify-content:center;padding:.6rem;"><img src="assets/lockup_stacked_icon_top.webp" style="max-height:70%;"></div>
+              <div style="flex:1;aspect-ratio:1.6/1;background:#733919;border-radius:.5rem;background-image:var(--pattern-url);background-size:180px;background-blend-mode:soft-light;"></div>
+            </div>
+            <div class="tile-label">BUSINESS CARD - front &amp; back</div>
+          </div>
+
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1.6/1;background:#FFFAF0;border:1px solid var(--hairline-strong);border-radius:.5rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;">
+              <img src="assets/primary_full.webp" style="max-height:60%;">
+              <div style="font-family:'IBM Plex Mono';font-size:.65rem;letter-spacing:.1em;color:var(--taupe);">MENU &middot; 2026</div>
+            </div>
+            <div class="tile-label">MENU COVER</div>
+          </div>
+
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1.6/1;display:flex;align-items:center;justify-content:center;background:var(--cream-deep);border:1px solid var(--hairline-strong);border-radius:.5rem;">
+              <div style="width:58%;height:78%;background:#E4CFA6;clip-path:polygon(12% 0%, 88% 0%, 100% 100%, 0% 100%);display:flex;align-items:center;justify-content:center;position:relative;">
+                <div style="position:absolute;top:-14px;left:28%;width:44%;height:26px;border:5px solid #A5754A;border-bottom:none;border-radius:20px 20px 0 0;"></div>
+                <img src="assets/lockup_stacked_icon_top.webp" style="width:55%;">
+              </div>
+            </div>
+            <div class="tile-label">SHOPPING BAG</div>
+          </div>
+
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1.6/1;background:var(--cream-deep);border:1px solid var(--hairline-strong);border-radius:.5rem;display:flex;align-items:center;justify-content:center;gap:.5rem;flex-wrap:wrap;padding:.8rem;">
+              <div style="width:44px;height:44px;border-radius:50%;border:2px dashed #D8C7AA;background:#C97629;display:flex;align-items:center;justify-content:center;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:18px;"></div>
+              <div style="width:44px;height:44px;border-radius:50%;border:2px dashed #D8C7AA;background:#733919;display:flex;align-items:center;justify-content:center;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:18px;"></div>
+              <div style="width:44px;height:44px;border-radius:50%;border:2px dashed #D8C7AA;background:#818735;display:flex;align-items:center;justify-content:center;"><img src="assets/icon_leaf_only_WHITE.webp" style="width:18px;"></div>
+              <div style="width:44px;height:44px;border-radius:50%;border:2px dashed #D8C7AA;background:#FFFDF8;display:flex;align-items:center;justify-content:center;"><img src="assets/icon_leaf_only.webp" style="width:18px;"></div>
+            </div>
+            <div class="tile-label">STICKER SHEET</div>
+          </div>
+
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1.6/1;background:#FFFDF8;border:1px solid var(--hairline-strong);border-radius:.5rem;display:flex;align-items:center;justify-content:center;padding:1rem;">
+              <div style="width:70%;">
+                <div style="font-family:'IBM Plex Mono';font-size:.6rem;color:var(--taupe);letter-spacing:.08em;margin-bottom:.3rem;">DELIVERY CARD</div>
+                <div style="font-family:'Fredoka';font-weight:600;color:#4A2410;font-size:1.05rem;line-height:1.3;">Thank you for<br>glowing with us. 🌿</div>
+              </div>
+            </div>
+            <div class="tile-label">DELIVERY / THANK-YOU CARD</div>
+          </div>
+
+          <div class="tile-wrap">
+            <div style="aspect-ratio:1.6/1;background:var(--cream-deep);border:1px solid var(--hairline-strong);border-radius:.5rem;display:flex;align-items:center;justify-content:center;">
+              <div style="width:60%;padding:1rem 0;background:#FFFAF0;border:1px solid var(--hairline-strong);border-radius:.4rem;display:flex;align-items:center;justify-content:center;position:relative;">
+                <span style="position:absolute;top:6px;left:16px;width:6px;height:6px;border-radius:50%;background:#D8C7AA;"></span>
+                <span style="position:absolute;top:6px;right:16px;width:6px;height:6px;border-radius:50%;background:#D8C7AA;"></span>
+                <img src="assets/lockup_horizontal.webp" style="width:75%;">
+              </div>
+            </div>
+            <div class="tile-label">STOREFRONT SIGNAGE</div>
+          </div>
+        </div>
+
+        <h3 class="sub">Uniform &amp; Apron</h3>
+        <p>A simple cream or kraft-colored apron with the leaf mark small and centered on the chest - no full wordmark, no busy pattern. The goal on-body is quiet consistency, not another billboard.</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="s10">
+      <div class="chapter-inner">
+        <div class="chapter-head"><span class="num">10</span><h2>Brand Guidelines Summary</h2></div>
+        <p class="chapter-lede">One page to pin to the wall. Everything above, condensed.</p>
+
+        <div class="grid grid-2">
+          <div class="card">
+            <h4 style="font-family:'Fredoka';color:var(--brown-deep);margin-bottom:.6rem;">Logo</h4>
+            <ul style="margin:0;padding-left:1.1rem;font-size:.92rem;">
+              <li>Full-color primary on cream, white or brown</li>
+              <li>Never stretched, rotated or recolored off-palette</li>
+              <li>Minimum 1&times; leaf-height clear space on all sides</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Fredoka';color:var(--brown-deep);margin-bottom:.6rem;">Color</h4>
+            <ul style="margin:0;padding-left:1.1rem;font-size:.92rem;">
+              <li>Cream dominates - roughly 60% of any layout</li>
+              <li>Orange &amp; Brown carry brand weight, Olive is accent-only</li>
+              <li>Avoid orange logo on olive-light backgrounds</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Fredoka';color:var(--brown-deep);margin-bottom:.6rem;">Typography</h4>
+            <ul style="margin:0;padding-left:1.1rem;font-size:.92rem;">
+              <li>Fredoka for headlines, Karla for body, Cairo for Arabic</li>
+              <li>Plex Mono only for specs, prices and codes</li>
+              <li>Body copy never below 14px digital / 7pt print</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Fredoka';color:var(--brown-deep);margin-bottom:.6rem;">Graphic Language &amp; Photography</h4>
+            <ul style="margin:0;padding-left:1.1rem;font-size:.92rem;">
+              <li>Tone-on-tone pattern stays in the background, low contrast</li>
+              <li>Warm natural light only, no cold or studio-flash shots</li>
+              <li>Leaf mark as the one recurring graphic punctuation</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Fredoka';color:var(--brown-deep);margin-bottom:.6rem;">Packaging</h4>
+            <ul style="margin:0;padding-left:1.1rem;font-size:.92rem;">
+              <li>Kraft &amp; cream stock, one or two brand colors printed</li>
+              <li>Logo small and consistent, product name largest</li>
+              <li>One key claim badge per pack, not a wall of claims</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h4 style="font-family:'Fredoka';color:var(--brown-deep);margin-bottom:.6rem;">Social &amp; Digital</h4>
+            <ul style="margin:0;padding-left:1.1rem;font-size:.92rem;">
+              <li>Product / lifestyle / tip rhythm across the feed</li>
+              <li>Rounded cards, cream ground, orange for calls to action</li>
+              <li>Small corner logo mark on every post</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 class="sub">Brand Consistency Checklist</h3>
+        <div class="dd-grid">
+          <div class="dd do">
+            <h4>Before anything ships, check</h4>
+            <ul>
+              <li>Is the logo an approved file, at an approved minimum size?</li>
+              <li>Do the colors match the hex values in Section 3 exactly?</li>
+              <li>Is cream still the dominant color in the layout?</li>
+              <li>Does the tone match the channel it's going out on?</li>
+            </ul>
+          </div>
+          <div class="dd dont">
+            <h4>Red flags to catch</h4>
+            <ul>
+              <li>A recolored or re-lettered version of the logo</li>
+              <li>Cold, blue-toned or heavily filtered photography</li>
+              <li>More than one accent color competing for attention</li>
+              <li>Clinical, guilt-driven or overly technical copy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="colophon">
+  <img src="assets/icon_leaf_only_WHITE.webp" alt="">
+  <div class="cname">Glow Bites</div>
+  <div class="meta">BRAND GUIDELINES &middot; VERSION 1.0 &middot; AUGUST 2026</div>
+  <div class="meta" style="margin-top:1.2rem;">Brand identity crafted by <a href="https://www.colartdigitalmarketingagency.com" style="color:#F0C896;">Colart Digital Marketing Agency</a></div>
+  <div class="colophon-links">
+    <a href="https://branding.colartdigitalmarketingagency.com/"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Branding Portfolio</a>
+    <span aria-hidden="true">&middot;</span>
+    <a href="https://www.colartdigitalmarketingagency.com/services/">Colart Services</a>
+    <span aria-hidden="true">&middot;</span>
+    <a href="https://www.colartdigitalmarketingagency.com/contact/">Start a Project</a>
   </div>
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+(function(){
+  var links = Array.prototype.slice.call(document.querySelectorAll('.toc-link'));
+  var sections = links.map(function(l){ return document.querySelector(l.getAttribute('href')); }).filter(Boolean);
+  if(!('IntersectionObserver' in window) || !sections.length) return;
+  var map = {};
+  sections.forEach(function(sec, i){ map[sec.id] = links[i]; });
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var link = map[entry.target.id];
+      if(!link) return;
+      if(entry.isIntersecting){
+        links.forEach(function(l){ l.classList.remove('active'); });
+        link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+  sections.forEach(function(sec){ observer.observe(sec); });
+})();
 </script>
+
 
 </body>
 </html>
