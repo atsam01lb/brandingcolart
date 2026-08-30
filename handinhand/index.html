@@ -39,32 +39,30 @@
   .container{max-width:1180px;margin:0 auto;padding:0 32px;}
   @media (max-width:700px){.container{padding:0 22px;}}
 
-  /* ============ NAV ============ */
-  header.site-nav{
+  /* ============ UTILITY BAR (matches the Joseph Farah / Glow Bites pattern) ============ */
+  .hih-utility{
     position:fixed; top:0; left:0; right:0; z-index:70;
     display:flex; align-items:center; justify-content:space-between;
-    padding:20px 32px;
+    padding:16px 32px;
     background:rgba(245,243,239,.82);
     backdrop-filter:blur(14px);
     -webkit-backdrop-filter:blur(14px);
     border-bottom:1px solid var(--line);
     transition:box-shadow .3s;
   }
-  .site-nav .brand{
-    display:flex; align-items:center; gap:10px;
-    font-family:var(--font-display); font-weight:800; font-size:15px;
-    letter-spacing:.02em;
+  .hih-utility a{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-display); font-size:12.5px; font-weight:600;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--charcoal);
+    transition:opacity .3s;
   }
-  .site-nav .brand .mark{
-    width:30px; height:30px; border-radius:50%;
-    overflow:hidden; flex-shrink:0;
-    box-shadow:0 2px 8px rgba(35,35,35,.15);
+  .hih-utility a:hover{opacity:.55;}
+  .hih-utility .hih-colart-credit{
+    font-family:var(--font-body); font-weight:400; color:var(--muted);
+    text-transform:none; letter-spacing:0;
   }
-  .site-nav .brand .mark img{width:100%;height:100%;object-fit:cover;}
-  .site-nav nav{display:flex; gap:30px; font-size:13.5px; font-weight:600;}
-  .site-nav nav a{color:var(--muted); transition:color .25s;}
-  .site-nav nav a:hover{color:var(--olive-dk);}
-  @media (max-width:760px){ .site-nav nav{display:none;} }
+  .hih-utility .hih-colart-credit strong{color:var(--olive-dk); font-weight:700;}
+  @media (max-width:700px){ .hih-utility{padding:14px 20px;} .hih-utility .hih-hide-sm{display:none;} }
 
   /* ============ SECTION SHELL ============ */
   section{padding:130px 0 110px; position:relative;}
@@ -258,11 +256,41 @@
   }
   .cta-btn:hover{background:var(--olive); color:#fff; transform:translateY(-2px);}
 
-  footer{
-    background:var(--charcoal-dk); color:rgba(255,255,255,.5);
-    text-align:center; padding:26px 20px; font-size:12.5px;
+  /* ============ CLOSING (matches the Joseph Farah / Glow Bites pattern) ============ */
+  .hih-closing{
+    background:var(--charcoal-dk); padding:90px 32px 50px; text-align:center;
   }
-  footer b{color:rgba(255,255,255,.8);}
+  .hih-closing .mark{
+    width:62px; height:62px; border-radius:50%; overflow:hidden;
+    margin:0 auto 22px; box-shadow:0 8px 24px rgba(0,0,0,.4);
+  }
+  .hih-closing .mark img{width:100%; height:100%; object-fit:cover;}
+  .hih-closing h2{
+    font-family:var(--font-display); font-weight:800; font-size:26px;
+    color:#fff; margin-bottom:6px;
+  }
+  .hih-closing .hih-rule{
+    width:46px; height:1px; margin:20px auto; background:rgba(255,255,255,.3);
+  }
+  .hih-closing-meta{
+    font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(255,255,255,.45); margin-bottom:46px;
+  }
+  .hih-closing-credit{
+    border-top:1px solid rgba(255,255,255,.12); padding-top:30px;
+    max-width:480px; margin:0 auto;
+  }
+  .hih-closing-credit p{
+    font-size:10.5px; letter-spacing:.12em; text-transform:uppercase;
+    color:rgba(255,255,255,.4); margin-bottom:10px;
+  }
+  .hih-closing-credit a{
+    color:rgba(255,255,255,.85); font-weight:600; font-size:14px;
+    font-family:var(--font-display);
+  }
+  .hih-closing-credit .hih-links{margin-top:12px; font-size:11.5px; color:rgba(255,255,255,.45);}
+  .hih-closing-credit .hih-links a{color:rgba(255,255,255,.65); font-weight:400; font-size:11.5px;}
+  .hih-closing-credit .hih-links a:hover{color:#fff;}
 
   .fade-in{opacity:0; transform:translateY(28px); transition:opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1);}
   .fade-in.visible{opacity:1; transform:translateY(0);}
@@ -270,19 +298,10 @@
 </head>
 <body>
 
-<header class="site-nav">
-  <div class="brand">
-    <span class="mark"><img src="assets/handinhand-logo.jpg" alt="Hand In Hand mark" /></span>
-    <span>HAND IN HAND</span>
-  </div>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#values">Values</a>
-    <a href="#identity">Identity</a>
-    <a href="#colors">Colors</a>
-    <a href="#type">Type</a>
-  </nav>
-</header>
+<div class="hih-utility">
+  <a href="https://branding.colartdigitalmarketingagency.com/"><i class="fa-solid fa-arrow-left"></i> Branding Portfolio</a>
+  <span class="hih-colart-credit hih-hide-sm">Identity by <strong>Colart</strong> Digital Marketing Agency</span>
+</div>
 
 <!-- ============ HERO ============ -->
 <section class="hero" id="top">
@@ -492,9 +511,21 @@
   </div>
 </section>
 
-<footer>
-  <b>Hand In Hand</b> — a HEDMEN Company initiative · Brand identity presentation
-</footer>
+<section class="hih-closing">
+  <div class="mark"><img src="assets/handinhand-logo.jpg" alt="Hand In Hand mark"></div>
+  <h2>Thank You</h2>
+  <div class="hih-rule"></div>
+  <div class="hih-closing-meta">Brand Identity Presentation · A HEDMEN Company Initiative</div>
+  <div class="hih-closing-credit">
+    <p>Identity Design &amp; Guidelines By</p>
+    <a href="https://www.colartdigitalmarketingagency.com/">Colart Digital Marketing Agency</a>
+    <div class="hih-links">
+      <a href="https://branding.colartdigitalmarketingagency.com/">More Branding Work</a> ·
+      <a href="https://www.colartdigitalmarketingagency.com/services/">Our Services</a> ·
+      <a href="https://www.colartdigitalmarketingagency.com/contact/">Start a Project</a>
+    </div>
+  </div>
+</section>
 
 <script>
   const io = new IntersectionObserver((entries)=>{
