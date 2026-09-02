@@ -204,6 +204,98 @@
   .foot-links{margin-top:12px; font-size:11.5px; color:rgba(255,255,255,.45);}
   .foot-links a{color:rgba(255,255,255,.65); font-weight:400; font-size:11.5px; text-decoration:none;}
   .foot-links a:hover{color:#fff;}
+
+  /* ---------- logo variations ---------- */
+  .variant-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.6rem;}
+  @media (max-width:760px){ .variant-grid{grid-template-columns:1fr;} }
+  .variant-card{background:#fff; border:1px solid var(--line); border-radius:18px; padding:1.8rem; box-shadow:var(--shadow);}
+  .variant-card.dark{background:var(--ink);}
+  .variant-card.dark h3, .variant-card.dark p{color:rgba(255,255,255,.85);}
+  .variant-card.dark p{color:rgba(255,255,255,.6);}
+  .variant-swatch{display:flex; align-items:center; justify-content:center; padding:1.6rem .5rem; margin-bottom:1.2rem;}
+  .variant-swatch img{max-height:70px; width:auto; margin:0 auto;}
+  .variant-card h3{font-size:15px; font-weight:700; margin-bottom:.5rem;}
+  .variant-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.55;}
+
+  /* ---------- logo usage ---------- */
+  .clearspace-demo{display:inline-block; position:relative; padding:2.2rem; border:1.5px dashed var(--blue); border-radius:8px; background:#fff;}
+  .clearspace-demo img{width:210px;}
+  .minsize-row{display:flex; align-items:flex-end; gap:2.2rem; flex-wrap:wrap; margin-top:.4rem;}
+  .minsize-row .ms{display:flex; flex-direction:column; align-items:center; gap:.5rem;}
+  .minsize-row img{width:var(--w,120px);}
+  .minsize-row span{font-size:11.5px; color:var(--ink-soft); font-weight:600;}
+  .dont-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin-top:1.8rem;}
+  @media (max-width:900px){ .dont-grid{grid-template-columns:repeat(2,1fr);} }
+  .dont-card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:1.3rem; text-align:center; position:relative;}
+  .dont-card .dont-badge{position:absolute; top:10px; right:10px; width:24px; height:24px; border-radius:50%; background:var(--red); color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;}
+  .dont-card .dont-frame{height:70px; display:flex; align-items:center; justify-content:center; margin-bottom:.8rem; background-position:center;}
+  .dont-card img{width:140px;}
+  .dont-card p{font-size:12.5px; color:var(--ink-soft); font-weight:600;}
+
+  /* ---------- graphic elements ---------- */
+  .pattern-pair{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-bottom:1.6rem;}
+  @media (max-width:760px){ .pattern-pair{grid-template-columns:1fr;} }
+  .pattern-pair .ptile{border-radius:18px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); height:160px; background-size:700px auto; background-repeat:repeat; position:relative;}
+  .pattern-pair .ptile.light{background-image:url('assets/images/atlas-pattern-light.jpg');}
+  .pattern-pair .ptile.dark{background-image:url('assets/images/atlas-pattern-dark.jpg');}
+  .pattern-pair .ptile span{position:absolute; left:16px; bottom:14px; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; background:rgba(255,255,255,.85); padding:5px 10px; border-radius:999px;}
+  .pattern-pair .ptile.dark span{background:rgba(24,24,27,.75); color:#fff;}
+  .icon-row{display:flex; flex-wrap:wrap; gap:1rem; margin-top:1.4rem;}
+  .icon-chip{display:flex; align-items:center; gap:.6rem; background:#fff; border:1px solid var(--line); border-radius:999px; padding:.6rem 1.1rem .6rem .8rem; font-size:13px; font-weight:600; color:var(--ink-soft); box-shadow:var(--shadow);}
+  .icon-chip i{width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#fff; font-size:12px;}
+
+  /* ---------- brand voice ---------- */
+  .voice-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.2rem; margin-bottom:1.8rem;}
+  @media (max-width:900px){ .voice-grid{grid-template-columns:repeat(2,1fr);} }
+  .voice-chip{background:#fff; border:1px solid var(--line); border-radius:16px; padding:1.4rem 1.2rem; text-align:center; box-shadow:var(--shadow);}
+  .voice-chip .vw{font-family:var(--font-display); font-weight:800; font-size:16px; margin-bottom:.4rem;}
+  .voice-chip p{font-size:12.5px; color:var(--ink-soft);}
+
+  /* ---------- social media direction ---------- */
+  .social-mock{display:flex; gap:1.8rem; align-items:center; flex-wrap:wrap; background:#fff; border:1px solid var(--line); border-radius:18px; padding:1.8rem; box-shadow:var(--shadow); margin-bottom:1.8rem;}
+  .social-avatar{width:84px; height:84px; border-radius:50%; overflow:hidden; background:var(--ink); display:flex; align-items:center; justify-content:center; flex-shrink:0; padding:14px;}
+  .social-avatar img{width:100%;}
+  .social-mock h3{font-size:16px; font-weight:800; margin-bottom:.4rem;}
+  .social-mock p{font-size:13px; color:var(--ink-soft); max-width:32rem;}
+  .pillar-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1.1rem;}
+  @media (max-width:900px){ .pillar-grid{grid-template-columns:repeat(2,1fr);} }
+  .pillar-card{background:#fff; border:1px solid var(--line); border-radius:16px; padding:1.3rem; box-shadow:var(--shadow);}
+  .pillar-card .pct{font-family:var(--font-mono); font-size:11px; color:var(--blue); font-weight:600; margin-bottom:.5rem;}
+  .pillar-card h4{font-size:14px; font-weight:700; margin-bottom:.4rem;}
+  .pillar-card p{font-size:12.5px; color:var(--ink-soft);}
+  .tag-row{display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.4rem;}
+  .hashtag{font-family:var(--font-mono); font-size:12px; font-weight:600; color:var(--blue); background:var(--paper-alt); border:1px solid var(--line); border-radius:8px; padding:.4rem .7rem;}
+
+  /* ---------- digital applications ---------- */
+  .browser-mock{border-radius:16px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow); margin-bottom:1.8rem;}
+  .browser-bar{display:flex; align-items:center; gap:6px; background:#EDEBE3; padding:10px 14px;}
+  .browser-bar span{width:10px; height:10px; border-radius:50%; background:#D6D3C8;}
+  .browser-body{background:var(--ink); padding:2.6rem 2rem; text-align:center; position:relative; overflow:hidden;}
+  .browser-body::before{content:""; position:absolute; inset:0; background-image:url('assets/images/atlas-pattern-dark.jpg'); background-size:600px auto; opacity:.3;}
+  .browser-body img{position:relative; z-index:1; width:180px; margin:0 auto;}
+  .mode-pair{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+  @media (max-width:760px){ .mode-pair{grid-template-columns:1fr;} }
+  .mode-card{border-radius:16px; padding:1.6rem; border:1px solid var(--line); text-align:center;}
+  .mode-card.light{background:#fff;}
+  .mode-card.dark{background:var(--ink);}
+  .mode-card img{width:130px; margin:0 auto 1rem;}
+  .mode-card .mlabel{font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft);}
+  .mode-card.dark .mlabel{color:rgba(255,255,255,.55);}
+
+  /* ---------- print applications ---------- */
+  .print-grid{display:grid; grid-template-columns:1.1fr 1fr; gap:1.8rem;}
+  @media (max-width:800px){ .print-grid{grid-template-columns:1fr;} }
+  .bcard{aspect-ratio:1.75/1; background:var(--ink); border-radius:14px; box-shadow:var(--shadow); padding:1.6rem; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;}
+  .bcard::before{content:""; position:absolute; inset:0; background-image:url('assets/images/atlas-pattern-dark.jpg'); background-size:400px auto; opacity:.3;}
+  .bcard > *{position:relative; z-index:1;}
+  .bcard img{width:110px;}
+  .bcard .bc-meta{font-family:var(--font-mono); font-size:10.5px; color:rgba(255,255,255,.6); line-height:1.7;}
+  .banner-mock{background:#fff; border:1px solid var(--line); border-radius:14px; box-shadow:var(--shadow); overflow:hidden; height:100%; display:flex; flex-direction:column;}
+  .banner-top{background:var(--ink); flex:1; display:flex; align-items:center; justify-content:center; padding:1.6rem; position:relative; min-height:150px;}
+  .banner-top::before{content:""; position:absolute; inset:0; background-image:url('assets/images/atlas-pattern-dark.jpg'); background-size:400px auto; opacity:.3;}
+  .banner-top img{position:relative; width:130px;}
+  .banner-bars{display:flex; height:14px;}
+  .banner-bars span{flex:1;}
 </style>
 </head>
 <body>
@@ -304,11 +396,90 @@
 </section>
 
 <!-- ===========================================
-     03 COLOR ANALYSIS
+     03 LOGO VARIATIONS
+=========================================== -->
+<section class="chapter" id="variations">
+  <div class="container">
+    <div class="chapter-head"><span class="num">03</span><h2>Logo Variations</h2></div>
+    <p class="chapter-lede">One primary lockup, four ways to run it. Each variation keeps the same proportions and letterforms; only the color treatment changes to fit the surface it sits on.</p>
+    <div class="variant-grid">
+      <div class="variant-card">
+        <div class="variant-swatch"><img src="assets/images/atlas-logo.png" alt="Atlas Cultural Initiative logo, full color"></div>
+        <h3>Primary / Full Color</h3>
+        <p>The default lockup. Use on white or light neutral backgrounds wherever full color reproduction is available.</p>
+      </div>
+      <div class="variant-card dark">
+        <div class="variant-swatch"><img src="assets/images/atlas-logo-white.png" alt="Atlas Cultural Initiative logo, reversed white"></div>
+        <h3>Reversed / White</h3>
+        <p>For dark backgrounds, photography, and the hero and closing sections of this guide.</p>
+      </div>
+      <div class="variant-card">
+        <div class="variant-swatch"><img src="assets/images/atlas-logo-mono.png" alt="Atlas Cultural Initiative logo, monochrome black"></div>
+        <h3>Monochrome / Black</h3>
+        <p>One-color applications: engraving, embroidery, stamping, watermarks, and fax-quality documents.</p>
+      </div>
+      <div class="variant-card">
+        <div class="variant-swatch"><img src="assets/images/atlas-logo-grayscale.png" alt="Atlas Cultural Initiative logo, grayscale"></div>
+        <h3>Grayscale</h3>
+        <p>Black and white print runs, and any material printed without CMYK or spot color.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     04 LOGO USAGE
+=========================================== -->
+<section class="chapter alt" id="logo-usage">
+  <div class="container">
+    <div class="chapter-head"><span class="num">04</span><h2>Logo Usage</h2></div>
+    <p class="chapter-lede">A few simple rules keep the mark sharp everywhere it appears, from a business card to a stage backdrop.</p>
+    <div class="sub-grid">
+      <div class="sub-card">
+        <h3><i class="fa-solid fa-vector-square"></i> Clear Space</h3>
+        <p style="margin-bottom:1rem;">Keep a minimum clear space equal to the height of the letter &ldquo;A&rdquo; in ATLAS on every side. Nothing, no text, no imagery, no edge of the page, should enter that space.</p>
+        <div class="clearspace-demo"><img src="assets/images/atlas-logo.png" alt="Atlas Cultural Initiative logo clear space guide"></div>
+      </div>
+      <div class="sub-card">
+        <h3><i class="fa-solid fa-ruler"></i> Minimum Size</h3>
+        <p style="margin-bottom:1.2rem;">Below these sizes the color bars and letterforms lose definition. Scale the layout up rather than crowd the mark into a smaller space.</p>
+        <div class="minsize-row">
+          <div class="ms"><img style="--w:150px" src="assets/images/atlas-logo.png" alt="Atlas Cultural Initiative logo at minimum print size"><span>Print &middot; 30mm wide</span></div>
+          <div class="ms"><img style="--w:90px" src="assets/images/atlas-logo.png" alt="Atlas Cultural Initiative logo at minimum digital size"><span>Digital &middot; 120px wide</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="dont-grid">
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><img style="transform:scaleX(1.7);" src="assets/images/atlas-logo.png" alt="Do not stretch the logo"></div>
+        <p>Don&rsquo;t stretch or distort</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><img style="transform:rotate(-14deg);" src="assets/images/atlas-logo.png" alt="Do not rotate the logo"></div>
+        <p>Don&rsquo;t rotate or tilt</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><img style="filter:hue-rotate(140deg) saturate(1.5);" src="assets/images/atlas-logo.png" alt="Do not recolor the logo"></div>
+        <p>Don&rsquo;t recolor outside the system</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame" style="background-image:url('assets/images/atlas-pattern-light.jpg'); background-size:240px auto; border-radius:10px;"><img style="width:110px;" src="assets/images/atlas-logo.png" alt="Do not place the logo on busy backgrounds"></div>
+        <p>Don&rsquo;t place on busy backgrounds</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     05 COLOR ANALYSIS
 =========================================== -->
 <section class="chapter" id="colors">
   <div class="container">
-    <div class="chapter-head"><span class="num">03</span><h2>Color Analysis</h2></div>
+    <div class="chapter-head"><span class="num">05</span><h2>Color Analysis</h2></div>
     <p class="chapter-lede">A palette built for energy and warmth, balanced by trust and calm, and grounded in neutral tones for contrast.</p>
     <div class="swatch-grid">
       <div class="swatch">
@@ -364,11 +535,11 @@
 </section>
 
 <!-- ===========================================
-     04 TYPOGRAPHY
+     06 TYPOGRAPHY
 =========================================== -->
 <section class="chapter alt" id="typography">
   <div class="container">
-    <div class="chapter-head"><span class="num">04</span><h2>Typography</h2></div>
+    <div class="chapter-head"><span class="num">06</span><h2>Typography</h2></div>
     <p class="chapter-lede">Two typefaces carry the whole system: a geometric sans for the logo and headings, and a humanist sans for everything the audience reads at length.</p>
     <div class="type-grid">
       <div class="type-card">
@@ -414,11 +585,43 @@
 </section>
 
 <!-- ===========================================
-     05 CULTURAL CONNECTION
+     07 GRAPHIC ELEMENTS
 =========================================== -->
-<section class="chapter" id="cultural-connection">
+<section class="chapter" id="graphic-elements">
   <div class="container">
-    <div class="chapter-head"><span class="num">05</span><h2>Cultural Connection</h2></div>
+    <div class="chapter-head"><span class="num">07</span><h2>Graphic Elements</h2></div>
+    <p class="chapter-lede">Beyond the logo, three supporting elements extend the identity into backgrounds, patterns, and iconography.</p>
+    <div class="sub-grid" style="margin-bottom:1.6rem;">
+      <div class="sub-card" style="grid-column:1 / -1;">
+        <h3><i class="fa-solid fa-grip-lines"></i> The Color Bar Accent</h3>
+        <div class="bars-demo" style="margin:1rem 0;"><span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span><span class="b5"></span></div>
+        <p>The five brand colors, used exactly as they appear in the logo, can run independently as a rule, a divider, or a footer accent anywhere the full mark would be too heavy.</p>
+      </div>
+    </div>
+    <div class="pattern-pair">
+      <div class="ptile light"><span>Light Pattern</span></div>
+      <div class="ptile dark"><span>Dark Pattern</span></div>
+    </div>
+    <div class="sub-card" style="margin-bottom:1.6rem;">
+      <h3><i class="fa-solid fa-map"></i> Cultural Pattern Tiles</h3>
+      <p>Hand-drawn travel and landmark motifs, sourced from the brand&rsquo;s own illustration set, tile seamlessly behind hero sections, section dividers, and closing panels. Keep opacity low, around 30 to 50 percent, so the pattern reads as texture, never as competing content.</p>
+    </div>
+    <div class="icon-row">
+      <div class="icon-chip"><i style="background:var(--red);" class="fa-solid fa-compass"></i> Exploration</div>
+      <div class="icon-chip"><i style="background:var(--orange);" class="fa-solid fa-route"></i> Journeys</div>
+      <div class="icon-chip"><i style="background:var(--blue);" class="fa-solid fa-earth-americas"></i> Global Reach</div>
+      <div class="icon-chip"><i style="background:var(--skyblue);" class="fa-solid fa-people-group"></i> Community</div>
+      <div class="icon-chip"><i style="background:var(--green);" class="fa-solid fa-mountain-sun"></i> Landmarks</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     08 CULTURAL CONNECTION
+=========================================== -->
+<section class="chapter alt" id="cultural-connection">
+  <div class="container">
+    <div class="chapter-head"><span class="num">08</span><h2>Cultural Connection</h2></div>
     <p class="chapter-lede">Atlas Cultural Initiative celebrates diverse cultures from around the world. Every visual element is built to reflect unity, diversity, and global engagement.</p>
     <div class="sub-grid">
       <div class="sub-card">
@@ -449,11 +652,45 @@
 </section>
 
 <!-- ===========================================
-     06 BACKGROUND & LAYOUT
+     09 BRAND VOICE
+=========================================== -->
+<section class="chapter" id="brand-voice">
+  <div class="container">
+    <div class="chapter-head"><span class="num">09</span><h2>Brand Voice</h2></div>
+    <p class="chapter-lede">If Atlas Cultural Initiative spoke as a person, it would sound curious, warm, and genuinely interested in every culture it introduces, never like a tour brochure.</p>
+    <div class="voice-grid">
+      <div class="voice-chip"><div class="vw" style="color:var(--red);">Curious</div><p>Asks questions and invites discovery, never assumes the audience already knows.</p></div>
+      <div class="voice-chip"><div class="vw" style="color:var(--orange);">Warm</div><p>Speaks like a welcoming host, not a marketing department.</p></div>
+      <div class="voice-chip"><div class="vw" style="color:var(--blue);">Confident</div><p>Clear and direct, without needing to oversell the experience.</p></div>
+      <div class="voice-chip"><div class="vw" style="color:var(--green);">Inclusive</div><p>Every culture is described with the same respect and specificity.</p></div>
+    </div>
+    <div class="sub-grid">
+      <div class="sub-card">
+        <h3><i class="fa-solid fa-comment-dots" style="color:var(--green);"></i> Say This</h3>
+        <ul>
+          <li>&ldquo;Explore the world without leaving home.&rdquo;</li>
+          <li>&ldquo;Every culture has a story worth telling.&rdquo;</li>
+          <li>&ldquo;Built with local artists, for global audiences.&rdquo;</li>
+        </ul>
+      </div>
+      <div class="sub-card">
+        <h3><i class="fa-solid fa-comment-slash" style="color:var(--red);"></i> Not This</h3>
+        <ul>
+          <li>&ldquo;The best cultural experience on the market.&rdquo;</li>
+          <li>Generic travel brand cliches with no cultural specificity.</li>
+          <li>Formal, corporate language that flattens the cultures it represents.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     10 BACKGROUND & LAYOUT
 =========================================== -->
 <section class="chapter alt" id="bg-layout">
   <div class="container">
-    <div class="chapter-head"><span class="num">06</span><h2>Background &amp; Layout</h2></div>
+    <div class="chapter-head"><span class="num">10</span><h2>Background &amp; Layout</h2></div>
     <div class="pattern-tile" role="img" aria-label="Atlas cultural pattern texture of travel and landmark illustrations"></div>
     <div class="sub-grid">
       <div class="sub-card">
@@ -473,11 +710,94 @@
 </section>
 
 <!-- ===========================================
-     07 KEY TAKEAWAYS
+     11 SOCIAL MEDIA DIRECTION
 =========================================== -->
-<section class="chapter" id="takeaways">
+<section class="chapter" id="social-media">
   <div class="container">
-    <div class="chapter-head"><span class="num">07</span><h2>Key Takeaways</h2></div>
+    <div class="chapter-head"><span class="num">11</span><h2>Social Media Direction</h2></div>
+    <p class="chapter-lede">Social is where the cultural storytelling lives day to day. Profiles carry the mark, and posts carry the color and pattern system.</p>
+    <div class="social-mock">
+      <div class="social-avatar"><img src="assets/images/atlas-logo-white.png" alt="Atlas Cultural Initiative avatar mark"></div>
+      <div>
+        <h3>Atlas Cultural Initiative</h3>
+        <p>Profile photo: white logo on the dark brand ground, never the full horizontal lockup, it reads better cropped tight at avatar size. Cover images use the light pattern tile at low opacity behind a single strong photograph.</p>
+      </div>
+    </div>
+    <div class="pillar-grid">
+      <div class="pillar-card"><div class="pct">Pillar 01</div><h4>Cultural Spotlights</h4><p>One tradition, artist, or landmark per post, told with specificity.</p></div>
+      <div class="pillar-card"><div class="pct">Pillar 02</div><h4>Behind the Scenes</h4><p>How an exhibit, event, or collaboration comes together.</p></div>
+      <div class="pillar-card"><div class="pct">Pillar 03</div><h4>Community Voices</h4><p>Local artists and partners speaking in their own words.</p></div>
+      <div class="pillar-card"><div class="pct">Pillar 04</div><h4>Events &amp; Announcements</h4><p>Clean, logo-forward graphics built on the color bar system.</p></div>
+    </div>
+    <div class="tag-row">
+      <span class="hashtag">#AtlasCulturalInitiative</span>
+      <span class="hashtag">#BridgingCultures</span>
+      <span class="hashtag">#GlobalStories</span>
+      <span class="hashtag">#ExploreTogether</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     12 DIGITAL APPLICATIONS
+=========================================== -->
+<section class="chapter alt" id="digital-applications">
+  <div class="container">
+    <div class="chapter-head"><span class="num">12</span><h2>Digital Applications</h2></div>
+    <p class="chapter-lede">Websites, apps, and email all pull from the same handful of rules: white or dark grounds, the primary lockup or the color bars alone, and generous space around the mark.</p>
+    <div class="browser-mock">
+      <div class="browser-bar"><span></span><span></span><span></span></div>
+      <div class="browser-body"><img src="assets/images/atlas-logo-white.png" alt="Atlas Cultural Initiative website header"></div>
+    </div>
+    <div class="mode-pair">
+      <div class="mode-card light">
+        <img src="assets/images/atlas-logo.png" alt="Atlas Cultural Initiative logo in light mode">
+        <div class="mlabel">Light Mode</div>
+      </div>
+      <div class="mode-card dark">
+        <img src="assets/images/atlas-logo-white.png" alt="Atlas Cultural Initiative logo in dark mode">
+        <div class="mlabel">Dark Mode</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     13 PRINT APPLICATIONS
+=========================================== -->
+<section class="chapter" id="print-applications">
+  <div class="container">
+    <div class="chapter-head"><span class="num">13</span><h2>Print Applications</h2></div>
+    <p class="chapter-lede">On paper, the mark stays exactly as disciplined as it is on screen: full color or reversed white, plenty of clear space, and the color bars as the one recurring flourish.</p>
+    <div class="print-grid">
+      <div class="bcard">
+        <img src="assets/images/atlas-logo-white.png" alt="Atlas Cultural Initiative business card">
+        <div class="bc-meta">Full Name<br>Title, Atlas Cultural Initiative<br>www.atlasculturalinitiative.org</div>
+      </div>
+      <div class="banner-mock">
+        <div class="banner-top"><img src="assets/images/atlas-logo-white.png" alt="Atlas Cultural Initiative event banner"></div>
+        <div class="banner-bars"><span style="background:var(--red);"></span><span style="background:var(--orange);"></span><span style="background:var(--blue);"></span><span style="background:var(--skyblue);"></span><span style="background:var(--green);"></span></div>
+      </div>
+    </div>
+    <div class="sub-grid" style="margin-top:1.6rem;">
+      <div class="sub-card" style="grid-column:1 / -1;">
+        <h3><i class="fa-solid fa-print"></i> Where It Shows Up</h3>
+        <ul>
+          <li>Business cards, letterhead, and internal stationery: dark ground with the reversed mark.</li>
+          <li>Event banners, step and repeats, and signage: full-color lockup with the color bar footer.</li>
+          <li>Brochures, reports, and printed guides: full-color logo on light neutral covers.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     14 KEY TAKEAWAYS
+=========================================== -->
+<section class="chapter alt" id="takeaways">
+  <div class="container">
+    <div class="chapter-head"><span class="num">14</span><h2>Key Takeaways</h2></div>
     <div class="takeaway-grid">
       <div class="takeaway">
         <div class="dot" style="background:var(--red);"><i class="fa-solid fa-signature"></i></div>
