@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pearl Beauty Lounge: Brand Identity Guidelines</title>
+<meta name="description" content="Brand identity guidelines for Pearl Beauty Lounge, a refined space for beauty rituals. Logo system, color palette, typography, voice, and applications.">
+<link rel="canonical" href="https://branding.colartdigitalmarketingagency.com/pearlbeautylounge">
+
+<link rel="icon" type="image/png" href="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
+<link rel="apple-touch-icon" href="https://www.colartdigitalmarketingagency.com/assets/images/colart-logo.png">
+
+<meta property="og:title" content="Pearl Beauty Lounge: Brand Identity Guidelines">
+<meta property="og:description" content="The full brand identity Colart created for Pearl Beauty Lounge.">
+<meta property="og:image" content="assets/images/pearlbeautylounge-logo.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+  :root{
+    --ink:#1C1B1A;
+    --ink-soft:#6B655C;
+    --ivory:#F4F1EA;
+    --ivory-alt:#ECE6D9;
+    --white:#FFFFFF;
+    --gold:#B9945C;
+    --gold-deep:#9C7C48;
+    --taupe:#DED5C6;
+    --line:#E2DACB;
+    --warn:#A6453B;
+    --font-display:'GFS Didot', 'Times New Roman', serif;
+    --font-body:'EB Garamond', Georgia, serif;
+    --font-support:'Poppins', system-ui, sans-serif;
+    --shadow: 0 20px 50px -22px rgba(28,27,26,.25);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--ivory); color:var(--ink);
+    font-family:var(--font-body); font-size:17px; line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:var(--font-display); margin:0; font-weight:400;}
+  p{margin:0;}
+  .container{max-width:70rem; margin:0 auto; padding:0 2rem;}
+  @media (max-width:700px){ .container{padding:0 1.3rem;} }
+  .eyebrow{
+    font-family:var(--font-support); font-size:11.5px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; color:var(--gold-deep);
+  }
+
+  /* ---------- utility bar ---------- */
+  .pearl-utility{
+    position:sticky; top:0; z-index:60;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    background:rgba(244,241,234,.9);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .pearl-utility a{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-support); font-size:12px; font-weight:600;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--ink);
+    text-decoration:none; transition:opacity .3s;
+  }
+  .pearl-utility a:hover{opacity:.55;}
+  .pearl-utility .pearl-credit{font-family:var(--font-body); font-weight:400; font-size:15px; color:var(--ink-soft); text-transform:none; letter-spacing:0;}
+  .pearl-utility .pearl-credit strong{color:var(--gold-deep); font-weight:600; font-family:var(--font-support); font-size:13px;}
+  @media (max-width:700px){ .pearl-utility{padding:14px 20px;} .pearl-utility .hide-sm{display:none;} }
+
+  /* ---------- hero ---------- */
+  .pearl-hero{
+    position:relative; overflow:hidden;
+    background:linear-gradient(180deg, var(--ivory) 0%, var(--taupe) 140%);
+    padding:100px 32px 86px;
+    text-align:center;
+  }
+  .pearl-hero-inner{position:relative; z-index:2; max-width:44rem; margin:0 auto;}
+  .pearl-logo-lockup{margin:0 auto 30px;}
+  .pearl-logo-lockup .word{font-family:var(--font-display); font-size:clamp(56px,9vw,96px); color:var(--ink); letter-spacing:-1px; line-height:1;}
+  .pearl-logo-lockup .sub{font-family:var(--font-support); font-size:clamp(12px,1.6vw,15px); font-weight:500; color:var(--ink); letter-spacing:.5em; margin-top:8px; padding-left:.5em;}
+  .pearl-hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-support); font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--gold-deep);
+    border:1px solid var(--gold); border-radius:999px;
+    padding:7px 18px; margin-bottom:28px;
+  }
+  .pearl-hero h1{color:var(--ink); font-size:clamp(28px,4vw,40px); font-weight:400; margin-bottom:20px; line-height:1.25;}
+  .pearl-hero p.lede{font-family:var(--font-body); font-style:italic; color:var(--ink-soft); font-size:19px; max-width:36rem; margin:0 auto;}
+  .pearl-pills{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:34px;}
+  .pearl-pill{
+    font-family:var(--font-support); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink); background:transparent; border:1px solid var(--gold);
+    padding:9px 18px; border-radius:999px;
+  }
+
+  /* ---------- section shell ---------- */
+  section.chapter{padding:96px 0; border-bottom:1px solid var(--line);}
+  section.chapter.alt{background:var(--ivory-alt);}
+  @media (max-width:700px){ section.chapter{padding:64px 0;} }
+  .chapter-head{display:flex; align-items:baseline; gap:18px; margin-bottom:40px;}
+  .chapter-head .num{
+    font-family:var(--font-support); font-size:12px; font-weight:600; color:var(--gold-deep);
+    border:1px solid var(--line); border-radius:999px; padding:6px 13px; flex-shrink:0;
+  }
+  .chapter-head h2{font-size:clamp(28px,3.6vw,38px); font-weight:400;}
+  .chapter-lede{font-size:17.5px; color:var(--ink-soft); max-width:50rem; margin-bottom:20px; line-height:1.75;}
+
+  .rule-gold{width:52px; height:1.5px; background:var(--gold); margin:22px 0;}
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:2.4rem;}
+  @media (max-width:760px){ .two-col{grid-template-columns:1fr;} }
+  .two-col h3{font-size:20px; font-weight:400; margin-bottom:.8rem;}
+  .two-col p, .two-col ul{font-size:15.5px; color:var(--ink-soft); line-height:1.75;}
+  .two-col ul{margin:0; padding-left:1.1rem;}
+
+  .quote-block{
+    border-left:2px solid var(--gold); padding:.2rem 0 .2rem 1.8rem; margin:1.8rem 0 2.4rem;
+  }
+  .quote-block p{font-family:var(--font-body); font-style:italic; font-size:22px; color:var(--ink); line-height:1.6;}
+
+  .story p{font-size:16.5px; color:var(--ink-soft); line-height:1.85; margin-bottom:1.1rem;}
+  .story p:last-child{margin-bottom:0;}
+
+  .personality-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:2rem;}
+  .personality-pill{
+    font-family:var(--font-support); font-size:11.5px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink); border:1px solid var(--gold); border-radius:999px; padding:9px 20px;
+  }
+
+  /* ---------- logo & clear space ---------- */
+  .logo-frame{
+    border:1px solid var(--line); border-radius:4px; background:var(--white);
+    padding:5.5rem 2rem; display:flex; align-items:center; justify-content:center; margin-bottom:2rem;
+  }
+  .logo-frame .word{font-family:var(--font-display); font-size:clamp(48px,8vw,78px); color:var(--ink); letter-spacing:-1px; line-height:1; text-align:center;}
+  .logo-frame .sub{font-family:var(--font-support); font-size:clamp(11px,1.4vw,14px); font-weight:500; color:var(--ink); letter-spacing:.5em; margin-top:8px; padding-left:.5em; text-align:center;}
+
+  .clearspace-box{
+    position:relative; border:1.5px dashed var(--gold); border-radius:4px; background:var(--white);
+    padding:3.2rem 2.6rem; max-width:36rem; margin:0 auto;
+  }
+  .clearspace-box .x-label{
+    position:absolute; font-family:var(--font-support); font-size:11px; font-weight:600; color:var(--gold-deep);
+  }
+  .clearspace-box .x-top{top:10px; left:50%; transform:translateX(-50%);}
+  .clearspace-box .x-bottom{bottom:10px; left:50%; transform:translateX(-50%);}
+  .clearspace-box .x-left{left:10px; top:50%; transform:translateY(-50%);}
+  .clearspace-box .x-right{right:10px; top:50%; transform:translateY(-50%);}
+  .clearspace-box .word{font-family:var(--font-display); font-size:clamp(34px,6vw,52px); color:var(--ink); letter-spacing:-1px; line-height:1; text-align:center;}
+  .clearspace-box .sub{font-family:var(--font-support); font-size:10px; font-weight:500; color:var(--ink); letter-spacing:.4em; margin-top:6px; padding-left:.4em; text-align:center;}
+
+  /* ---------- logo variations ---------- */
+  .variant-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem;}
+  @media (max-width:760px){ .variant-grid{grid-template-columns:1fr;} }
+  .variant-tile{border-radius:4px; overflow:hidden; border:1px solid var(--line);}
+  .variant-tile .swatch{height:200px; display:flex; align-items:center; justify-content:center;}
+  .variant-tile .word{font-family:var(--font-display); font-size:44px; letter-spacing:-1px; line-height:1; text-align:center;}
+  .variant-tile .sub{font-family:var(--font-support); font-size:10.5px; font-weight:500; letter-spacing:.4em; margin-top:7px; padding-left:.4em; text-align:center;}
+  .variant-tile.on-ivory .swatch{background:var(--ivory);}
+  .variant-tile.on-ivory .word, .variant-tile.on-ivory .sub{color:var(--ink);}
+  .variant-tile.on-ink .swatch{background:var(--ink);}
+  .variant-tile.on-ink .word, .variant-tile.on-ink .sub{color:var(--white);}
+  .variant-tile.on-gold .swatch{background:var(--gold);}
+  .variant-tile.on-gold .word, .variant-tile.on-gold .sub{color:var(--white);}
+  .variant-tile.on-taupe .swatch{background:var(--taupe);}
+  .variant-tile.on-taupe .word, .variant-tile.on-taupe .sub{color:var(--ink);}
+  .variant-caption{
+    font-family:var(--font-support); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink-soft); background:var(--white); padding:14px 18px; border-top:1px solid var(--line);
+  }
+
+  .minsize-row{display:flex; align-items:flex-end; gap:3rem; flex-wrap:wrap; margin-top:2.2rem;}
+  .minsize-row .ms{display:flex; flex-direction:column; align-items:flex-start; gap:.6rem;}
+  .minsize-row .word{font-family:var(--font-display); color:var(--ink); letter-spacing:-1px; line-height:1;}
+  .minsize-row .sub{font-family:var(--font-support); font-weight:500; color:var(--ink); margin-top:5px; padding-left:.3em;}
+  .minsize-row span.cap{font-family:var(--font-support); font-size:11.5px; color:var(--ink-soft); font-weight:600;}
+
+  /* ---------- logo misuse ---------- */
+  .dont-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem;}
+  @media (max-width:820px){ .dont-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .dont-grid{grid-template-columns:1fr;} }
+  .dont-card{background:var(--white); border:1px solid var(--line); border-radius:4px; padding:1.4rem; text-align:center; position:relative;}
+  .dont-card .dont-badge{
+    position:absolute; top:10px; right:10px; width:24px; height:24px; border-radius:50%;
+    background:var(--warn); color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;
+  }
+  .dont-card .dont-frame{height:100px; display:flex; align-items:center; justify-content:center; margin-bottom:1rem; background-position:center; background-size:cover;}
+  .dont-card .word{font-family:var(--font-display); font-size:34px; color:var(--ink); letter-spacing:-1px;}
+  .dont-card .sub{font-family:var(--font-support); font-size:9px; font-weight:500; letter-spacing:.35em; color:var(--ink); margin-top:5px; padding-left:.35em;}
+  .dont-card p{font-size:12.5px; color:var(--warn); font-weight:600; font-family:var(--font-support);}
+
+  /* ---------- color palette ---------- */
+  .swatch-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem;}
+  @media (max-width:600px){ .swatch-grid{grid-template-columns:1fr;} }
+  .swatch{background:var(--white); border:1px solid var(--line); border-radius:4px; overflow:hidden;}
+  .swatch-chip{height:110px;}
+  .swatch-chip.outline{border-bottom:1px solid var(--line);}
+  .swatch-body{padding:1.3rem 1.4rem 1.5rem;}
+  .swatch-body .name{font-family:var(--font-display); font-weight:400; font-size:19px; margin-bottom:6px;}
+  .swatch-body .hex{font-family:var(--font-support); font-size:11.5px; color:var(--ink-soft); margin-bottom:2px; letter-spacing:.02em;}
+  .swatch-body .cmyk{font-family:var(--font-support); font-size:11px; color:var(--ink-soft); opacity:.75;}
+
+  .ratio-bar{display:flex; height:44px; border-radius:4px; overflow:hidden; border:1px solid var(--line); margin-top:1.8rem;}
+  .ratio-bar span{display:block; height:100%;}
+  .ratio-legend{display:flex; flex-wrap:wrap; gap:1.6rem; margin-top:1rem; font-family:var(--font-support); font-size:12.5px; color:var(--ink-soft); font-weight:500;}
+
+  /* ---------- typography ---------- */
+  .type-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+  @media (max-width:760px){ .type-grid{grid-template-columns:1fr;} }
+  .type-card{background:var(--white); border:1px solid var(--line); border-radius:4px; padding:2.2rem;}
+  .type-card .tag{font-family:var(--font-support); font-size:11px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:1rem;}
+  .type-card .specimen{font-family:var(--font-display); font-size:clamp(38px,5.4vw,56px); margin-bottom:.5rem; color:var(--ink);}
+  .type-card.support .specimen{font-family:var(--font-support); font-weight:600;}
+  .type-card .fname{font-size:14.5px; font-weight:600; color:var(--ink); margin-bottom:.6rem; font-family:var(--font-support);}
+  .type-card p.note{font-size:13.5px; color:var(--ink-soft); line-height:1.65;}
+  .weight-row{display:flex; flex-wrap:wrap; gap:1.2rem; margin-top:1.2rem;}
+  .weight-row span{font-family:var(--font-support); font-size:15px; color:var(--ink);}
+  .weight-row span.w300{font-weight:300;}
+  .weight-row span.w400{font-weight:400;}
+  .weight-row span.w500{font-weight:500;}
+  .weight-row span.w700{font-weight:700;}
+
+  .scale-card{background:var(--white); border:1px solid var(--line); border-radius:4px; padding:2rem 2.2rem; margin-top:1.6rem;}
+  .scale-card .h1s{font-family:var(--font-display); font-size:34px; color:var(--ink); margin-bottom:.5rem;}
+  .scale-card .h2s{font-family:var(--font-display); font-size:19px; color:var(--ink); margin-bottom:.6rem;}
+  .scale-card .bodys{font-family:var(--font-body); font-size:15px; color:var(--ink-soft); margin-bottom:.7rem;}
+  .scale-card .caps{font-family:var(--font-support); font-size:10.5px; letter-spacing:.25em; text-transform:uppercase; color:var(--ink-soft); font-weight:600;}
+
+  /* ---------- voice & tone ---------- */
+  .voice-cards{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-top:1.8rem;}
+  @media (max-width:760px){ .voice-cards{grid-template-columns:1fr;} }
+  .voice-card{border-radius:4px; padding:1.9rem 2rem;}
+  .voice-card.say{background:var(--taupe);}
+  .voice-card.avoid{background:var(--white); border:1px solid var(--line);}
+  .voice-card .lbl{font-family:var(--font-support); font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--gold-deep); margin-bottom:1rem;}
+  .voice-card p{font-family:var(--font-body); font-style:italic; font-size:18px; color:var(--ink); line-height:1.6; margin-bottom:1rem;}
+  .voice-card p:last-child{margin-bottom:0;}
+
+  /* ---------- brand in application ---------- */
+  .app-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.8rem;}
+  @media (max-width:760px){ .app-grid{grid-template-columns:1fr;} }
+  .app-item{display:flex; flex-direction:column; gap:.9rem;}
+  .app-caption{font-family:var(--font-support); font-size:13px; color:var(--ink-soft); text-align:center;}
+
+  .ig-post{aspect-ratio:1/1; background:var(--gold); border-radius:4px; display:flex; align-items:center; justify-content:center; padding:10%; box-shadow:var(--shadow);}
+  .ig-post-inner{border:1px solid rgba(255,255,255,.55); width:100%; height:100%; display:flex; align-items:center; justify-content:center;}
+  .ig-post .word{font-family:var(--font-display); color:#fff; font-size:clamp(30px,5vw,44px); letter-spacing:-1px;}
+  .ig-post .sub{font-family:var(--font-support); color:#fff; font-size:10px; font-weight:500; letter-spacing:.4em; margin-top:7px; padding-left:.4em; text-align:center;}
+  .ig-post-inner-col{display:flex; flex-direction:column; align-items:center;}
+
+  .bcard-pair{display:flex; flex-direction:column; gap:.9rem;}
+  .bcard{aspect-ratio:1.75/1; border-radius:6px; box-shadow:var(--shadow); padding:1.5rem 1.7rem; display:flex; flex-direction:column; justify-content:center; align-items:center;}
+  .bcard.front{background:var(--ink);}
+  .bcard.front .word{font-family:var(--font-display); color:#fff; font-size:32px; letter-spacing:-1px;}
+  .bcard.front .sub{font-family:var(--font-support); color:#fff; font-size:8.5px; font-weight:500; letter-spacing:.4em; margin-top:6px; padding-left:.4em;}
+  .bcard.back{background:var(--white); border:1px solid var(--line); align-items:flex-start; justify-content:space-between;}
+  .bcard.back .word{font-family:var(--font-display); font-size:19px; color:var(--ink); letter-spacing:-1px;}
+  .bcard.back .sub{font-family:var(--font-support); font-size:6.5px; font-weight:500; letter-spacing:.35em; color:var(--ink); margin-top:3px; padding-left:.35em;}
+  .bcard.back .meta{font-family:var(--font-support); font-size:10.5px; color:var(--ink-soft); line-height:1.9;}
+  .bcard.back .meta .fn{color:var(--ink); font-weight:600;}
+
+  .giftbox{border-radius:6px; overflow:hidden; box-shadow:var(--shadow); background:var(--ivory); border:1px solid var(--line);}
+  .giftbox-band{height:16%; background:var(--gold);}
+  .giftbox-body{aspect-ratio:1.6/1; display:flex; align-items:center; justify-content:center;}
+  .giftbox-body .word{font-family:var(--font-display); font-size:clamp(26px,4vw,36px); color:var(--ink); letter-spacing:-1px;}
+  .giftbox-body .sub{font-family:var(--font-support); font-size:9px; font-weight:500; letter-spacing:.4em; color:var(--ink); margin-top:6px; padding-left:.4em; text-align:center;}
+
+  .bag{position:relative; margin:0 auto; width:70%; box-shadow:var(--shadow);}
+  .bag-handle{width:44%; height:34%; margin:0 auto; border:6px solid var(--taupe); border-bottom:none; border-radius:60px 60px 0 0;}
+  .bag-body{background:var(--taupe); aspect-ratio:1/1.15; display:flex; align-items:center; justify-content:center; border-radius:2px;}
+  .bag-body .word{font-family:var(--font-display); font-size:clamp(24px,3.6vw,32px); color:var(--ink); letter-spacing:-1px;}
+  .bag-body .sub{font-family:var(--font-support); font-size:8px; font-weight:500; letter-spacing:.35em; color:var(--ink); margin-top:6px; padding-left:.35em; text-align:center;}
+
+  /* ---------- closing ---------- */
+  footer.pearl-closing{
+    background:var(--ink); padding:96px 32px 54px; text-align:center; position:relative;
+  }
+  footer.pearl-closing .word{font-family:var(--font-display); color:#fff; font-size:clamp(38px,6vw,54px); letter-spacing:-1px; line-height:1;}
+  footer.pearl-closing .sub{font-family:var(--font-support); color:#fff; font-size:12px; font-weight:500; letter-spacing:.5em; margin-top:10px; padding-left:.5em; margin-bottom:34px;}
+  footer.pearl-closing h2{font-weight:400; font-size:26px; color:#fff; margin-bottom:6px; font-family:var(--font-display);}
+  .foot-rule{width:46px; height:1px; margin:20px auto; background:var(--gold);}
+  .foot-meta{font-family:var(--font-support); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.45); margin-bottom:46px;}
+  .foot-credit{border-top:1px solid rgba(255,255,255,.12); padding-top:30px; max-width:30rem; margin:0 auto;}
+  .foot-credit p{font-family:var(--font-support); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.4); margin-bottom:10px;}
+  .foot-credit a{color:var(--gold); font-weight:600; font-size:14px; font-family:var(--font-support); text-decoration:none;}
+  .foot-links{margin-top:12px; font-size:11.5px; color:rgba(255,255,255,.45); font-family:var(--font-support);}
+  .foot-links a{color:rgba(255,255,255,.65); font-weight:400; font-size:11.5px; text-decoration:none;}
+  .foot-links a:hover{color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="pearl-utility">
+  <a href="https://branding.colartdigitalmarketingagency.com/"><i class="fa-solid fa-arrow-left"></i> Branding Portfolio</a>
+  <span class="pearl-credit hide-sm">Identity by <strong>Colart</strong> Digital Marketing Agency</span>
+</div>
+
+<!-- ===========================================
+     HERO
+=========================================== -->
+<section class="pearl-hero">
+  <div class="pearl-hero-inner">
+    <div class="pearl-logo-lockup">
+      <div class="word">PEARL</div>
+      <div class="sub">BEAUTY LOUNGE</div>
+    </div>
+    <span class="pearl-hero-eyebrow">Brand Identity Guidelines</span>
+    <h1>Formed slowly. Layer upon layer.</h1>
+    <p class="lede">&ldquo;Like a pearl, formed slowly, layer upon layer, Pearl Beauty Lounge is built on patience, craft, and quiet confidence.&rdquo;</p>
+    <div class="pearl-pills">
+      <span class="pearl-pill">Refined</span>
+      <span class="pearl-pill">Calm</span>
+      <span class="pearl-pill">Confident</span>
+      <span class="pearl-pill">Timeless</span>
+      <span class="pearl-pill">Attentive</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     01 BRAND OVERVIEW
+=========================================== -->
+<section class="chapter" id="overview">
+  <div class="container">
+    <div class="chapter-head"><span class="num">01</span><h2>Brand Overview</h2></div>
+    <div class="story">
+      <p>Pearl Beauty Lounge is a refined space for beauty rituals, where every visit is unhurried and every detail considered. In an industry that often rushes, Pearl stands apart by slowing down: skilled hands, premium care, and an atmosphere designed for clients to feel genuinely looked after.</p>
+      <p>This guide sets out how the Pearl identity should look, sound, and feel across every touchpoint, from the salon chair to the Instagram grid, so the brand stays consistent, elegant, and unmistakably Pearl.</p>
+    </div>
+    <div class="rule-gold"></div>
+    <div class="two-col">
+      <div>
+        <h3>Mission</h3>
+        <p>To offer an elevated, unhurried beauty experience rooted in craftsmanship and genuine care, so every client leaves polished, confident, and at ease.</p>
+      </div>
+      <div>
+        <h3>Brand Values</h3>
+        <p>Elegance &middot; Craftsmanship &middot; Warmth &middot; Consistency</p>
+      </div>
+    </div>
+    <div style="margin-top:2.4rem;">
+      <h3 style="font-size:20px; margin-bottom:.4rem;">Brand Personality</h3>
+      <div class="personality-row">
+        <span class="personality-pill">Refined</span>
+        <span class="personality-pill">Calm</span>
+        <span class="personality-pill">Confident</span>
+        <span class="personality-pill">Timeless</span>
+        <span class="personality-pill">Attentive</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     02 LOGO & CLEAR SPACE
+=========================================== -->
+<section class="chapter alt" id="logo">
+  <div class="container">
+    <div class="chapter-head"><span class="num">02</span><h2>Primary Logo &amp; Clear Space</h2></div>
+    <p class="chapter-lede">The primary lockup pairs the &ldquo;Pearl&rdquo; wordmark with the &ldquo;Beauty Lounge&rdquo; descriptor. It is the preferred version of the logo and should be used whenever possible, in solid ink black.</p>
+    <div class="logo-frame">
+      <div>
+        <div class="word">PEARL</div>
+        <div class="sub">BEAUTY LOUNGE</div>
+      </div>
+    </div>
+    <h3 style="font-size:20px; margin-bottom:.6rem;">Clear Space</h3>
+    <p style="font-size:15.5px; color:var(--ink-soft); line-height:1.75; max-width:44rem; margin-bottom:1.8rem;">Always preserve a minimum clear space around the logo, free of text, imagery, or the page edge. Use the cap height of the letter &ldquo;P&rdquo; as the unit (X) to measure this space on every side.</p>
+    <div class="clearspace-box">
+      <span class="x-label x-top">X</span>
+      <span class="x-label x-bottom">X</span>
+      <span class="x-label x-left">X</span>
+      <span class="x-label x-right">X</span>
+      <div class="word">PEARL</div>
+      <div class="sub">BEAUTY LOUNGE</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     03 LOGO VARIATIONS & MINIMUM SIZE
+=========================================== -->
+<section class="chapter" id="variations">
+  <div class="container">
+    <div class="chapter-head"><span class="num">03</span><h2>Variations &amp; Minimum Size</h2></div>
+    <p class="chapter-lede">Four approved grounds for the wordmark, each keeping the same proportions and letterforms.</p>
+    <div class="variant-grid">
+      <div class="variant-tile on-ivory">
+        <div class="swatch"><div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div></div>
+        <div class="variant-caption">On Ivory &amp; White &middot; Primary</div>
+      </div>
+      <div class="variant-tile on-ink">
+        <div class="swatch"><div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div></div>
+        <div class="variant-caption">On Ink Black &middot; Reversed</div>
+      </div>
+      <div class="variant-tile on-gold">
+        <div class="swatch"><div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div></div>
+        <div class="variant-caption">On Champagne Gold &middot; Accent Use</div>
+      </div>
+      <div class="variant-tile on-taupe">
+        <div class="swatch"><div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div></div>
+        <div class="variant-caption">On Taupe Mist &middot; Secondary</div>
+      </div>
+    </div>
+    <h3 style="font-size:20px; margin:2.6rem 0 .4rem;">Minimum Size</h3>
+    <p style="font-size:15.5px; color:var(--ink-soft); margin-bottom:.6rem;">To keep the wordmark legible, never reproduce the logo smaller than the sizes below.</p>
+    <div class="minsize-row">
+      <div class="ms">
+        <div><div class="word" style="font-size:44px;">PEARL</div><div class="sub" style="font-size:11px;">BEAUTY LOUNGE</div></div>
+        <span class="cap">Print &middot; 25mm wide</span>
+      </div>
+      <div class="ms">
+        <div><div class="word" style="font-size:26px;">PEARL</div><div class="sub" style="font-size:7px;">BEAUTY LOUNGE</div></div>
+        <span class="cap">Digital &middot; 120px wide</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     04 LOGO MISUSE
+=========================================== -->
+<section class="chapter alt" id="misuse">
+  <div class="container">
+    <div class="chapter-head"><span class="num">04</span><h2>Logo Misuse</h2></div>
+    <p class="chapter-lede">The integrity of the wordmark depends on consistent use. Never alter, distort, or dress up the logo beyond the approved variations shown above.</p>
+    <div class="dont-grid">
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><div style="transform:scaleX(1.7);"><div class="word">PEARL</div></div></div>
+        <p>Don&rsquo;t stretch or distort</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><div style="transform:rotate(-13deg);"><div class="word">PEARL</div></div></div>
+        <p>Don&rsquo;t rotate</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame" style="background:var(--gold);"><div class="word" style="color:#E23B6B;">PEARL</div></div>
+        <p>Don&rsquo;t recolor outside the palette</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><div class="word" style="text-shadow:6px 8px 10px rgba(0,0,0,.45);">PEARL</div></div>
+        <p>Don&rsquo;t add shadows or effects</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame" style="background:linear-gradient(135deg, var(--gold), var(--taupe));"><div class="word" style="color:var(--ivory); opacity:.7;">PEARL</div></div>
+        <p>Don&rsquo;t place on low-contrast backgrounds</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><div><div style="font-family:var(--font-support); font-weight:700; font-size:26px; color:var(--ink);">PEARL</div><div class="sub" style="font-family:var(--font-support); font-weight:600; font-size:9px;">BEAUTY LOUNGE</div></div></div>
+        <p>Don&rsquo;t rebuild in another typeface</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     05 COLOR PALETTE
+=========================================== -->
+<section class="chapter" id="colors">
+  <div class="container">
+    <div class="chapter-head"><span class="num">05</span><h2>Color Palette</h2></div>
+    <p class="chapter-lede">Pearl&rsquo;s palette takes its cue from the wordmark itself: ink black grounded by warm, pearlescent neutrals and a single champagne gold accent, used sparingly for moments of detail.</p>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--ink);"></div>
+        <div class="swatch-body">
+          <div class="name">Ink Black</div>
+          <div class="hex">HEX 1C1B1A &middot; RGB 28 27 26</div>
+          <div class="cmyk">CMYK 0 4 7 89</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip outline" style="background:var(--ivory);"></div>
+        <div class="swatch-body">
+          <div class="name">Pearl Ivory</div>
+          <div class="hex">HEX F4F1EA &middot; RGB 244 241 234</div>
+          <div class="cmyk">CMYK 0 1 4 4</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--gold);"></div>
+        <div class="swatch-body">
+          <div class="name">Champagne Gold</div>
+          <div class="hex">HEX B9945C &middot; RGB 185 148 92</div>
+          <div class="cmyk">CMYK 0 20 50 27</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--taupe);"></div>
+        <div class="swatch-body">
+          <div class="name">Taupe Mist</div>
+          <div class="hex">HEX DED5C6 &middot; RGB 222 213 198</div>
+          <div class="cmyk">CMYK 0 4 11 13</div>
+        </div>
+      </div>
+    </div>
+    <h3 style="font-size:20px; margin:2.4rem 0 0;">Usage Ratio</h3>
+    <div class="ratio-bar">
+      <span style="width:60%; background:var(--ivory);"></span>
+      <span style="width:30%; background:var(--ink);"></span>
+      <span style="width:10%; background:var(--gold);"></span>
+    </div>
+    <div class="ratio-legend">
+      <span>60% Pearl Ivory, backgrounds</span>
+      <span>30% Ink Black, type &amp; logo</span>
+      <span>10% Gold, accents</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     06 TYPOGRAPHY
+=========================================== -->
+<section class="chapter alt" id="typography">
+  <div class="container">
+    <div class="chapter-head"><span class="num">06</span><h2>Type System</h2></div>
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="tag">Display &middot; GFS Didot</div>
+        <div class="specimen">Aa Bb Cc</div>
+        <p class="note">Used for headlines, section titles, and the wordmark itself. High-contrast strokes echo the pearl&rsquo;s refined, luxury character. Reserve for large sizes only.</p>
+      </div>
+      <div class="type-card">
+        <div class="tag">Body &middot; EB Garamond</div>
+        <div class="specimen" style="font-style:italic; font-size:clamp(30px,4.4vw,44px);">Aa Bb Cc <span style="font-style:italic;">Aa</span></div>
+        <p class="note">A classic, highly readable serif for body copy, brand storytelling, and longer passages, paired with italics for quotes and quiet emphasis.</p>
+      </div>
+      <div class="type-card support" style="grid-column:1 / -1;">
+        <div class="tag">Support &middot; Poppins</div>
+        <div class="weight-row">
+          <span class="w300">Light</span>
+          <span class="w400">Regular</span>
+          <span class="w500">Medium</span>
+          <span class="w700">Bold</span>
+        </div>
+        <p class="note" style="margin-top:1.1rem;">Used for the &ldquo;Beauty Lounge&rdquo; descriptor, UI, captions, labels, and eyebrow text, always well letter-spaced in capitals for small sizes.</p>
+      </div>
+    </div>
+    <div class="scale-card">
+      <div class="h1s">Heading One / 34pt</div>
+      <div class="h2s">Heading Two / 17pt</div>
+      <div class="bodys">Body copy / 12.5pt, for storytelling and longer text passages.</div>
+      <div class="caps">Caption / Label, 9pt</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     07 VOICE & TONE
+=========================================== -->
+<section class="chapter" id="voice">
+  <div class="container">
+    <div class="chapter-head"><span class="num">07</span><h2>How Pearl Speaks</h2></div>
+    <p class="chapter-lede">Pearl speaks like a trusted, elegant friend, warm and personal, never loud or overly salesy. Copy should feel unhurried, confident, and considered, whether in English or Lebanese Arabic.</p>
+    <div class="two-col">
+      <div>
+        <h3>We Are</h3>
+        <p>Warm &middot; Polished &middot; Attentive &middot; Quietly confident &middot; Bilingual (EN / AR)</p>
+      </div>
+      <div>
+        <h3>We Are Not</h3>
+        <p>Loud &middot; Pushy &middot; Overly casual &middot; Cluttered &middot; Generic</p>
+      </div>
+    </div>
+    <div class="voice-cards">
+      <div class="voice-card say">
+        <div class="lbl">Do Say</div>
+        <p>&ldquo;Treat yourself to a moment of quiet luxury.&rdquo;</p>
+        <p>&ldquo;Crafted with care, from the first consultation to the final polish.&rdquo;</p>
+      </div>
+      <div class="voice-card avoid">
+        <div class="lbl">Avoid Saying</div>
+        <p>&ldquo;OMG BEST DEAL EVER!!! Don&rsquo;t miss out!!&rdquo;</p>
+        <p style="font-style:normal; font-size:14.5px; color:var(--ink-soft);">Excess exclamation points, slang, or hard-sell language.</p>
+      </div>
+    </div>
+    <div style="margin-top:2.2rem;">
+      <h3 style="font-size:20px; margin-bottom:.5rem;">Bilingual Use</h3>
+      <p style="font-size:15.5px; color:var(--ink-soft); max-width:44rem; line-height:1.75;">Social captions and client communications should be available in both English and Lebanese Arabic, keeping the same warm, unhurried register in both languages.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     08 BRAND IN APPLICATION
+=========================================== -->
+<section class="chapter alt" id="applications">
+  <div class="container">
+    <div class="chapter-head"><span class="num">08</span><h2>Brand in Application</h2></div>
+    <p class="chapter-lede">A quick look at the identity carried onto the surfaces clients actually touch: social, stationery, and packaging.</p>
+    <div class="app-grid">
+      <div class="app-item">
+        <div class="ig-post">
+          <div class="ig-post-inner">
+            <div class="ig-post-inner-col">
+              <div class="word">PEARL</div>
+              <div class="sub">BEAUTY LOUNGE</div>
+            </div>
+          </div>
+        </div>
+        <div class="app-caption">Instagram Post</div>
+      </div>
+      <div class="app-item">
+        <div class="bcard-pair">
+          <div class="bcard front">
+            <div class="word">PEARL</div>
+            <div class="sub">BEAUTY LOUNGE</div>
+          </div>
+          <div class="bcard back">
+            <div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div>
+            <div class="meta"><span class="fn">FULL NAME</span><br>Job Title<br>+961 00 000 000<br>pearlbeautylounge.com</div>
+          </div>
+        </div>
+        <div class="app-caption">Business Card</div>
+      </div>
+      <div class="app-item">
+        <div class="giftbox">
+          <div class="giftbox-band"></div>
+          <div class="giftbox-body">
+            <div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div>
+          </div>
+        </div>
+        <div class="app-caption">Packaging / Gift Box</div>
+      </div>
+      <div class="app-item">
+        <div class="bag">
+          <div class="bag-handle"></div>
+          <div class="bag-body">
+            <div><div class="word">PEARL</div><div class="sub">BEAUTY LOUNGE</div></div>
+          </div>
+        </div>
+        <div class="app-caption">Shopping Bag</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     CLOSING
+=========================================== -->
+<footer class="pearl-closing">
+  <div class="word">PEARL</div>
+  <div class="sub">BEAUTY LOUNGE</div>
+  <h2>Thank You</h2>
+  <div class="foot-rule"></div>
+  <div class="foot-meta">Brand Identity Guidelines &middot; 2026</div>
+  <div class="foot-credit">
+    <p>Identity Design &amp; Guidelines By</p>
+    <a href="https://www.colartdigitalmarketingagency.com/">Colart Digital Marketing Agency</a>
+    <div class="foot-links">
+      <a href="https://branding.colartdigitalmarketingagency.com/">More Branding Work</a> &middot;
+      <a href="https://www.colartdigitalmarketingagency.com/services/">Our Services</a> &middot;
+      <a href="https://www.colartdigitalmarketingagency.com/contact/">Start a Project</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
