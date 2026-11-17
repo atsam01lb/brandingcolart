@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mama Sobhiya: Brand Identity Guidelines</title>
+<meta name="description" content="Brand identity guidelines for Mama Sobhiya, a Lebanese home-style kitchen brand. Logo system, color palette, typography, voice, and applications.">
+<link rel="canonical" href="https://branding.colartdigitalmarketingagency.com/mamasobhiya">
+
+<link rel="icon" type="image/png" href="../assets/images/branding-favicon.png">
+<link rel="apple-touch-icon" href="../assets/images/branding-favicon.png">
+
+<meta property="og:title" content="Mama Sobhiya: Brand Identity Guidelines">
+<meta property="og:description" content="The full brand identity Colart created for Mama Sobhiya, a Lebanese home-style kitchen brand.">
+<meta property="og:image" content="assets/images/mamasobhiya-logo-black.png">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+  :root{
+    --red:#AA1D23;
+    --red-deep:#7E161B;
+    --cream:#FFF9F1;
+    --cream-alt:#F6ECDC;
+    --white:#FFFFFF;
+    --terracotta:#C76E4C;
+    --olive:#747B4C;
+    --cocoa:#493128;
+    --ink:#3C2B22;
+    --ink-soft:#8A7A6C;
+    --line:#EEE1CC;
+    --shadow: 0 20px 50px -22px rgba(73,49,40,.3);
+    --font-display:'Baloo 2', 'Arial Rounded MT Bold', Arial, sans-serif;
+    --font-body:'Poppins', Arial, sans-serif;
+    --font-support:'Poppins', Arial, sans-serif;
+    --font-ar-h:'Cairo', Tahoma, Arial, sans-serif;
+    --font-ar-b:'Tajawal', Tahoma, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} }
+  body{
+    margin:0; background:var(--cream); color:var(--ink);
+    font-family:var(--font-body); font-size:16.5px; line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{max-width:100%; display:block;}
+  a{color:inherit;}
+  h1,h2,h3,h4{font-family:var(--font-display); margin:0; font-weight:700;}
+  p{margin:0;}
+  .ar{font-family:var(--font-ar-b); direction:rtl; unicode-bidi:isolate;}
+  .ar-h{font-family:var(--font-ar-h); direction:rtl; unicode-bidi:isolate;}
+  .container{max-width:70rem; margin:0 auto; padding:0 2rem;}
+  @media (max-width:700px){ .container{padding:0 1.3rem;} }
+
+  /* ---------- utility bar ---------- */
+  .mama-utility{
+    position:sticky; top:0; z-index:60;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 32px;
+    background:rgba(255,249,241,.92);
+    backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .mama-utility a{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-support); font-size:12px; font-weight:600;
+    letter-spacing:.06em; text-transform:uppercase; color:var(--ink);
+    text-decoration:none; transition:opacity .3s;
+  }
+  .mama-utility a:hover{opacity:.55;}
+  .mama-utility .mama-credit{font-family:var(--font-body); font-weight:400; font-size:14.5px; color:var(--ink-soft); text-transform:none; letter-spacing:0;}
+  .mama-utility .mama-credit strong{color:var(--red); font-weight:700; font-family:var(--font-support); font-size:13px;}
+  @media (max-width:700px){ .mama-utility{padding:14px 20px;} .mama-utility .hide-sm{display:none;} }
+
+  /* ---------- hero ---------- */
+  .mama-hero{
+    position:relative; overflow:hidden;
+    background:linear-gradient(180deg, var(--cream) 0%, var(--cream-alt) 140%);
+    padding:88px 32px 80px;
+    text-align:center;
+  }
+  .mama-hero-inner{position:relative; z-index:2; max-width:44rem; margin:0 auto;}
+  .mama-logo-lockup{margin:0 auto 26px;}
+  .mama-logo-lockup img{width:clamp(150px,18vw,220px); margin:0 auto;}
+  .mama-hero-eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-family:var(--font-support); font-size:11px; font-weight:700; letter-spacing:.16em; text-transform:uppercase;
+    color:var(--red);
+    border:1px solid var(--red); border-radius:999px;
+    padding:7px 18px; margin-bottom:26px;
+  }
+  .mama-hero h1{color:var(--ink); font-size:clamp(28px,4vw,40px); font-weight:700; margin-bottom:22px; line-height:1.25;}
+  .mama-hero .ar-tagline{font-size:clamp(22px,3vw,28px); color:var(--red); margin-bottom:8px; font-weight:700;}
+  .mama-hero p.lede{font-family:var(--font-body); font-style:italic; color:var(--ink-soft); font-size:17.5px; max-width:36rem; margin:0 auto;}
+  .mama-pills{display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-top:32px;}
+  .mama-pill{
+    font-family:var(--font-support); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink); background:var(--white); border:1px solid var(--line);
+    padding:9px 18px; border-radius:999px;
+  }
+
+  /* ---------- section shell ---------- */
+  section.chapter{padding:92px 0; border-bottom:1px solid var(--line);}
+  section.chapter.alt{background:var(--cream-alt);}
+  @media (max-width:700px){ section.chapter{padding:60px 0;} }
+  .chapter-head{display:flex; align-items:baseline; gap:18px; margin-bottom:38px;}
+  .chapter-head .num{
+    font-family:var(--font-support); font-size:12px; font-weight:700; color:var(--red);
+    border:1px solid var(--line); border-radius:999px; padding:6px 13px; flex-shrink:0; background:var(--white);
+  }
+  .chapter-head h2{font-size:clamp(26px,3.4vw,36px); font-weight:700;}
+  .chapter-lede{font-size:17px; color:var(--ink-soft); max-width:50rem; margin-bottom:20px; line-height:1.75;}
+  .note-line{font-size:13.5px; color:var(--ink-soft); font-style:italic; margin-top:1.4rem;}
+
+  .rule-red{width:52px; height:3px; background:var(--red); margin:22px 0; border-radius:2px;}
+
+  .two-col{display:grid; grid-template-columns:1fr 1fr; gap:2.2rem;}
+  @media (max-width:760px){ .two-col{grid-template-columns:1fr;} }
+  .two-col h3{font-size:19px; font-weight:700; margin-bottom:.7rem;}
+  .two-col p, .two-col ul{font-size:15.5px; color:var(--ink-soft); line-height:1.75;}
+  .two-col ul{margin:0; padding-left:1.1rem;}
+
+  .quad-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.4rem;}
+  @media (max-width:760px){ .quad-grid{grid-template-columns:1fr;} }
+  .info-card{background:var(--white); border:1px solid var(--line); border-radius:8px; padding:1.7rem 1.9rem;}
+  .info-card h3{font-size:16.5px; font-weight:700; color:var(--red); margin-bottom:.7rem; text-transform:uppercase; letter-spacing:.03em; font-family:var(--font-support);}
+  .info-card p, .info-card ul{font-size:15px; color:var(--ink-soft); line-height:1.75; margin:0;}
+  .info-card ul{padding-left:1.1rem;}
+
+  .quote-block{
+    border-left:3px solid var(--red); padding:.2rem 0 .2rem 1.8rem; margin:1.8rem 0 2.2rem;
+  }
+  .quote-block p{font-family:var(--font-display); font-weight:700; font-size:21px; color:var(--ink); line-height:1.5;}
+
+  .story p{font-size:16px; color:var(--ink-soft); line-height:1.85; margin-bottom:1.1rem;}
+  .story p:last-child{margin-bottom:0;}
+
+  .personality-row{display:flex; flex-wrap:wrap; gap:10px; margin-top:.4rem;}
+  .personality-pill{
+    font-family:var(--font-support); font-size:11.5px; font-weight:600; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--white); background:var(--red); border-radius:999px; padding:9px 20px;
+  }
+
+  /* ---------- logo & clear space ---------- */
+  .logo-frame{
+    border:1px solid var(--line); border-radius:8px; background:var(--white);
+    padding:4rem 2rem; display:flex; align-items:center; justify-content:center; margin-bottom:2rem;
+  }
+  .logo-frame img{width:min(260px,55%); margin:0 auto;}
+
+  .clearspace-box{
+    position:relative; border:1.5px dashed var(--terracotta); border-radius:8px; background:var(--white);
+    padding:3rem 2.4rem; max-width:26rem; margin:0 auto;
+  }
+  .clearspace-box .x-label{
+    position:absolute; font-family:var(--font-support); font-size:11px; font-weight:700; color:var(--red);
+  }
+  .clearspace-box .x-top{top:10px; left:50%; transform:translateX(-50%);}
+  .clearspace-box .x-bottom{bottom:10px; left:50%; transform:translateX(-50%);}
+  .clearspace-box .x-left{left:10px; top:50%; transform:translateY(-50%);}
+  .clearspace-box .x-right{right:10px; top:50%; transform:translateY(-50%);}
+  .clearspace-box img{width:min(160px,55%); margin:0 auto;}
+
+  .minsize-row{display:flex; align-items:flex-end; gap:3rem; flex-wrap:wrap; margin-top:2.2rem;}
+  .minsize-row .ms{display:flex; flex-direction:column; align-items:flex-start; gap:.8rem;}
+  .minsize-row span.cap{font-family:var(--font-support); font-size:11.5px; color:var(--ink-soft); font-weight:600;}
+
+  /* ---------- signature elements ---------- */
+  .sig-list{list-style:none; margin:0; padding:0; counter-reset:sig;}
+  .sig-list li{counter-increment:sig; position:relative; padding-left:2.4rem; margin-bottom:.9rem; font-size:15.5px; color:var(--ink-soft);}
+  .sig-list li::before{
+    content: counter(sig, decimal-leading-zero);
+    position:absolute; left:0; top:-1px; font-family:var(--font-support); font-weight:700; font-size:12.5px; color:var(--red);
+  }
+
+  /* ---------- logo variations ---------- */
+  .variant-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:1.4rem;}
+  @media (max-width:760px){ .variant-grid{grid-template-columns:1fr;} }
+  .variant-tile{border-radius:8px; overflow:hidden; border:1px solid var(--line);}
+  .variant-tile .swatch{height:190px; display:flex; align-items:center; justify-content:center;}
+  .variant-tile .swatch img{width:110px;}
+  .variant-tile.on-cream .swatch{background:var(--cream);}
+  .variant-tile.on-cocoa .swatch{background:var(--cocoa);}
+  .variant-tile.on-red .swatch{background:var(--red);}
+  .variant-tile.on-alt .swatch{background:var(--cream-alt);}
+  .variant-caption{
+    font-family:var(--font-support); font-size:11px; font-weight:600; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink-soft); background:var(--white); padding:14px 18px; border-top:1px solid var(--line);
+  }
+
+  .dodont{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin:2rem 0 2.6rem;}
+  @media (max-width:700px){ .dodont{grid-template-columns:1fr;} }
+  .dodont-card{border-radius:8px; padding:1.6rem 1.8rem;}
+  .dodont-card.do{background:var(--white); border:1px solid var(--line);}
+  .dodont-card.dont{background:var(--cocoa);}
+  .dodont-card .lbl{font-family:var(--font-support); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.9rem;}
+  .dodont-card.do .lbl{color:var(--red);}
+  .dodont-card.dont .lbl{color:var(--cream);}
+  .dodont-card ul{margin:0; padding-left:1.1rem; font-size:15px; line-height:1.8;}
+  .dodont-card.do ul{color:var(--ink-soft);}
+  .dodont-card.dont ul{color:rgba(255,249,241,.8);}
+
+  .dont-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem;}
+  @media (max-width:820px){ .dont-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .dont-grid{grid-template-columns:1fr;} }
+  .dont-card{background:var(--white); border:1px solid var(--line); border-radius:8px; padding:1.4rem; text-align:center; position:relative;}
+  .dont-card .dont-badge{
+    position:absolute; top:10px; right:10px; width:24px; height:24px; border-radius:50%;
+    background:var(--red); color:#fff; display:flex; align-items:center; justify-content:center; font-size:11px;
+  }
+  .dont-card .dont-frame{height:100px; display:flex; align-items:center; justify-content:center; margin-bottom:1rem; background-position:center; background-size:cover;}
+  .dont-card .dont-frame img{width:84px;}
+  .dont-card p{font-size:12.5px; color:var(--red); font-weight:600; font-family:var(--font-support);}
+  .mask-logo{width:84px; height:144px; background:#2E8BC0;
+    -webkit-mask:url('assets/images/mamasobhiya-icon-black.png') center/contain no-repeat;
+    mask:url('assets/images/mamasobhiya-icon-black.png') center/contain no-repeat;}
+  .mask-logo.low-contrast{background:#D8A98C;}
+  .rebuild-fake{font-family:Georgia, serif; font-weight:700; font-size:20px; color:var(--ink); line-height:1.2; text-align:center;}
+  .rebuild-fake .sub2{font-family:Georgia, serif; font-weight:400; font-style:italic; font-size:12px; margin-top:4px;}
+
+  /* ---------- color palette ---------- */
+  .swatch-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem;}
+  @media (max-width:760px){ .swatch-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:480px){ .swatch-grid{grid-template-columns:1fr;} }
+  .swatch{background:var(--white); border:1px solid var(--line); border-radius:8px; overflow:hidden;}
+  .swatch-chip{height:100px;}
+  .swatch-chip.outline{border-bottom:1px solid var(--line);}
+  .swatch-body{padding:1.1rem 1.2rem 1.3rem;}
+  .swatch-body .name{font-family:var(--font-display); font-weight:700; font-size:16.5px; margin-bottom:5px;}
+  .swatch-body .hex{font-family:var(--font-support); font-size:11px; color:var(--ink-soft); margin-bottom:2px; letter-spacing:.02em;}
+  .swatch-body .cmyk{font-family:var(--font-support); font-size:10.5px; color:var(--ink-soft); opacity:.75;}
+
+  .ratio-bar{display:flex; height:44px; border-radius:6px; overflow:hidden; border:1px solid var(--line); margin-top:1.8rem;}
+  .ratio-bar span{display:block; height:100%;}
+  .ratio-legend{display:flex; flex-wrap:wrap; gap:1.6rem; margin-top:1rem; font-family:var(--font-support); font-size:12.5px; color:var(--ink-soft); font-weight:500;}
+
+  /* ---------- typography ---------- */
+  .type-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+  @media (max-width:760px){ .type-grid{grid-template-columns:1fr;} }
+  .type-card{background:var(--white); border:1px solid var(--line); border-radius:8px; padding:2rem;}
+  .type-card .tag{font-family:var(--font-support); font-size:11px; font-weight:700; letter-spacing:.12em; text-transform:uppercase; color:var(--red); margin-bottom:1rem;}
+  .type-card .specimen{font-family:var(--font-display); font-weight:700; font-size:clamp(36px,5vw,52px); margin-bottom:.5rem; color:var(--ink);}
+  .type-card .specimen.ar-h{font-family:var(--font-ar-h); font-weight:800;}
+  .type-card .fname{font-size:14px; font-weight:600; color:var(--ink); margin-bottom:.5rem; font-family:var(--font-support);}
+  .type-card p.note{font-size:13.5px; color:var(--ink-soft); line-height:1.65;}
+
+  .scale-card{background:var(--white); border:1px solid var(--line); border-radius:8px; padding:2rem 2.2rem; margin-top:1.6rem;}
+  .scale-card .h1s{font-family:var(--font-display); font-weight:700; font-size:32px; color:var(--ink); margin-bottom:.5rem;}
+  .scale-card .h2s{font-family:var(--font-display); font-weight:700; font-size:21px; color:var(--ink); margin-bottom:.6rem;}
+  .scale-card .bodys{font-family:var(--font-body); font-size:15px; color:var(--ink-soft); margin-bottom:.7rem;}
+  .scale-card .caps{font-family:var(--font-support); font-size:10.5px; letter-spacing:.2em; text-transform:uppercase; color:var(--ink-soft); font-weight:600;}
+
+  /* ---------- illustration sample ---------- */
+  .illus-row{display:flex; gap:1.6rem; align-items:center; margin-top:1rem;}
+  @media (max-width:600px){ .illus-row{flex-direction:column; align-items:flex-start;} }
+  .illus-sample{border:1px solid var(--line); border-radius:8px; overflow:hidden; flex-shrink:0; width:140px; box-shadow:var(--shadow);}
+  .illus-sample img{width:100%;}
+
+  /* ---------- voice cards ---------- */
+  .voice-cards{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem; margin-top:1.8rem;}
+  @media (max-width:760px){ .voice-cards{grid-template-columns:1fr;} }
+  .voice-card{border-radius:8px; padding:1.8rem 2rem; background:var(--white); border:1px solid var(--line);}
+  .voice-card .lbl{font-family:var(--font-support); font-size:10.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--red); margin-bottom:1rem;}
+  .voice-card .phrase{margin-bottom:1rem;}
+  .voice-card .phrase:last-child{margin-bottom:0;}
+  .voice-card .phrase .ar{font-size:17px; color:var(--ink); display:block; margin-bottom:.2rem;}
+  .voice-card .phrase .gloss{font-size:13px; color:var(--ink-soft); font-style:italic;}
+
+  /* ---------- digital applications ---------- */
+  .social-grid{display:grid; grid-template-columns:1.1fr 1fr 1fr; gap:1.4rem;}
+  @media (max-width:820px){ .social-grid{grid-template-columns:1fr; }}
+  .social-photo-card{border-radius:8px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow);}
+  .social-photo-card img{width:100%;}
+  .social-concept-card{border-radius:8px; overflow:hidden; border:1px solid var(--line);}
+  .social-concept-card .tile{height:170px;}
+  .social-concept-card .tile.bg-red{background:var(--red);}
+  .social-concept-card .tile.bg-terracotta{background:var(--terracotta);}
+  .concept-body{background:var(--white); padding:1.2rem 1.3rem;}
+  .concept-body h4{font-family:var(--font-support); font-size:13.5px; font-weight:700; margin-bottom:.5rem;}
+  .concept-body p{font-size:13px; color:var(--ink-soft); line-height:1.6;}
+  .prod-sizes{font-family:var(--font-support); font-size:12.5px; color:var(--ink-soft); margin-top:1.4rem;}
+
+  /* ---------- real-world gallery ---------- */
+  .gallery-grid{display:grid; grid-template-columns:1fr 1fr; gap:1.6rem;}
+  @media (max-width:700px){ .gallery-grid{grid-template-columns:1fr;} }
+  .gallery-item{border-radius:8px; overflow:hidden; border:1px solid var(--line); box-shadow:var(--shadow);}
+  .gallery-item img{width:100%;}
+  .gallery-caption{background:var(--white); padding:.9rem 1.2rem; font-family:var(--font-support); font-size:12.5px; font-weight:600; letter-spacing:.04em; color:var(--ink); text-align:center;}
+
+  /* ---------- asset handoff ---------- */
+  .handoff-list{list-style:none; margin:0; padding:0;}
+  .handoff-list li{display:flex; gap:1rem; align-items:flex-start; padding:1rem 0; border-bottom:1px solid var(--line); font-size:15.5px; color:var(--ink-soft); line-height:1.65;}
+  .handoff-list li:last-child{border-bottom:none;}
+  .handoff-list i{color:var(--red); margin-top:4px; flex-shrink:0;}
+  .handoff-list strong{color:var(--ink); font-weight:600;}
+
+  /* ---------- closing ---------- */
+  footer.mama-closing{
+    background:var(--cocoa); padding:90px 32px 52px; text-align:center; position:relative;
+  }
+  footer.mama-closing img{width:min(160px,42%); margin:0 auto 28px;}
+  footer.mama-closing h2{font-weight:700; font-size:24px; color:#fff; margin-bottom:6px; font-family:var(--font-display);}
+  .foot-rule{width:46px; height:3px; margin:18px auto; background:var(--red); border-radius:2px;}
+  .foot-meta{font-family:var(--font-support); font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,249,241,.5); margin-bottom:44px;}
+  .foot-credit{border-top:1px solid rgba(255,249,241,.14); padding-top:28px; max-width:30rem; margin:0 auto;}
+  .foot-credit p{font-family:var(--font-support); font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,249,241,.45); margin-bottom:10px;}
+  .foot-credit a{color:var(--terracotta); font-weight:700; font-size:14px; font-family:var(--font-support); text-decoration:none;}
+  .foot-links{margin-top:12px; font-size:11.5px; color:rgba(255,249,241,.5); font-family:var(--font-support);}
+  .foot-links a{color:rgba(255,249,241,.7); font-weight:400; font-size:11.5px; text-decoration:none;}
+  .foot-links a:hover{color:#fff;}
+</style>
+</head>
+<body>
+
+<div class="mama-utility">
+  <a href="https://branding.colartdigitalmarketingagency.com/"><i class="fa-solid fa-arrow-left"></i> Branding Portfolio</a>
+  <span class="mama-credit hide-sm">Identity by <strong>Colart</strong> Digital Marketing Agency</span>
+</div>
+
+<!-- ===========================================
+     HERO
+=========================================== -->
+<section class="mama-hero">
+  <div class="mama-hero-inner">
+    <div class="mama-logo-lockup">
+      <img src="assets/images/mamasobhiya-logo.png" alt="Mama Sobhiya logo">
+    </div>
+    <span class="mama-hero-eyebrow">Brand Identity Guidelines</span>
+    <h1>The Taste of Home, From the House Cook's Hands.</h1>
+    <p class="ar-h ar-tagline">طعم البيت... من إيد ست البيت</p>
+    <p class="lede">A Lebanese home-style kitchen brand that brings the warmth, generosity, and authentic flavors of traditional home cooking to every table.</p>
+    <div class="mama-pills">
+      <span class="mama-pill">Warm</span>
+      <span class="mama-pill">Authentic</span>
+      <span class="mama-pill">Generous</span>
+      <span class="mama-pill">Friendly</span>
+      <span class="mama-pill">Reassuring</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     01 BRAND FOUNDATION
+=========================================== -->
+<section class="chapter" id="foundation">
+  <div class="container">
+    <div class="chapter-head"><span class="num">01</span><h2>Brand Foundation</h2></div>
+    <p class="chapter-lede">Mama Sobhiya is built on one idea: traditional Lebanese home cooking, made convenient, without losing the warmth of a real family kitchen.</p>
+    <div class="two-col">
+      <div>
+        <h3>Brand Essence</h3>
+        <p>A Lebanese home-style kitchen rooted in comforting flavors, generosity, family traditions and the joy of sharing.</p>
+      </div>
+      <div>
+        <h3>Brand Promise</h3>
+        <p>Bring the warmth of a home-cooked Lebanese meal to every table, with approachable and lovingly prepared food.</p>
+      </div>
+    </div>
+    <div class="quote-block">
+      <p>Traditional in spirit. Modern in presentation. Always homemade.</p>
+    </div>
+    <div class="story">
+      <p>Mama Sobhiya celebrates the familiar flavors of a Lebanese family kitchen, where recipes evoke memories and every meal brings people together.</p>
+    </div>
+    <p class="note-line">Note: this is a proposed positioning statement, not a verified historical claim.</p>
+    <div class="rule-red"></div>
+    <div class="two-col">
+      <div>
+        <h3>Mission</h3>
+        <p>Make comforting Lebanese home-style food accessible for everyday meals and family gatherings.</p>
+      </div>
+      <div>
+        <h3>Vision</h3>
+        <p>Become a trusted, recognizable name for authentic home-style Lebanese food and convenient meal solutions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     02 AUDIENCE & POSITIONING
+=========================================== -->
+<section class="chapter alt" id="audience">
+  <div class="container">
+    <div class="chapter-head"><span class="num">02</span><h2>Audience &amp; Positioning</h2></div>
+    <p class="chapter-lede">Mama Sobhiya speaks to people who want the ease of takeaway without giving up the taste of a home-cooked meal.</p>
+    <div class="quad-grid">
+      <div class="info-card">
+        <h3>Core Values</h3>
+        <p>Authenticity &middot; Care &middot; Generosity &middot; Consistency &middot; Family connection</p>
+      </div>
+      <div class="info-card">
+        <h3>Primary Audience</h3>
+        <p>Lebanese families, working professionals and households seeking convenient, familiar meals.</p>
+      </div>
+      <div class="info-card">
+        <h3>Needs &amp; Pain Points</h3>
+        <p>Reliable quality, convenience, familiar flavors, easy ordering and practical ready-to-cook options.</p>
+      </div>
+      <div class="info-card">
+        <h3>Positioning</h3>
+        <p>A warm, accessible alternative to impersonal takeaway: home-style food with a distinctive family-kitchen identity.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     03 BRAND VOICE & MESSAGING
+=========================================== -->
+<section class="chapter" id="voice">
+  <div class="container">
+    <div class="chapter-head"><span class="num">03</span><h2>Brand Voice &amp; Messaging</h2></div>
+    <p class="chapter-lede">Every word from Mama Sobhiya should sound like it is coming from someone who genuinely cares what you are having for dinner.</p>
+    <h3 style="font-size:19px; margin-bottom:.8rem;">Personality</h3>
+    <div class="personality-row">
+      <span class="personality-pill">Warm</span>
+      <span class="personality-pill">Authentic</span>
+      <span class="personality-pill">Generous</span>
+      <span class="personality-pill">Friendly</span>
+      <span class="personality-pill">Reassuring</span>
+    </div>
+    <div class="rule-red"></div>
+    <div class="two-col">
+      <div>
+        <h3>Channel Tone</h3>
+        <ul>
+          <li>Social: playful Lebanese Arabic.</li>
+          <li>Customer care: patient, clear, helpful.</li>
+          <li>Menus: appetizing, concise, accurate.</li>
+          <li>Notices: respectful, factual, direct.</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Copywriting Rules</h3>
+        <p>Prefer simple Lebanese Arabic. Use short sentences and direct CTAs. Preserve exact product names and ingredient information. Avoid exaggerated health or quality claims.</p>
+      </div>
+    </div>
+    <div class="quote-block" style="margin-top:2.4rem;">
+      <p class="ar-h">طعم البيت... من إيد ست البيت</p>
+      <p style="font-family:var(--font-body); font-style:italic; font-weight:400; font-size:15.5px; color:var(--ink-soft); margin-top:.6rem;">&ldquo;The taste of home, from the hands of the lady of the house.&rdquo; &middot; Primary tagline</p>
+    </div>
+    <div class="voice-cards">
+      <div class="voice-card">
+        <div class="lbl">Secondary Phrases</div>
+        <div class="phrase"><span class="ar">من مطبخنا لبيتك... بكل حب</span><span class="gloss">From our kitchen to yours, with love.</span></div>
+        <div class="phrase"><span class="ar">أكل بيتي، طعمة أصيلة</span><span class="gloss">Home cooking, authentic taste.</span></div>
+        <div class="phrase"><span class="ar">جمعتكن بتحلى مع أكل ماما صبحية</span><span class="gloss">Your gathering is sweeter with Mama Sobhiya&rsquo;s food.</span></div>
+      </div>
+      <div class="voice-card">
+        <div class="lbl">Call To Action</div>
+        <div class="phrase"><span class="ar">اطلبوا هلّق</span><span class="gloss">Order now.</span></div>
+        <div class="phrase"><span class="ar">اكتشفوا المنيو</span><span class="gloss">Discover the menu.</span></div>
+        <div class="phrase"><span class="ar">خلّوا الطيبة توصل لعندكن</span><span class="gloss">Let the goodness reach you.</span></div>
+      </div>
+    </div>
+    <p class="note-line">Only the primary tagline is user-selected; secondary phrases and CTAs are proposed.</p>
+  </div>
+</section>
+
+<!-- ===========================================
+     04 PRIMARY LOGO & CONSTRUCTION
+=========================================== -->
+<section class="chapter alt" id="logo">
+  <div class="container">
+    <div class="chapter-head"><span class="num">04</span><h2>Primary Logo &amp; Construction</h2></div>
+    <p class="chapter-lede">The chopping-board mark is Mama Sobhiya&rsquo;s signature: a tool from every home kitchen, carrying the name of the house cook.</p>
+    <div class="logo-frame">
+      <img src="assets/images/mamasobhiya-logo.png" alt="Mama Sobhiya primary logo">
+    </div>
+    <div class="two-col">
+      <div>
+        <h3>Signature Elements</h3>
+        <ul class="sig-list">
+          <li>Chopping-board silhouette</li>
+          <li>Expressive English lettering</li>
+          <li>Chef-hat and utensil details</li>
+          <li>Arabic descriptor beneath</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Master Asset Rule</h3>
+        <p>Use the supplied logo without redrawing, replacing the lettering, or changing its proportions.</p>
+      </div>
+    </div>
+    <h3 style="font-size:19px; margin:2.6rem 0 .5rem;">Clear Space &amp; Minimum Size</h3>
+    <p style="font-size:15.5px; color:var(--ink-soft); line-height:1.75; max-width:44rem; margin-bottom:1.8rem;">Maintain a buffer equal to the diameter of the hanging hole (X) on all sides. Validate against the vector master before production.</p>
+    <div class="clearspace-box">
+      <span class="x-label x-top">X</span>
+      <span class="x-label x-bottom">X</span>
+      <span class="x-label x-left">X</span>
+      <span class="x-label x-right">X</span>
+      <img src="assets/images/mamasobhiya-icon.png" alt="Mama Sobhiya logo clear space guide">
+    </div>
+    <div class="minsize-row">
+      <div class="ms">
+        <img src="assets/images/mamasobhiya-icon-black.png" alt="Mama Sobhiya logo at minimum print size" style="width:90px;">
+        <span class="cap">Print &middot; 24mm wide (provisional)</span>
+      </div>
+      <div class="ms">
+        <img src="assets/images/mamasobhiya-icon-black.png" alt="Mama Sobhiya logo at minimum digital size" style="width:60px;">
+        <span class="cap">Digital &middot; 90px wide (provisional)</span>
+      </div>
+    </div>
+    <p class="note-line">Minimum sizes are provisional for the complete bilingual mark. Test Arabic legibility before final approval.</p>
+  </div>
+</section>
+
+<!-- ===========================================
+     05 LOGO VARIATIONS & MISUSE
+=========================================== -->
+<section class="chapter" id="variations">
+  <div class="container">
+    <div class="chapter-head"><span class="num">05</span><h2>Logo Variations &amp; Misuse</h2></div>
+    <p class="chapter-lede">Four approved grounds for the mark, plus the handling rules that keep Mama Sobhiya recognizable everywhere it appears.</p>
+    <div class="variant-grid">
+      <div class="variant-tile on-cream">
+        <div class="swatch"><img src="assets/images/mamasobhiya-logo.png" alt="Mama Sobhiya logo on warm cream"></div>
+        <div class="variant-caption">On Warm Cream &amp; White &middot; Primary</div>
+      </div>
+      <div class="variant-tile on-cocoa">
+        <div class="swatch"><img src="assets/images/mamasobhiya-logo-white.png" alt="Mama Sobhiya logo on cocoa"></div>
+        <div class="variant-caption">On Cocoa / Ink &middot; Reversed</div>
+      </div>
+      <div class="variant-tile on-red">
+        <div class="swatch"><img src="assets/images/mamasobhiya-logo-white.png" alt="Mama Sobhiya logo on mama red"></div>
+        <div class="variant-caption">On Mama Red &middot; Accent Use</div>
+      </div>
+      <div class="variant-tile on-alt">
+        <div class="swatch"><img src="assets/images/mamasobhiya-logo-black.png" alt="Mama Sobhiya logo one-color black"></div>
+        <div class="variant-caption">One-Color &middot; Print &amp; Stamps</div>
+      </div>
+    </div>
+    <div class="dodont">
+      <div class="dodont-card do">
+        <div class="lbl">Do</div>
+        <ul>
+          <li>Keep original aspect ratio.</li>
+          <li>Use on uncluttered backgrounds.</li>
+          <li>Keep strong contrast.</li>
+        </ul>
+      </div>
+      <div class="dodont-card dont">
+        <div class="lbl">Don&rsquo;t</div>
+        <ul>
+          <li>Stretch, rotate or crop.</li>
+          <li>Add shadows or outlines.</li>
+          <li>Change brand colors or lettering.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dont-grid">
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><img src="assets/images/mamasobhiya-icon-black.png" alt="Stretched logo example" style="transform:scaleX(1.7); width:56px;"></div>
+        <p>Don&rsquo;t stretch or distort</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><img src="assets/images/mamasobhiya-icon-black.png" alt="Rotated logo example" style="transform:rotate(-16deg); width:68px;"></div>
+        <p>Don&rsquo;t rotate</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><div class="mask-logo"></div></div>
+        <p>Don&rsquo;t recolor outside the palette</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><img src="assets/images/mamasobhiya-icon-black.png" alt="Logo with drop shadow example" style="width:68px; filter:drop-shadow(5px 7px 7px rgba(0,0,0,.45));"></div>
+        <p>Don&rsquo;t add shadows or effects</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame" style="background:linear-gradient(135deg, var(--terracotta), var(--cream-alt));"><div class="mask-logo low-contrast"></div></div>
+        <p>Don&rsquo;t place on low-contrast backgrounds</p>
+      </div>
+      <div class="dont-card">
+        <div class="dont-badge"><i class="fa-solid fa-xmark"></i></div>
+        <div class="dont-frame"><div class="rebuild-fake">MAMA SOBHIYA<div class="sub2">kitchen</div></div></div>
+        <p>Don&rsquo;t rebuild in another typeface</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     06 COLOR SYSTEM
+=========================================== -->
+<section class="chapter alt" id="colors">
+  <div class="container">
+    <div class="chapter-head"><span class="num">06</span><h2>Color System</h2></div>
+    <p class="chapter-lede">A palette built around one unmistakable red, balanced by warm neutrals and two muted supporting tones.</p>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--red);"></div>
+        <div class="swatch-body">
+          <div class="name">Mama Red</div>
+          <div class="hex">HEX AA1D23 &middot; RGB 170 29 35</div>
+          <div class="cmyk">CMYK 0/83/79/33</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip outline" style="background:var(--cream);"></div>
+        <div class="swatch-body">
+          <div class="name">Warm Cream</div>
+          <div class="hex">HEX FFF9F1 &middot; RGB 255 249 241</div>
+          <div class="cmyk">CMYK 0/2/5/0</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--terracotta);"></div>
+        <div class="swatch-body">
+          <div class="name">Terracotta</div>
+          <div class="hex">HEX C76E4C &middot; RGB 199 110 76</div>
+          <div class="cmyk">CMYK 0/45/62/22</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--olive);"></div>
+        <div class="swatch-body">
+          <div class="name">Olive</div>
+          <div class="hex">HEX 747B4C &middot; RGB 116 123 76</div>
+          <div class="cmyk">CMYK 6/0/38/52</div>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-chip" style="background:var(--cocoa);"></div>
+        <div class="swatch-body">
+          <div class="name">Cocoa</div>
+          <div class="hex">HEX 493128 &middot; RGB 73 49 40</div>
+          <div class="cmyk">CMYK 0/33/45/71</div>
+        </div>
+      </div>
+    </div>
+    <h3 style="font-size:19px; margin:2.2rem 0 0;">Usage Ratio</h3>
+    <div class="ratio-bar">
+      <span style="width:55%; background:var(--red);"></span>
+      <span style="width:30%; background:var(--cream);"></span>
+      <span style="width:15%; background:var(--terracotta);"></span>
+    </div>
+    <div class="ratio-legend">
+      <span>55% Mama Red</span>
+      <span>30% Warm Cream</span>
+      <span>15% Supporting accents</span>
+    </div>
+    <p class="note-line">CMYK values are mathematical approximations. Pantone / PMS matching is to be determined via printed swatch; do not assign an unverified PMS number.</p>
+  </div>
+</section>
+
+<!-- ===========================================
+     07 TYPOGRAPHY
+=========================================== -->
+<section class="chapter" id="typography">
+  <div class="container">
+    <div class="chapter-head"><span class="num">07</span><h2>Typography &amp; Hierarchy</h2></div>
+    <div class="type-grid">
+      <div class="type-card">
+        <div class="tag">English Headings &middot; Baloo 2 Bold</div>
+        <div class="specimen">Aa Bb Cc</div>
+        <div class="fname">Body: Poppins Regular / Medium</div>
+        <p class="note">Fallback: Arial, sans-serif. Used for headlines, section titles and the wordmark&rsquo;s English lettering.</p>
+      </div>
+      <div class="type-card">
+        <div class="tag">Arabic Headings &middot; Cairo Bold</div>
+        <div class="specimen ar-h">أكل بيتي</div>
+        <div class="fname">Body: Tajawal Regular / Medium</div>
+        <p class="note">Fallback: Tahoma, Arial. Arabic should be optically adjusted; do not compress or force tracking.</p>
+      </div>
+    </div>
+    <div class="scale-card">
+      <div class="h1s">Heading One / 48px, 1.15 line height</div>
+      <div class="h2s">Heading Two / 32px, 1.2 line height</div>
+      <div class="bodys">Body copy / 16px, 1.6 line height, for menus, notices and storytelling.</div>
+      <div class="caps">Caption / Label &middot; 12px, 1.4 line height</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     08 PHOTOGRAPHY & VISUAL LANGUAGE
+=========================================== -->
+<section class="chapter alt" id="visual-language">
+  <div class="container">
+    <div class="chapter-head"><span class="num">08</span><h2>Photography &amp; Visual Language</h2></div>
+    <div class="quad-grid">
+      <div class="info-card">
+        <h3>Photography</h3>
+        <p>Natural soft daylight; appetizing true-to-life colors; close-up food texture; clean cream or warm wood surfaces; family-table compositions.</p>
+      </div>
+      <div class="info-card">
+        <h3>Iconography</h3>
+        <p>Rounded, friendly outline icons; consistent 2px strokes at a 24px artboard; avoid mixing styles.</p>
+      </div>
+      <div class="info-card">
+        <h3>Illustrations &amp; Patterns</h3>
+        <div class="illus-row">
+          <div class="illus-sample"><img src="assets/images/mamasobhiya-pattern-sample.jpg" alt="Mama Sobhiya hand-drawn ingredient linework sample"></div>
+          <p>Simple hand-drawn vegetables, kitchen utensils and ingredient motifs. Use red linework on cream, with restrained olive accents.</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <h3>Data Visualization</h3>
+        <p>Red as the primary series, terracotta and olive as supporting; clear labels and accessible contrast. Avoid color-only distinctions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     09 DIGITAL APPLICATIONS
+=========================================== -->
+<section class="chapter" id="digital">
+  <div class="container">
+    <div class="chapter-head"><span class="num">09</span><h2>Digital Applications</h2></div>
+    <p class="chapter-lede">Concept direction for the surfaces Mama Sobhiya uses most: social, web, email and presentations.</p>
+    <div class="social-grid">
+      <div class="social-photo-card">
+        <img src="assets/images/mamasobhiya-mockup-social.jpg" alt="Mama Sobhiya Instagram story mockup">
+      </div>
+      <div class="social-concept-card">
+        <div class="tile bg-red"></div>
+        <div class="concept-body">
+          <h4>Product Feature</h4>
+          <p>Hero food image, short Arabic headline, logo and order CTA.</p>
+        </div>
+      </div>
+      <div class="social-concept-card">
+        <div class="tile bg-terracotta"></div>
+        <div class="concept-body">
+          <h4>Menu Promotion</h4>
+          <p>Cream background, red headline, category and price.</p>
+        </div>
+      </div>
+    </div>
+    <p class="prod-sizes">Production sizes: Feed 1080&times;1350px &middot; Square 1080&times;1080px &middot; Stories 1080&times;1920px</p>
+    <div class="rule-red" style="margin:2.4rem 0;"></div>
+    <div class="two-col">
+      <div>
+        <h3>Web UI</h3>
+        <p>Cream canvas; red primary actions; cocoa body text; rounded buttons; simple menu categories and visible ordering contact.</p>
+      </div>
+      <div>
+        <h3>Email Signature</h3>
+        <p>Brand logo, representative name, role, phone, website and social links. Keep formatting minimal and mobile-readable.</p>
+      </div>
+    </div>
+    <div class="info-card" style="margin-top:1.6rem;">
+      <h3>Presentation Deck</h3>
+      <p>Cream master background, red headings, product imagery, ample whitespace, and consistent Colart / Mama Sobhiya attribution.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================================
+     10 BRAND IN THE REAL WORLD
+=========================================== -->
+<section class="chapter alt" id="real-world">
+  <div class="container">
+    <div class="chapter-head"><span class="num">10</span><h2>Brand in the Real World</h2></div>
+    <p class="chapter-lede">A look at the identity applied to packaging, stationery, uniforms and storefronts, generated as creative direction for Mama Sobhiya.</p>
+    <div class="gallery-grid">
+      <div class="gallery-item">
+        <img src="assets/images/mamasobhiya-mockup-bag-box.jpg" alt="Mama Sobhiya takeaway bag and box mockup">
+        <div class="gallery-caption">Takeaway Bag &amp; Box</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/mamasobhiya-mockup-frozen-pouch.jpg" alt="Mama Sobhiya frozen food pouch mockup">
+        <div class="gallery-caption">Frozen Food Pouch</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/mamasobhiya-mockup-business-cards.jpg" alt="Mama Sobhiya business cards mockup">
+        <div class="gallery-caption">Business Cards</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/mamasobhiya-mockup-apron.jpg" alt="Mama Sobhiya uniform and apron mockup">
+        <div class="gallery-caption">Uniform &amp; Apron</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/mamasobhiya-mockup-storefront.jpg" alt="Mama Sobhiya storefront signage mockup">
+        <div class="gallery-caption">Storefront Signage</div>
+      </div>
+      <div class="gallery-item">
+        <img src="assets/images/mamasobhiya-mockup-social.jpg" alt="Mama Sobhiya social media post mockup">
+        <div class="gallery-caption">Social Media</div>
+      </div>
+    </div>
+    <p class="note-line">Mockups illustrate creative direction. Product names, social handles, phone numbers and package claims depicted in generated images are placeholders, not approved business information.</p>
+  </div>
+</section>
+
+<!-- ===========================================
+     11 ASSET LIBRARY & PRODUCTION HANDOFF
+=========================================== -->
+<section class="chapter" id="handoff">
+  <div class="container">
+    <div class="chapter-head"><span class="num">11</span><h2>Asset Library &amp; Production Handoff</h2></div>
+    <p class="chapter-lede">What production needs before Mama Sobhiya&rsquo;s identity goes live on packaging, signage and digital channels.</p>
+    <ul class="handoff-list">
+      <li><i class="fa-solid fa-circle-check"></i><span><strong>Master logo:</strong> editable SVG / AI / EPS plus transparent PNG exports.</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span><strong>Logo variants:</strong> primary, reversed, one-color and approved responsive icon.</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span><strong>Color sheet:</strong> HEX / RGB / press-profile CMYK / Pantone after physical matching.</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span><strong>Fonts:</strong> licensed sources or installation instructions (no redistribution).</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span><strong>Templates:</strong> PPTX, social post masters, menu and packaging print artwork.</span></li>
+      <li><i class="fa-solid fa-circle-check"></i><span><strong>Approval:</strong> verify Arabic spelling, print proofs and food-label requirements.</span></li>
+    </ul>
+    <p class="note-line">Asset repository URL to be supplied by Colart; no external asset link is assumed. Conceptual guidelines &middot; final production approval required.</p>
+  </div>
+</section>
+
+<!-- ===========================================
+     CLOSING
+=========================================== -->
+<footer class="mama-closing">
+  <img src="assets/images/mamasobhiya-logo-white.png" alt="Mama Sobhiya logo">
+  <h2>Thank You</h2>
+  <div class="foot-rule"></div>
+  <div class="foot-meta">Brand Identity Guidelines &middot; 2026</div>
+  <div class="foot-credit">
+    <p>Identity Design &amp; Guidelines By</p>
+    <a href="https://www.colartdigitalmarketingagency.com/">Colart Digital Marketing Agency</a>
+    <div class="foot-links">
+      <a href="https://branding.colartdigitalmarketingagency.com/">More Branding Work</a> &middot;
+      <a href="https://www.colartdigitalmarketingagency.com/services/">Our Services</a> &middot;
+      <a href="https://www.colartdigitalmarketingagency.com/contact/">Start a Project</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
